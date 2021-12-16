@@ -1,0 +1,2371 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Copyright (C) 2008, 2009 Michael Trier and contributors,
+# 2010-2015 Sebastian Thiel
+# This file is distributed under the same license as the GitPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitPython 3.1.24\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-16 13:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/changes.rst:3
+msgid "Changelog"
+msgstr ""
+
+#: ../../source/changes.rst:7
+msgid "3.1.24"
+msgstr ""
+
+#: ../../source/changes.rst:9
+msgid ""
+"Newly added timeout flag is not be enabled by default, and was renamed to"
+" kill_after_timeout"
+msgstr ""
+
+#: ../../source/changes.rst:11
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/54?closed=1 https://github.com/gitpython-"
+"developers/gitpython/milestone/53?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:16
+msgid "3.1.23 (YANKED)"
+msgstr ""
+
+#: ../../source/changes.rst:18
+msgid ""
+"This is the second typed release with a lot of improvements under the "
+"hood."
+msgstr ""
+
+#: ../../source/changes.rst:20
+msgid "General:"
+msgstr ""
+
+#: ../../source/changes.rst:22
+msgid "Remove python 3.6 support"
+msgstr ""
+
+#: ../../source/changes.rst:24
+msgid "Remove distutils ahead of deprecation in standard library."
+msgstr ""
+
+#: ../../source/changes.rst:26
+msgid "Update sphinx to 4.1.12 and use autodoc-typehints."
+msgstr ""
+
+#: ../../source/changes.rst:28
+msgid "Include README as long_description on PyPI"
+msgstr ""
+
+#: ../../source/changes.rst:30
+msgid ""
+"Test against earliest and latest minor version available on Github "
+"Actions (e.g. 3.9.0 and 3.9.7)"
+msgstr ""
+
+#: ../../source/changes.rst:33
+msgid "Typing:"
+msgstr ""
+
+#: ../../source/changes.rst:35
+msgid "Add types to ALL functions."
+msgstr ""
+
+#: ../../source/changes.rst:37
+msgid "Ensure py.typed is collected."
+msgstr ""
+
+#: ../../source/changes.rst:39
+msgid ""
+"Increase mypy strictness with disallow_untyped_defs, "
+"warn_redundant_casts, warn_unreachable."
+msgstr ""
+
+#: ../../source/changes.rst:41
+msgid "Use typing.NamedTuple and typing.OrderedDict now 3.6 dropped."
+msgstr ""
+
+#: ../../source/changes.rst:43
+msgid ""
+"Make Protocol classes ABCs at runtime due to new behaviour/bug in 3.9.7 &"
+" 3.10.0-rc1"
+msgstr ""
+
+#: ../../source/changes.rst:45
+msgid ""
+"Remove use of typing.TypeGuard until later release, to allow dependant "
+"libs time to update."
+msgstr ""
+
+#: ../../source/changes.rst:47
+msgid ""
+"Tracking issue: https://github.com/gitpython-"
+"developers/GitPython/issues/1095"
+msgstr ""
+
+#: ../../source/changes.rst:49
+msgid "Runtime improvements:"
+msgstr ""
+
+#: ../../source/changes.rst:51
+msgid "Add clone_multi_options support to submodule.add()"
+msgstr ""
+
+#: ../../source/changes.rst:53
+msgid ""
+"Delay calling get_user_id() unless essential, to support sand-boxed "
+"environments."
+msgstr ""
+
+#: ../../source/changes.rst:55
+msgid "Add timeout to handle_process_output(), in case thread.join() hangs."
+msgstr ""
+
+#: ../../source/changes.rst:57
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/53?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:62
+msgid "3.1.20 (YANKED)"
+msgstr ""
+
+#: ../../source/changes.rst:64 ../../source/changes.rst:74
+msgid ""
+"This is the second typed release with a lot of improvements under the "
+"hood. * Tracking issue: https://github.com/gitpython-"
+"developers/GitPython/issues/1095"
+msgstr ""
+
+#: ../../source/changes.rst:67
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/52?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:72
+msgid "3.1.19 (YANKED)"
+msgstr ""
+
+#: ../../source/changes.rst:77
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/51?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:81
+msgid "3.1.18"
+msgstr ""
+
+#: ../../source/changes.rst:83
+msgid ""
+"drop support for python 3.5 to reduce maintenance burden on typing. Lower"
+" patch levels of python 3.5 would break, too."
+msgstr ""
+
+#: ../../source/changes.rst:85
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/50?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:89
+msgid "3.1.17"
+msgstr ""
+
+#: ../../source/changes.rst:91
+msgid ""
+"Fix issues from 3.1.16 (see https://github.com/gitpython-"
+"developers/GitPython/issues/1238)"
+msgstr ""
+
+#: ../../source/changes.rst:92 ../../source/changes.rst:101
+msgid ""
+"Fix issues from 3.1.15 (see https://github.com/gitpython-"
+"developers/GitPython/issues/1223)"
+msgstr ""
+
+#: ../../source/changes.rst:93 ../../source/changes.rst:102
+msgid "Add more static typing information"
+msgstr ""
+
+#: ../../source/changes.rst:95
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/49?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:99
+msgid "3.1.16 (YANKED)"
+msgstr ""
+
+#: ../../source/changes.rst:104
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/48?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:108
+msgid "3.1.15 (YANKED)"
+msgstr ""
+
+#: ../../source/changes.rst:110
+msgid "add deprectation warning for python 3.5"
+msgstr ""
+
+#: ../../source/changes.rst:112
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/47?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:116
+msgid "3.1.14"
+msgstr ""
+
+#: ../../source/changes.rst:118
+msgid ""
+"git.Commit objects now have a ``replace`` method that will return a copy "
+"of the commit with modified attributes."
+msgstr ""
+
+#: ../../source/changes.rst:120
+msgid "Add python 3.9 support"
+msgstr ""
+
+#: ../../source/changes.rst:121
+msgid "Drop python 3.4 support"
+msgstr ""
+
+#: ../../source/changes.rst:123
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/46?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:127
+msgid "3.1.13"
+msgstr ""
+
+#: ../../source/changes.rst:129
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/45?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:133
+msgid "3.1.12"
+msgstr ""
+
+#: ../../source/changes.rst:135
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/44?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:139
+msgid "3.1.11"
+msgstr ""
+
+#: ../../source/changes.rst:141
+msgid "Fixes regression of 3.1.10."
+msgstr ""
+
+#: ../../source/changes.rst:143
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/43?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:147
+msgid "3.1.10"
+msgstr ""
+
+#: ../../source/changes.rst:149
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/42?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:154
+msgid "3.1.9"
+msgstr ""
+
+#: ../../source/changes.rst:156
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/41?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:161
+msgid "3.1.8"
+msgstr ""
+
+#: ../../source/changes.rst:163
+msgid "support for 'includeIf' in git configuration files"
+msgstr ""
+
+#: ../../source/changes.rst:164
+msgid "tests are now excluded from the package, making it conisderably smaller"
+msgstr ""
+
+#: ../../source/changes.rst:167
+msgid ""
+"See the following for more details: https://github.com/gitpython-"
+"developers/gitpython/milestone/40?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:172
+msgid "3.1.7"
+msgstr ""
+
+#: ../../source/changes.rst:174
+msgid ""
+"Fix tutorial examples, which disappeared in 3.1.6 due to a missed path "
+"change."
+msgstr ""
+
+#: ../../source/changes.rst:177
+msgid "3.1.6"
+msgstr ""
+
+#: ../../source/changes.rst:179
+msgid ""
+"Greatly reduced package size, see https://github.com/gitpython-"
+"developers/GitPython/pull/1031"
+msgstr ""
+
+#: ../../source/changes.rst:182
+msgid "3.1.5"
+msgstr ""
+
+#: ../../source/changes.rst:184
+msgid ""
+"rollback: package size was reduced significantly not placing tests into "
+"the package anymore. See https://github.com/gitpython-"
+"developers/GitPython/issues/1030"
+msgstr ""
+
+#: ../../source/changes.rst:188
+msgid "3.1.4"
+msgstr ""
+
+#: ../../source/changes.rst:190
+msgid "all exceptions now keep track of their cause"
+msgstr ""
+
+#: ../../source/changes.rst:191
+msgid ""
+"package size was reduced significantly not placing tests into the package"
+" anymore."
+msgstr ""
+
+#: ../../source/changes.rst:193
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/39?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:197
+msgid "3.1.3"
+msgstr ""
+
+#: ../../source/changes.rst:199
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/38?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:203
+msgid "3.1.2"
+msgstr ""
+
+#: ../../source/changes.rst:205
+msgid "Re-release of 3.1.1, with known signature"
+msgstr ""
+
+#: ../../source/changes.rst:207
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/37?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:212
+msgid "3.1.1"
+msgstr ""
+
+#: ../../source/changes.rst:214
+msgid ""
+"support for PyOxidizer, which previously failed due to usage of "
+"`__file__`."
+msgstr ""
+
+#: ../../source/changes.rst:216
+msgid ""
+"See the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/36?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:221
+msgid "3.1.0"
+msgstr ""
+
+#: ../../source/changes.rst:223
+msgid ""
+"Switched back to using gitdb package as requirement (`gitdb#59 "
+"<https://github.com/gitpython-developers/gitdb/issues/59>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:227
+msgid "3.0.9"
+msgstr ""
+
+#: ../../source/changes.rst:229
+msgid "Restricted GitDB (gitdb2) version requirement to < 4"
+msgstr ""
+
+#: ../../source/changes.rst:230
+msgid "Removed old nose library from test requirements"
+msgstr ""
+
+#: ../../source/changes.rst:233 ../../source/changes.rst:247
+#: ../../source/changes.rst:269
+msgid "Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:235
+msgid ""
+"Changed to use UTF-8 instead of default encoding when getting information"
+" about a symbolic reference (`#774 <https://github.com/gitpython-"
+"developers/GitPython/issues/774>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:237
+msgid ""
+"Fixed decoding of tag object message so as to replace invalid bytes "
+"(`#943 <https://github.com/gitpython-developers/GitPython/issues/943>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:241
+msgid "3.0.8"
+msgstr ""
+
+#: ../../source/changes.rst:243
+msgid "Added support for Python 3.8"
+msgstr ""
+
+#: ../../source/changes.rst:244
+msgid "Bumped GitDB (gitdb2) version requirement to > 3"
+msgstr ""
+
+#: ../../source/changes.rst:249
+msgid ""
+"Fixed Repo.__repr__ when subclassed (`#968 <https://github.com/gitpython-"
+"developers/GitPython/pull/968>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:251
+msgid "Removed compatibility shims for Python < 3.4 and old mock library"
+msgstr ""
+
+#: ../../source/changes.rst:252
+msgid "Replaced usage of deprecated unittest aliases and Logger.warn"
+msgstr ""
+
+#: ../../source/changes.rst:253
+msgid "Removed old, no longer used assert methods"
+msgstr ""
+
+#: ../../source/changes.rst:254
+msgid "Replaced usage of nose assert methods with unittest"
+msgstr ""
+
+#: ../../source/changes.rst:257
+msgid "3.0.7"
+msgstr ""
+
+#: ../../source/changes.rst:259
+msgid ""
+"Properly signed re-release of v3.0.6 with new signature (See `#980 "
+"<https://github.com/gitpython-developers/GitPython/issues/980>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:263
+msgid "3.0.6"
+msgstr ""
+
+#: ../../source/changes.rst:265
+msgid ""
+"Note: There was an issue that caused this version to be released to PyPI "
+"without a signature"
+msgstr ""
+
+#: ../../source/changes.rst:266
+msgid ""
+"See the changelog for v3.0.7 and `#980 <https://github.com/gitpython-"
+"developers/GitPython/issues/980>`_"
+msgstr ""
+
+#: ../../source/changes.rst:271
+msgid ""
+"Fixed warning for usage of environment variables for paths containing "
+"``$`` or ``%`` (`#832 <https://github.com/gitpython-"
+"developers/GitPython/issues/832>`_, `#961 <https://github.com/gitpython-"
+"developers/GitPython/pull/961>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:274
+msgid ""
+"Added support for parsing Git internal date format (@<unix timestamp> "
+"<timezone offset>) (`#965 <https://github.com/gitpython-"
+"developers/GitPython/pull/965>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:276
+msgid ""
+"Removed Python 2 and < 3.3 compatibility shims (`#979 <https://github.com"
+"/gitpython-developers/GitPython/pull/979>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:278
+msgid ""
+"Fixed GitDB (gitdb2) requirement version specifier formatting in "
+"requirements.txt (`#979 <https://github.com/gitpython-"
+"developers/GitPython/pull/979>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:282
+msgid "3.0.5 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:284
+msgid ""
+"see the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/32?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:288
+msgid "3.0.4 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:290
+msgid ""
+"see the following for details: https://github.com/gitpython-"
+"developers/gitpython/milestone/31?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:294
+msgid "3.0.3 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:296
+msgid ""
+"see the following for (most) details: https://github.com/gitpython-"
+"developers/gitpython/milestone/30?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:300
+msgid "3.0.2 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:302
+msgid "fixes an issue with installation"
+msgstr ""
+
+#: ../../source/changes.rst:305
+msgid "3.0.1 - Bugfixes and performance improvements"
+msgstr ""
+
+#: ../../source/changes.rst:307
+#, python-format
+msgid ""
+"Fix a `performance regression <https://github.com/gitpython-"
+"developers/GitPython/issues/906>`__ which could make certain workloads "
+"50% slower"
+msgstr ""
+
+#: ../../source/changes.rst:308
+msgid ""
+"Add `currently_rebasing_on` method on `Repo`, see `the PR "
+"<https://github.com/gitpython-developers/GitPython/pull/903/files#diff-"
+"c276fc3c4df38382ec884e59657b869dR1065>`__"
+msgstr ""
+
+#: ../../source/changes.rst:309
+msgid ""
+"Fix incorrect `requirements.txt` which could lead to broken "
+"installations, see this `issue <https://github.com/gitpython-"
+"developers/GitPython/issues/908>`__ for details."
+msgstr ""
+
+#: ../../source/changes.rst:312
+msgid "3.0.0 - Remove Python 2 support"
+msgstr ""
+
+#: ../../source/changes.rst:314
+msgid ""
+"Motivation for this is a patch which improves unicode handling when "
+"dealing with filesystem paths. Python 2 compatibility was introduced to "
+"deal with differences, and I thought it would be a good idea to 'just' "
+"drop support right now, mere 5 months away from the official maintenance "
+"stop of python 2.7."
+msgstr ""
+
+#: ../../source/changes.rst:318
+msgid ""
+"The underlying motivation clearly is my anger when thinking python and "
+"unicode, which was a hassle from the start, at least in a codebase as old"
+" as GitPython, which totally doesn't handle encodings correctly in many "
+"cases."
+msgstr ""
+
+#: ../../source/changes.rst:321
+msgid ""
+"Having migrated to using `Rust` exclusively for tooling, I still see that"
+" correct handling of encodings isn't entirely trivial, but at least "
+"`Rust` makes clear what has to be done at compile time, allowing to write"
+" software that is pretty much guaranteed to work once it compiles."
+msgstr ""
+
+#: ../../source/changes.rst:325
+msgid ""
+"Again, my apologies if removing Python 2 support caused inconveniences, "
+"please see release 2.1.13 which returns it."
+msgstr ""
+
+#: ../../source/changes.rst:327
+msgid ""
+"see the following for (most) details: https://github.com/gitpython-"
+"developers/gitpython/milestone/27?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:330
+msgid ""
+"or run have a look at the difference between tags v2.1.12 and v3.0.0: "
+"https://github.com/gitpython-developers/GitPython/compare/2.1.12...3.0.0."
+msgstr ""
+
+#: ../../source/changes.rst:334
+msgid "2.1.15"
+msgstr ""
+
+#: ../../source/changes.rst:336
+msgid ""
+"Fixed GitDB (gitdb2) requirement version specifier formatting in "
+"requirements.txt (Backported from `#979 <https://github.com/gitpython-"
+"developers/GitPython/pull/979>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:338
+msgid ""
+"Restricted GitDB (gitdb2) version requirement to < 3 (`#897 "
+"<https://github.com/gitpython-developers/GitPython/issues/897>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:342
+msgid "2.1.14"
+msgstr ""
+
+#: ../../source/changes.rst:344
+msgid ""
+"Fixed handling of 0 when transforming kwargs into Git command arguments "
+"(Backported from `#899 <https://github.com/gitpython-"
+"developers/GitPython/pull/899>`_)"
+msgstr ""
+
+#: ../../source/changes.rst:348
+msgid "2.1.13 - Bring back Python 2.7 support"
+msgstr ""
+
+#: ../../source/changes.rst:350
+msgid ""
+"My apologies for any inconvenience this may have caused. Following "
+"semver, backward incompatible changes will be introduced in a minor "
+"version."
+msgstr ""
+
+#: ../../source/changes.rst:354
+msgid "2.1.12 - Bugfixes and Features"
+msgstr ""
+
+#: ../../source/changes.rst:356
+msgid ""
+"Multi-value support and interface improvements for Git configuration. "
+"Thanks to A. Jesse Jiryu Davis."
+msgstr ""
+
+#: ../../source/changes.rst:358
+msgid ""
+"or run have a look at the difference between tags v2.1.11 and v2.1.12: "
+"https://github.com/gitpython-developers/GitPython/compare/2.1.11...2.1.12"
+msgstr ""
+
+#: ../../source/changes.rst:362
+msgid "2.1.11 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:364
+msgid ""
+"see the following for (most) details: https://github.com/gitpython-"
+"developers/gitpython/milestone/26?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:367
+msgid ""
+"or run have a look at the difference between tags v2.1.10 and v2.1.11: "
+"https://github.com/gitpython-developers/GitPython/compare/2.1.10...2.1.11"
+msgstr ""
+
+#: ../../source/changes.rst:371
+msgid "2.1.10 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:373
+msgid ""
+"see the following for (most) details: https://github.com/gitpython-"
+"developers/gitpython/milestone/25?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:376
+msgid ""
+"or run have a look at the difference between tags v2.1.9 and v2.1.10: "
+"https://github.com/gitpython-developers/GitPython/compare/2.1.9...2.1.10"
+msgstr ""
+
+#: ../../source/changes.rst:380
+msgid "2.1.9 - Dropping support for Python 2.6"
+msgstr ""
+
+#: ../../source/changes.rst:382
+msgid ""
+"see the following for (most) details: https://github.com/gitpython-"
+"developers/gitpython/milestone/24?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:385
+msgid ""
+"or run have a look at the difference between tags v2.1.8 and v2.1.9: "
+"https://github.com/gitpython-developers/GitPython/compare/2.1.8...2.1.9"
+msgstr ""
+
+#: ../../source/changes.rst:390
+msgid "2.1.8 - bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:392
+msgid ""
+"see the following for (most) details: https://github.com/gitpython-"
+"developers/gitpython/milestone/23?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:395
+msgid ""
+"or run have a look at the difference between tags v2.1.7 and v2.1.8: "
+"https://github.com/gitpython-developers/GitPython/compare/2.1.7...2.1.8"
+msgstr ""
+
+#: ../../source/changes.rst:399
+msgid "2.1.6 - bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:401
+msgid "support for worktrees"
+msgstr ""
+
+#: ../../source/changes.rst:404
+msgid "2.1.3 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:406
+msgid ""
+"All issues and PRs can be viewed in all detail when following this URL: "
+"https://github.com/gitpython-developers/GitPython/milestone/21?closed=1"
+msgstr ""
+
+#: ../../source/changes.rst:411
+msgid "2.1.1 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:413
+msgid ""
+"All issues and PRs can be viewed in all detail when following this URL: "
+"https://github.com/gitpython-"
+"developers/GitPython/issues?q=is%3Aclosed+milestone%3A%22v2.1.1+-+Bugfixes%22"
+msgstr ""
+
+#: ../../source/changes.rst:418
+msgid "2.1.0 - Much better windows support!"
+msgstr ""
+
+#: ../../source/changes.rst:420
+msgid ""
+"Special thanks to @ankostis, who made this release possible (nearly) "
+"single-handedly. GitPython is run by its users, and their PRs make all "
+"the difference, they keep GitPython relevant. Thank you all so much for "
+"contributing !"
+msgstr ""
+
+#: ../../source/changes.rst:425
+msgid "Notable fixes"
+msgstr ""
+
+#: ../../source/changes.rst:427
+msgid ""
+"The `GIT_DIR` environment variable does not override the `path` argument "
+"when initializing a `Repo` object anymore. However, if said `path` unset,"
+" `GIT_DIR` will be used to fill the void."
+msgstr ""
+
+#: ../../source/changes.rst:431
+msgid ""
+"All issues and PRs can be viewed in all detail when following this URL: "
+"https://github.com/gitpython-"
+"developers/GitPython/issues?q=is%3Aclosed+milestone%3A%22v2.1.0+-+proper+windows+support%22"
+msgstr ""
+
+#: ../../source/changes.rst:436
+msgid "2.0.9 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:438
+msgid "`tag.commit` will now resolve commits deeply."
+msgstr ""
+
+#: ../../source/changes.rst:439
+msgid "`Repo` objects can now be pickled, which helps with multi-processing."
+msgstr ""
+
+#: ../../source/changes.rst:440
+msgid ""
+"`Head.checkout()` now deals with detached heads, which is when it will "
+"return the `HEAD` reference instead."
+msgstr ""
+
+#: ../../source/changes.rst:443
+msgid "`DiffIndex.iter_change_type(...)` produces better results when diffing"
+msgstr ""
+
+#: ../../source/changes.rst:446
+msgid "2.0.8 - Features and Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:448
+msgid ""
+"`DiffIndex.iter_change_type(...)` produces better results when diffing an"
+" index against the working tree."
+msgstr ""
+
+#: ../../source/changes.rst:450
+msgid ""
+"`Repo().is_dirty(...)` now supports the `path` parameter, to specify a "
+"single path by which to filter the output. Similar to `git status <path>`"
+msgstr ""
+
+#: ../../source/changes.rst:452
+msgid ""
+"Symbolic refs created by this library will now be written with a newline "
+"character, which was previously missing."
+msgstr ""
+
+#: ../../source/changes.rst:454
+msgid "`blame()` now properly preserves multi-line commit messages."
+msgstr ""
+
+#: ../../source/changes.rst:455
+msgid "No longer corrupt ref-logs by writing multi-line comments into them."
+msgstr ""
+
+#: ../../source/changes.rst:458
+msgid "2.0.7 - New Features"
+msgstr ""
+
+#: ../../source/changes.rst:461
+msgid ""
+"`IndexFile.commit(...,skip_hooks=False)` added. This parameter emulates "
+"the"
+msgstr ""
+
+#: ../../source/changes.rst:461
+msgid "behaviour of `--no-verify` on the command-line."
+msgstr ""
+
+#: ../../source/changes.rst:464
+msgid "2.0.6 - Fixes and Features"
+msgstr ""
+
+#: ../../source/changes.rst:466
+msgid ""
+"Fix: remote output parser now correctly matches refs with non-ASCII chars"
+" in them"
+msgstr ""
+
+#: ../../source/changes.rst:468
+msgid ""
+"API: Diffs now have `a_rawpath`, `b_rawpath`, `raw_rename_from`, "
+"`raw_rename_to` properties, which are the raw-bytes equivalents of their "
+"unicode path counterparts."
+msgstr ""
+
+#: ../../source/changes.rst:471
+msgid ""
+"Fix: TypeError about passing keyword argument to string decode() on "
+"Python 2.6."
+msgstr ""
+
+#: ../../source/changes.rst:473
+msgid ""
+"Feature: `setUrl API on Remotes <https://github.com/gitpython-"
+"developers/GitPython/pull/446#issuecomment-224670539>`__"
+msgstr ""
+
+#: ../../source/changes.rst:476
+msgid "2.0.5 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:478
+msgid "Fix: parser of fetch info lines choked on some legitimate lines"
+msgstr ""
+
+#: ../../source/changes.rst:481
+msgid "2.0.4 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:483
+msgid ""
+"Fix: parser of commit object data is now robust against cases where "
+"commit object contains invalid bytes.  The invalid characters are now "
+"replaced rather than choked on."
+msgstr ""
+
+#: ../../source/changes.rst:486
+msgid ""
+"Fix: non-ASCII paths are now properly decoded and returned in ``.diff()``"
+" output"
+msgstr ""
+
+#: ../../source/changes.rst:488
+msgid ""
+"Fix: `RemoteProgress` will now strip the ', ' prefix or suffix from "
+"messages."
+msgstr ""
+
+#: ../../source/changes.rst:489
+msgid ""
+"API: Remote.[fetch|push|pull](...) methods now allow the ``progress`` "
+"argument to be a callable. This saves you from creating a custom type "
+"with usually just one implemented method."
+msgstr ""
+
+#: ../../source/changes.rst:494
+msgid "2.0.3 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:496
+msgid ""
+"Fix: bug in ``git-blame --incremental`` output parser that broken when "
+"commit messages contained ``\\r`` characters"
+msgstr ""
+
+#: ../../source/changes.rst:498
+msgid ""
+"Fix: progress handler exceptions are not caught anymore, which would "
+"usually just hide bugs previously."
+msgstr ""
+
+#: ../../source/changes.rst:500
+msgid ""
+"Fix: The `Git.execute` method will now redirect `stdout` to `devnull` if "
+"`with_stdout` is false, which is the intended behaviour based on the "
+"parameter's documentation."
+msgstr ""
+
+#: ../../source/changes.rst:504
+msgid "2.0.2 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:506
+msgid "Fix: source package does not include \\*.pyc files"
+msgstr ""
+
+#: ../../source/changes.rst:507
+msgid "Fix: source package does include doc sources"
+msgstr ""
+
+#: ../../source/changes.rst:510
+msgid "2.0.1 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:512
+msgid "Fix: remote output parser now correctly matches refs with \"@\" in them"
+msgstr ""
+
+#: ../../source/changes.rst:515
+msgid "2.0.0 - Features"
+msgstr ""
+
+#: ../../source/changes.rst:517
+msgid ""
+"Please note that due to breaking changes, we have to increase the major "
+"version."
+msgstr ""
+
+#: ../../source/changes.rst:519
+msgid ""
+"**IMPORTANT**: This release drops support for python 2.6, which is "
+"officially deprecated by the python maintainers."
+msgstr ""
+
+#: ../../source/changes.rst:521
+msgid ""
+"**CRITICAL**: `Diff` objects created with patch output will now not carry"
+" the --- and +++ header lines anymore.  All diffs now start with the @@ "
+"header line directly.  Users that rely on the old behaviour can now "
+"(reliably) read this information from the a_path and b_path properties "
+"without having to parse these lines manually."
+msgstr ""
+
+#: ../../source/changes.rst:526
+msgid ""
+"`Commit` now has extra properties `authored_datetime` and "
+"`committer_datetime` (to get Python datetime instances rather than "
+"timestamps)"
+msgstr ""
+
+#: ../../source/changes.rst:529
+msgid ""
+"`Commit.diff()` now supports diffing the root commit via "
+"`Commit.diff(NULL_TREE)`."
+msgstr ""
+
+#: ../../source/changes.rst:531
+msgid ""
+"`Repo.blame()` now respects `incremental=True`, supporting incremental "
+"blames.  Incremental blames are slightly faster since they don't include "
+"the file's contents in them."
+msgstr ""
+
+#: ../../source/changes.rst:534
+msgid ""
+"Fix: `Diff` objects created with patch output will now have their "
+"`a_path` and `b_path` properties parsed out correctly.  Previously, some "
+"values may have been populated incorrectly when a file was added or "
+"deleted."
+msgstr ""
+
+#: ../../source/changes.rst:538
+msgid ""
+"Fix: diff parsing issues with paths that contain \"unsafe\" chars, like "
+"spaces, tabs, backslashes, etc."
+msgstr ""
+
+#: ../../source/changes.rst:542
+msgid "1.0.2 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:544
+msgid ""
+"IMPORTANT: Changed default object database of `Repo` objects to "
+"`GitCmdObjectDB`. The pure-python implementation used previously usually "
+"fails to release its resources (i.e. file handles), which can lead to "
+"problems when working with large repositories."
+msgstr ""
+
+#: ../../source/changes.rst:547
+msgid ""
+"CRITICAL: fixed incorrect `Commit` object serialization when authored or "
+"commit date had timezones which were not divisiblej by 3600 seconds. This"
+" would happen if the timezone was something like `+0530` for instance."
+msgstr ""
+
+#: ../../source/changes.rst:549
+msgid ""
+"A list of all additional fixes can be found `on GitHub "
+"<https://github.com/gitpython-"
+"developers/GitPython/issues?q=milestone%3A%22v1.0.2+-+Fixes%22+is%3Aclosed>`__"
+msgstr ""
+
+#: ../../source/changes.rst:550
+msgid ""
+"CRITICAL: `Tree.cache` was removed without replacement. It is technically"
+" impossible to change individual trees and expect their serialization "
+"results to be consistent with what *git* expects. Instead, use the "
+"`IndexFile` facilities to adjust the content of the staging area, and "
+"write it out to the respective tree objects using "
+"`IndexFile.write_tree()` instead."
+msgstr ""
+
+#: ../../source/changes.rst:553
+msgid "1.0.1 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:555
+msgid ""
+"A list of all issues can be found `on GitHub <https://github.com"
+"/gitpython-"
+"developers/GitPython/issues?q=milestone%3A%22v1.0.1+-+Fixes%22+is%3Aclosed>`__"
+msgstr ""
+
+#: ../../source/changes.rst:558
+msgid "1.0.0 - Notes"
+msgstr ""
+
+#: ../../source/changes.rst:560
+msgid ""
+"This version is equivalent to v0.3.7, but finally acknowledges that "
+"GitPython is stable and production ready."
+msgstr ""
+
+#: ../../source/changes.rst:562
+msgid ""
+"It follows the `semantic version scheme <http://semver.org>`_, and thus "
+"will not break its existing API unless it goes 2.0."
+msgstr ""
+
+#: ../../source/changes.rst:565
+msgid "0.3.7 - Fixes"
+msgstr ""
+
+#: ../../source/changes.rst:566
+msgid ""
+"`IndexFile.add()` will now write the index without any extension data by "
+"default. However, you may override this behaviour with the new "
+"`write_extension_data` keyword argument."
+msgstr ""
+
+#: ../../source/changes.rst:568
+msgid ""
+"Renamed `ignore_tree_extension_data` keyword argument in "
+"`IndexFile.write(...)` to `ignore_extension_data`"
+msgstr ""
+
+#: ../../source/changes.rst:569
+msgid ""
+"If the git command executed during `Remote.push(...)|fetch(...)` returns "
+"with an non-zero exit code and GitPython didn't obtain any head-"
+"information, the corresponding `GitCommandError` will be raised. This may"
+" break previous code which expected these operations to never raise. "
+"However, that behavious is undesirable as it would effectively hide the "
+"fact that there was an error. See `this issue <https://github.com"
+"/gitpython-developers/GitPython/issues/271>`__ for more information."
+msgstr ""
+
+#: ../../source/changes.rst:574
+msgid ""
+"If the git executable can't be found in the PATH or at the path provided "
+"by `GIT_PYTHON_GIT_EXECUTABLE`, this is made obvious by throwing "
+"`GitCommandNotFound`, both on unix and on windows."
+msgstr ""
+
+#: ../../source/changes.rst:577
+msgid ""
+"Those who support **GUI on windows** will now have to set "
+"`git.Git.USE_SHELL = True` to get the previous behaviour."
+msgstr ""
+
+#: ../../source/changes.rst:579
+msgid ""
+"A list of all issues can be found `on GitHub <https://github.com"
+"/gitpython-"
+"developers/GitPython/issues?q=milestone%3A%22v0.3.7+-+Fixes%22+is%3Aclosed>`__"
+msgstr ""
+
+#: ../../source/changes.rst:583
+msgid "0.3.6 - Features"
+msgstr ""
+
+#: ../../source/changes.rst:584
+msgid "**DOCS**"
+msgstr ""
+
+#: ../../source/changes.rst:586
+msgid "special members like `__init__` are now listed in the API documentation"
+msgstr ""
+
+#: ../../source/changes.rst:587
+msgid "tutorial section was revised entirely, more advanced examples were added."
+msgstr ""
+
+#: ../../source/changes.rst:589
+msgid "**POSSIBLY BREAKING CHANGES**"
+msgstr ""
+
+#: ../../source/changes.rst:591
+msgid ""
+"As `rev_parse` will now throw `BadName` as well as `BadObject`, client "
+"code will have to catch both exception types."
+msgstr ""
+
+#: ../../source/changes.rst:592
+msgid ""
+"Repo.working_tree_dir now returns None if it is bare. Previously it "
+"raised AssertionError."
+msgstr ""
+
+#: ../../source/changes.rst:593
+msgid ""
+"IndexFile.add() previously raised AssertionError when paths where used "
+"with bare repository, now it raises InvalidGitRepositoryError"
+msgstr ""
+
+#: ../../source/changes.rst:595
+msgid ""
+"Added `Repo.merge_base()` implementation. See the `respective issue on "
+"GitHub <https://github.com/gitpython-developers/GitPython/issues/169>`__"
+msgstr ""
+
+#: ../../source/changes.rst:596
+msgid "`[include]` sections in git configuration files are now respected"
+msgstr ""
+
+#: ../../source/changes.rst:597
+msgid "Added `GitConfigParser.rename_section()`"
+msgstr ""
+
+#: ../../source/changes.rst:598
+msgid "Added `Submodule.rename()`"
+msgstr ""
+
+#: ../../source/changes.rst:599
+msgid ""
+"A list of all issues can be found `on GitHub <https://github.com"
+"/gitpython-"
+"developers/GitPython/issues?q=milestone%3A%22v0.3.6+-+Features%22+>`__"
+msgstr ""
+
+#: ../../source/changes.rst:602
+msgid "0.3.5 - Bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:603
+msgid "push/pull/fetch operations will not block anymore"
+msgstr ""
+
+#: ../../source/changes.rst:604
+msgid ""
+"diff() can now properly detect renames, both in patch and raw format. "
+"Previously it only worked when create_patch was True."
+msgstr ""
+
+#: ../../source/changes.rst:605
+msgid ""
+"repo.odb.update_cache() is now called automatically after fetch and pull "
+"operations. In case you did that in your own code, you might want to "
+"remove your line to prevent a double-update that causes unnecessary IO."
+msgstr ""
+
+#: ../../source/changes.rst:606
+msgid ""
+"`Repo(path)` will not automatically search upstream anymore and find any "
+"git directory on its way up. If you need that behaviour, you can turn it "
+"back on using the new `search_parent_directories=True` flag when "
+"constructing a `Repo` object."
+msgstr ""
+
+#: ../../source/changes.rst:607
+msgid ""
+"IndexFile.commit() now runs the `pre-commit` and `post-commit` hooks. "
+"Verified to be working on posix systems only."
+msgstr ""
+
+#: ../../source/changes.rst:608
+msgid ""
+"A list of all fixed issues can be found here: https://github.com"
+"/gitpython-"
+"developers/GitPython/issues?q=milestone%3A%22v0.3.5+-+bugfixes%22+"
+msgstr ""
+
+#: ../../source/changes.rst:611
+msgid "0.3.4 - Python 3 Support"
+msgstr ""
+
+#: ../../source/changes.rst:612
+msgid ""
+"Internally, hexadecimal SHA1 are treated as ascii encoded strings. Binary"
+" SHA1 are treated as bytes."
+msgstr ""
+
+#: ../../source/changes.rst:613
+msgid ""
+"Id attribute of Commit objects is now `hexsha`, instead of `binsha`. The "
+"latter makes no sense in python 3 and I see no application of it anyway "
+"besides its artificial usage in test cases."
+msgstr ""
+
+#: ../../source/changes.rst:614
+msgid ""
+"**IMPORTANT**: If you were using the config_writer(), you implicitly "
+"relied on __del__ to work as expected to flush changes. To be sure "
+"changes are flushed under PY3, you will have to call the new `release()` "
+"method to trigger a flush. For some reason, __del__ is not called "
+"necessarily anymore when a symbol goes out of scope."
+msgstr ""
+
+#: ../../source/changes.rst:615
+msgid ""
+"The `Tree` now has a `.join('name')` method which is equivalent to `tree "
+"/ 'name'`"
+msgstr ""
+
+#: ../../source/changes.rst:618
+msgid "0.3.3"
+msgstr ""
+
+#: ../../source/changes.rst:619
+msgid ""
+"When fetching, pulling or pushing, and an error occurs, it will not be "
+"reported on stdout anymore. However, if there is a fatal error, it will "
+"still result in a GitCommandError to be thrown. This goes hand in hand "
+"with improved fetch result parsing."
+msgstr ""
+
+#: ../../source/changes.rst:620
+msgid "Code Cleanup (in preparation for python 3 support)"
+msgstr ""
+
+#: ../../source/changes.rst:622
+msgid "Applied autopep8 and cleaned up code"
+msgstr ""
+
+#: ../../source/changes.rst:623
+msgid ""
+"Using python logging module instead of print statements to signal certain"
+" kinds of errors"
+msgstr ""
+
+#: ../../source/changes.rst:626
+msgid "0.3.2.1"
+msgstr ""
+
+#: ../../source/changes.rst:627
+msgid ""
+"`Fix for #207 <https://github.com/gitpython-"
+"developers/GitPython/issues/207>`_"
+msgstr ""
+
+#: ../../source/changes.rst:630
+msgid "0.3.2"
+msgstr ""
+
+#: ../../source/changes.rst:632
+msgid ""
+"Release of most recent version as non-RC build, just to allow pip to "
+"install the latest version right away."
+msgstr ""
+
+#: ../../source/changes.rst:633
+msgid ""
+"Have a look at the milestones (https://github.com/gitpython-"
+"developers/GitPython/milestones) to see what's next."
+msgstr ""
+
+#: ../../source/changes.rst:636
+msgid "0.3.2 RC1"
+msgstr ""
+
+#: ../../source/changes.rst:637
+msgid "**git** command wrapper"
+msgstr ""
+
+#: ../../source/changes.rst:639
+msgid ""
+"Added ``version_info`` property which returns a tuple of integers "
+"representing the installed git version."
+msgstr ""
+
+#: ../../source/changes.rst:641
+msgid ""
+"Added GIT_PYTHON_GIT_EXECUTABLE environment variable, which can be used "
+"to set the desired git executable to be used. despite of what would be "
+"found in the path."
+msgstr ""
+
+#: ../../source/changes.rst:643
+msgid "**Blob** Type"
+msgstr ""
+
+#: ../../source/changes.rst:645
+msgid "Added mode constants to ease the manual creation of blobs"
+msgstr ""
+
+#: ../../source/changes.rst:647
+msgid "**IterableList**"
+msgstr ""
+
+#: ../../source/changes.rst:649
+msgid "Added __contains__ and __delitem__ methods"
+msgstr ""
+
+#: ../../source/changes.rst:651
+msgid "**More Changes**"
+msgstr ""
+
+#: ../../source/changes.rst:653
+msgid ""
+"Configuration file parsing is more robust. It should now be able to "
+"handle everything that the git command can parse as well."
+msgstr ""
+
+#: ../../source/changes.rst:654
+msgid ""
+"The progress parsing was updated to support git 1.7.0.3 and newer. "
+"Previously progress was not enabled for the git command or only worked "
+"with ssh in case of older git versions."
+msgstr ""
+
+#: ../../source/changes.rst:655
+msgid ""
+"Parsing of tags was improved. Previously some parts of the name could not"
+" be parsed properly."
+msgstr ""
+
+#: ../../source/changes.rst:656
+msgid ""
+"The rev-parse pure python implementation now handles branches correctly "
+"if they look like hexadecimal sha's."
+msgstr ""
+
+#: ../../source/changes.rst:657
+msgid ""
+"GIT_PYTHON_TRACE is now set on class level of the Git type, previously it"
+" was a module level global variable."
+msgstr ""
+
+#: ../../source/changes.rst:658
+msgid "GIT_PYTHON_GIT_EXECUTABLE is a class level variable as well."
+msgstr ""
+
+#: ../../source/changes.rst:662
+msgid "0.3.1 Beta 2"
+msgstr ""
+
+#: ../../source/changes.rst:663
+msgid "Added **reflog support** ( reading and writing )"
+msgstr ""
+
+#: ../../source/changes.rst:665
+msgid "New types: ``RefLog`` and ``RefLogEntry``"
+msgstr ""
+
+#: ../../source/changes.rst:666
+msgid ""
+"Reflog is maintained automatically when creating references and deleting "
+"them"
+msgstr ""
+
+#: ../../source/changes.rst:667
+msgid ""
+"Non-intrusive changes to ``SymbolicReference``, these don't require your "
+"code to change. They allow to append messages to the reflog."
+msgstr ""
+
+#: ../../source/changes.rst:669
+msgid "``abspath`` property added, similar to ``abspath`` of Object instances"
+msgstr ""
+
+#: ../../source/changes.rst:670
+msgid "``log()`` method added"
+msgstr ""
+
+#: ../../source/changes.rst:671
+msgid "``log_append(...)`` method added"
+msgstr ""
+
+#: ../../source/changes.rst:672
+msgid "``set_reference(...)`` method added (reflog support)"
+msgstr ""
+
+#: ../../source/changes.rst:673
+msgid "``set_commit(...)`` method added (reflog support)"
+msgstr ""
+
+#: ../../source/changes.rst:674
+msgid "``set_object(...)`` method added (reflog support)"
+msgstr ""
+
+#: ../../source/changes.rst:676
+msgid "**Intrusive Changes** to ``Head`` type"
+msgstr ""
+
+#: ../../source/changes.rst:678
+msgid ""
+"``create(...)`` method now supports the reflog, but will not raise "
+"``GitCommandError`` anymore as it is a pure python implementation now. "
+"Instead, it raises ``OSError``."
+msgstr ""
+
+#: ../../source/changes.rst:680
+msgid "**Intrusive Changes** to ``Repo`` type"
+msgstr ""
+
+#: ../../source/changes.rst:682
+msgid ""
+"``create_head(...)`` method does not support kwargs anymore, instead it "
+"supports a logmsg parameter"
+msgstr ""
+
+#: ../../source/changes.rst:684
+msgid ""
+"Repo.rev_parse now supports the [ref]@{n} syntax, where *n* is the number"
+" of steps to look into the reference's past"
+msgstr ""
+
+#: ../../source/changes.rst:686
+msgid "**BugFixes**"
+msgstr ""
+
+#: ../../source/changes.rst:688
+msgid "Removed incorrect ORIG_HEAD handling"
+msgstr ""
+
+#: ../../source/changes.rst:690
+msgid "**Flattened directory** structure to make development more convenient."
+msgstr ""
+
+#: ../../source/changes.rst:692
+msgid ""
+"This alters the way projects using git-python as a submodule have to "
+"adjust their sys.path to be able to import git-python successfully."
+msgstr ""
+
+#: ../../source/changes.rst:693
+msgid "Misc smaller changes and bugfixes"
+msgstr ""
+
+#: ../../source/changes.rst:696
+msgid "0.3.1 Beta 1"
+msgstr ""
+
+#: ../../source/changes.rst:697
+msgid "Full Submodule-Support"
+msgstr ""
+
+#: ../../source/changes.rst:698
+msgid ""
+"Added unicode support for author names. Commit.author.name is now unicode"
+" instead of string."
+msgstr ""
+
+#: ../../source/changes.rst:699
+msgid "Head Type changes"
+msgstr ""
+
+#: ../../source/changes.rst:701
+msgid ""
+"config_reader() & config_writer() methods added for access to head "
+"specific options."
+msgstr ""
+
+#: ../../source/changes.rst:702
+msgid ""
+"tracking_branch() & set_tracking_branch() methods added for easy "
+"configuration of tracking branches."
+msgstr ""
+
+#: ../../source/changes.rst:706
+msgid "0.3.0 Beta 2"
+msgstr ""
+
+#: ../../source/changes.rst:707
+msgid "Added python 2.4 support"
+msgstr ""
+
+#: ../../source/changes.rst:710
+msgid "0.3.0 Beta 1"
+msgstr ""
+
+#: ../../source/changes.rst:712
+msgid "Renamed Modules"
+msgstr ""
+
+#: ../../source/changes.rst:713
+msgid ""
+"For consistency with naming conventions used in sub-modules like gitdb, "
+"the following modules have been renamed"
+msgstr ""
+
+#: ../../source/changes.rst:715
+msgid "git.utils -> git.util"
+msgstr ""
+
+#: ../../source/changes.rst:716
+msgid "git.errors -> git.exc"
+msgstr ""
+
+#: ../../source/changes.rst:717
+msgid "git.objects.utils -> git.objects.util"
+msgstr ""
+
+#: ../../source/changes.rst:720 ../../source/changes.rst:739
+#: ../../source/changes.rst:907 ../../source/changes.rst:955
+msgid "General"
+msgstr ""
+
+#: ../../source/changes.rst:721
+msgid ""
+"Object instances, and everything derived from it, now use binary sha's "
+"internally. The 'sha' member was removed, in favor of the 'binsha' "
+"member. An 'hexsha' property is available for convenient conversions. "
+"They may only be initialized using their binary shas, reference names or "
+"revision specs are not allowed anymore."
+msgstr ""
+
+#: ../../source/changes.rst:722
+msgid ""
+"IndexEntry instances contained in IndexFile.entries now use binary sha's."
+" Use the .hexsha property to obtain the hexadecimal version. The .sha "
+"property was removed to make the use of the respective sha more explicit."
+msgstr ""
+
+#: ../../source/changes.rst:723
+msgid ""
+"If objects are instantiated explicitly, a binary sha is required to "
+"identify the object, where previously any rev-spec could be used. The "
+"ref-spec compatible version still exists as Object.new or "
+"Repo.commit|Repo.tree respectively."
+msgstr ""
+
+#: ../../source/changes.rst:724
+msgid ""
+"The .data attribute was removed from the Object type, to obtain plain "
+"data, use the data_stream property instead."
+msgstr ""
+
+#: ../../source/changes.rst:725
+msgid "ConcurrentWriteOperation was removed, and replaced by LockedFD"
+msgstr ""
+
+#: ../../source/changes.rst:726
+msgid "IndexFile.get_entries_key was renamed to entry_key"
+msgstr ""
+
+#: ../../source/changes.rst:727
+msgid ""
+"IndexFile.write_tree: removed missing_ok keyword, its always True now. "
+"Instead of raising GitCommandError it raises UnmergedEntriesError. This "
+"is required as the pure-python implementation doesn't support the "
+"missing_ok keyword yet."
+msgstr ""
+
+#: ../../source/changes.rst:728
+msgid ""
+"diff.Diff.null_hex_sha renamed to NULL_HEX_SHA, to be conforming with the"
+" naming in the Object base class"
+msgstr ""
+
+#: ../../source/changes.rst:732
+msgid "0.2 Beta 2"
+msgstr ""
+
+#: ../../source/changes.rst:733
+msgid ""
+"Commit objects now carry the 'encoding' information of their message. It "
+"wasn't parsed previously, and defaults to UTF-8"
+msgstr ""
+
+#: ../../source/changes.rst:734
+msgid ""
+"Commit.create_from_tree now uses a pure-python implementation, mimicking "
+"git-commit-tree"
+msgstr ""
+
+#: ../../source/changes.rst:737
+msgid "0.2"
+msgstr ""
+
+#: ../../source/changes.rst:740
+msgid ""
+"file mode in Tree, Blob and Diff objects now is an int compatible to "
+"definitions in the stat module, allowing you to query whether individual "
+"user, group and other read, write and execute bits are set."
+msgstr ""
+
+#: ../../source/changes.rst:743
+msgid ""
+"Adjusted class hierarchy to generally allow comparison and hash for "
+"Objects and Refs"
+msgstr ""
+
+#: ../../source/changes.rst:744
+msgid ""
+"Improved Tag object which now is a Ref that may contain a tag object with"
+" additional Information"
+msgstr ""
+
+#: ../../source/changes.rst:746
+msgid ""
+"id_abbrev method has been removed as it could not assure the returned "
+"short SHA's where unique"
+msgstr ""
+
+#: ../../source/changes.rst:748
+msgid ""
+"removed basename method from Objects with path's as it replicated "
+"features of os.path"
+msgstr ""
+
+#: ../../source/changes.rst:749
+msgid ""
+"from_string and list_from_string methods are now private and were renamed"
+" to _from_string  and _list_from_string respectively. As part of the "
+"private API, they may change without prior notice."
+msgstr ""
+
+#: ../../source/changes.rst:752
+msgid ""
+"Renamed all find_all methods to list_items - this method is part of the "
+"Iterable interface that also provides a more efficients and more "
+"responsive iter_items method"
+msgstr ""
+
+#: ../../source/changes.rst:754
+msgid ""
+"All dates, like authored_date and committer_date, are stored as seconds "
+"since epoch to consume less memory - they can be converted using "
+"time.gmtime in a more suitable presentation format if needed."
+msgstr ""
+
+#: ../../source/changes.rst:757
+msgid ""
+"Named method parameters changed on a wide scale to unify their use. Now "
+"git specific terms are used everywhere, such as \"Reference\" ( ref ) and"
+" \"Revision\" ( rev ). Previously multiple terms where used making it "
+"harder to know which type was allowed or not."
+msgstr ""
+
+#: ../../source/changes.rst:761
+msgid ""
+"Unified diff interface to allow easy diffing between trees, trees and "
+"index, trees and working tree, index and working tree, trees and index. "
+"This closely follows the git-diff capabilities."
+msgstr ""
+
+#: ../../source/changes.rst:764
+msgid ""
+"Git.execute does not take the with_raw_output option anymore. It was not "
+"used by anyone within the project and False by default."
+msgstr ""
+
+#: ../../source/changes.rst:769
+msgid "Item Iteration"
+msgstr ""
+
+#: ../../source/changes.rst:770
+msgid ""
+"Previously one would return and process multiple items as list only which"
+" can hurt performance and memory consumption and reduce response times. "
+"iter_items method provide an iterator that will return items on demand as"
+" parsed from a stream. This way any amount of objects can be handled."
+msgstr ""
+
+#: ../../source/changes.rst:774
+msgid ""
+"list_items method returns IterableList allowing to access list members by"
+" name"
+msgstr ""
+
+#: ../../source/changes.rst:777
+msgid "objects Package"
+msgstr ""
+
+#: ../../source/changes.rst:778
+msgid ""
+"blob, tree, tag and commit module have been moved to new objects package."
+" This should not affect you though unless you explicitly imported "
+"individual objects. If you just used the git package, names did not "
+"change."
+msgstr ""
+
+#: ../../source/changes.rst:783 ../../source/changes.rst:963
+msgid "Blob"
+msgstr ""
+
+#: ../../source/changes.rst:784 ../../source/changes.rst:894
+msgid "former 'name' member renamed to path as it suits the actual data better"
+msgstr ""
+
+#: ../../source/changes.rst:787
+msgid "GitCommand"
+msgstr ""
+
+#: ../../source/changes.rst:788
+msgid ""
+"git.subcommand call scheme now prunes out None from the argument list, "
+"allowing to be called more comfortably as None can never be a valid to "
+"the git command if converted to a string."
+msgstr ""
+
+#: ../../source/changes.rst:791
+msgid ""
+"Renamed 'git_dir' attribute to 'working_dir' which is exactly how it is "
+"used"
+msgstr ""
+
+#: ../../source/changes.rst:794 ../../source/changes.rst:922
+#: ../../source/changes.rst:967 ../../source/changes.rst:1025
+msgid "Commit"
+msgstr ""
+
+#: ../../source/changes.rst:795
+msgid "'count' method is not an instance method to increase its ease of use"
+msgstr ""
+
+#: ../../source/changes.rst:796
+msgid "'name_rev' property returns a nice name for the commit's sha"
+msgstr ""
+
+#: ../../source/changes.rst:799
+msgid "Config"
+msgstr ""
+
+#: ../../source/changes.rst:800
+msgid ""
+"The git configuration can now be read and manipulated directly from "
+"within python using the GitConfigParser"
+msgstr ""
+
+#: ../../source/changes.rst:802
+msgid "Repo.config_reader() returns a read-only parser"
+msgstr ""
+
+#: ../../source/changes.rst:803
+msgid "Repo.config_writer() returns a read-write parser"
+msgstr ""
+
+#: ../../source/changes.rst:806 ../../source/changes.rst:931
+msgid "Diff"
+msgstr ""
+
+#: ../../source/changes.rst:807
+msgid ""
+"Members a a_commit and b_commit renamed to a_blob and b_blob - they are "
+"populated with Blob objects if possible"
+msgstr ""
+
+#: ../../source/changes.rst:809
+msgid "Members a_path and b_path removed as this information is kept in the blobs"
+msgstr ""
+
+#: ../../source/changes.rst:810
+msgid ""
+"Diffs are now returned as DiffIndex allowing to more quickly find the "
+"kind of diffs you are interested in"
+msgstr ""
+
+#: ../../source/changes.rst:814
+msgid "Diffing"
+msgstr ""
+
+#: ../../source/changes.rst:815
+msgid ""
+"Commit and Tree objects now support diffing natively with a common "
+"interface to compare against other Commits or Trees, against the working "
+"tree or against the index."
+msgstr ""
+
+#: ../../source/changes.rst:819
+msgid "Index"
+msgstr ""
+
+#: ../../source/changes.rst:820
+msgid ""
+"A new Index class allows to read and write index files directly, and to "
+"perform simple two and three way merges based on an arbitrary index."
+msgstr ""
+
+#: ../../source/changes.rst:824
+msgid "References"
+msgstr ""
+
+#: ../../source/changes.rst:825
+msgid "References are object that point to a Commit"
+msgstr ""
+
+#: ../../source/changes.rst:826
+msgid ""
+"SymbolicReference are a pointer to a Reference Object, which itself "
+"points to a specific Commit"
+msgstr ""
+
+#: ../../source/changes.rst:828
+msgid ""
+"They will dynamically retrieve their object at the time of query to "
+"assure the information is actual. Recently objects would be cached, hence"
+" ref object not be safely kept persistent."
+msgstr ""
+
+#: ../../source/changes.rst:833 ../../source/changes.rst:944
+#: ../../source/changes.rst:972 ../../source/changes.rst:1051
+msgid "Repo"
+msgstr ""
+
+#: ../../source/changes.rst:834
+msgid ""
+"Moved blame method from Blob to repo as it appeared to belong there much "
+"more."
+msgstr ""
+
+#: ../../source/changes.rst:835
+msgid ""
+"active_branch method now returns a Head object instead of a string with "
+"the name of the active branch."
+msgstr ""
+
+#: ../../source/changes.rst:837
+msgid ""
+"tree method now requires a Ref instance as input and defaults to the "
+"active_branch instead of master"
+msgstr ""
+
+#: ../../source/changes.rst:839
+msgid ""
+"is_dirty now takes additional arguments allowing fine-grained control "
+"about what is considered dirty"
+msgstr ""
+
+#: ../../source/changes.rst:841
+msgid "Removed the following methods:"
+msgstr ""
+
+#: ../../source/changes.rst:843
+msgid "'log' method as it as effectively the same as the 'commits' method"
+msgstr ""
+
+#: ../../source/changes.rst:844
+msgid ""
+"'commits_since' as it is just a flag given to rev-list in "
+"Commit.iter_items"
+msgstr ""
+
+#: ../../source/changes.rst:845
+msgid ""
+"'commit_count' as it was just a redirection to the respective commit "
+"method"
+msgstr ""
+
+#: ../../source/changes.rst:846
+msgid ""
+"'commits_between', replaced by a note on the iter_commits method as it "
+"can achieve the same thing"
+msgstr ""
+
+#: ../../source/changes.rst:847
+msgid ""
+"'commit_delta_from' as it was a very special case by comparing two "
+"different repjrelated repositories, i.e. clones, git-rev-list would be "
+"sufficient to find commits that would need to be transferred for example."
+msgstr ""
+
+#: ../../source/changes.rst:848
+msgid "'create' method which equals the 'init' method's functionality"
+msgstr ""
+
+#: ../../source/changes.rst:849
+msgid "'diff' - it returned a mere string which still had to be parsed"
+msgstr ""
+
+#: ../../source/changes.rst:850
+msgid "'commit_diff' - moved to Commit, Tree and Diff types respectively"
+msgstr ""
+
+#: ../../source/changes.rst:852
+msgid "Renamed the following methods:"
+msgstr ""
+
+#: ../../source/changes.rst:854
+msgid "commits to iter_commits to improve the performance, adjusted signature"
+msgstr ""
+
+#: ../../source/changes.rst:855
+msgid "init_bare to init, implying less about the options to be used"
+msgstr ""
+
+#: ../../source/changes.rst:856
+msgid ""
+"fork_bare to clone, as it was to represent general clone functionality, "
+"but implied a bare clone to be more versatile"
+msgstr ""
+
+#: ../../source/changes.rst:858
+msgid ""
+"archive_tar_gz and archive_tar and replaced by archive method with "
+"different signature"
+msgstr ""
+
+#: ../../source/changes.rst:860
+msgid ""
+"'commits' method has no max-count of returned commits anymore, it now "
+"behaves  like git-rev-list"
+msgstr ""
+
+#: ../../source/changes.rst:861
+msgid "The following methods and properties were added"
+msgstr ""
+
+#: ../../source/changes.rst:863
+msgid "'untracked_files' property, returning all currently untracked files"
+msgstr ""
+
+#: ../../source/changes.rst:864
+msgid "'head', creates a head object"
+msgstr ""
+
+#: ../../source/changes.rst:865
+msgid "'tag', creates a tag object"
+msgstr ""
+
+#: ../../source/changes.rst:866
+msgid "'iter_trees' method"
+msgstr ""
+
+#: ../../source/changes.rst:867
+msgid "'config_reader' method"
+msgstr ""
+
+#: ../../source/changes.rst:868
+msgid "'config_writer' method"
+msgstr ""
+
+#: ../../source/changes.rst:869
+msgid ""
+"'bare' property, previously it was a simple attribute that could be "
+"written"
+msgstr ""
+
+#: ../../source/changes.rst:871
+msgid "Renamed the following attributes"
+msgstr ""
+
+#: ../../source/changes.rst:873
+msgid "'path' is now 'git_dir'"
+msgstr ""
+
+#: ../../source/changes.rst:874
+msgid "'wd' is now 'working_dir'"
+msgstr ""
+
+#: ../../source/changes.rst:876
+msgid "Added attribute"
+msgstr ""
+
+#: ../../source/changes.rst:878
+msgid "'working_tree_dir' which may be None in case of bare repositories"
+msgstr ""
+
+#: ../../source/changes.rst:881
+msgid "Remote"
+msgstr ""
+
+#: ../../source/changes.rst:882
+msgid "Added Remote object allowing easy access to remotes"
+msgstr ""
+
+#: ../../source/changes.rst:883
+msgid "Repo.remotes lists all remotes"
+msgstr ""
+
+#: ../../source/changes.rst:884
+msgid "Repo.remote returns a remote of the specified name if it exists"
+msgstr ""
+
+#: ../../source/changes.rst:887
+msgid "Test Framework"
+msgstr ""
+
+#: ../../source/changes.rst:888
+msgid ""
+"Added support for common TestCase base class that provides additional "
+"functionality to receive repositories tests can also write to. This way, "
+"more aspects can be tested under real-world ( un-mocked ) conditions."
+msgstr ""
+
+#: ../../source/changes.rst:893 ../../source/changes.rst:998
+#: ../../source/changes.rst:1047 ../../source/changes.rst:1058
+msgid "Tree"
+msgstr ""
+
+#: ../../source/changes.rst:895
+msgid "added traverse method allowing to recursively traverse tree items"
+msgstr ""
+
+#: ../../source/changes.rst:896
+msgid "deleted blob method"
+msgstr ""
+
+#: ../../source/changes.rst:897
+msgid ""
+"added blobs and trees properties allowing to query the respective items "
+"in the tree"
+msgstr ""
+
+#: ../../source/changes.rst:899
+msgid ""
+"now mimics behaviour of a read-only list instead of a dict to maintain "
+"order."
+msgstr ""
+
+#: ../../source/changes.rst:900
+msgid ""
+"content_from_string method is now private and not part of the public API "
+"anymore"
+msgstr ""
+
+#: ../../source/changes.rst:904
+msgid "0.1.6"
+msgstr ""
+
+#: ../../source/changes.rst:908
+msgid "Added in Sphinx documentation."
+msgstr ""
+
+#: ../../source/changes.rst:910
+msgid ""
+"Removed ambiguity between paths and treeishs. When calling commands that "
+"accept treeish and path arguments and there is a path with the same name "
+"as a treeish git cowardly refuses to pick one and asks for the command to"
+" use the unambiguous syntax where '--' separates the treeish from the "
+"paths."
+msgstr ""
+
+#: ../../source/changes.rst:915
+msgid ""
+"``Repo.commits``, ``Repo.commits_between``, ``Repo.commits_since``, "
+"``Repo.commit_count``, ``Repo.commit``, ``Commit.count`` and "
+"``Commit.find_all`` all now optionally take a path argument which "
+"constrains the lookup by path.  This changes the order of the positional "
+"arguments in ``Repo.commits`` and ``Repo.commits_since``."
+msgstr ""
+
+#: ../../source/changes.rst:923
+msgid ""
+"``Commit.message`` now contains the full commit message (rather than just"
+" the first line) and a new property ``Commit.summary`` contains the first"
+" line of the commit message."
+msgstr ""
+
+#: ../../source/changes.rst:927
+msgid ""
+"Fixed a failure when trying to lookup the stats of a parentless commit "
+"from a bare repo."
+msgstr ""
+
+#: ../../source/changes.rst:932
+msgid ""
+"The diff parser is now far faster and also addresses a bug where "
+"sometimes b_mode was not set."
+msgstr ""
+
+#: ../../source/changes.rst:935
+msgid ""
+"Added support for parsing rename info to the diff parser. Addition of new"
+" properties ``Diff.renamed``, ``Diff.rename_from``, and "
+"``Diff.rename_to``."
+msgstr ""
+
+#: ../../source/changes.rst:939
+msgid "Head"
+msgstr ""
+
+#: ../../source/changes.rst:940
+msgid ""
+"Corrected problem where branches was only returning the last path "
+"component instead of the entire path component following refs/heads/."
+msgstr ""
+
+#: ../../source/changes.rst:945
+msgid "Modified the gzip archive creation to use the python gzip module."
+msgstr ""
+
+#: ../../source/changes.rst:947
+msgid ""
+"Corrected ``commits_between`` always returning None instead of the "
+"reversed list."
+msgstr ""
+
+#: ../../source/changes.rst:952
+msgid "0.1.5"
+msgstr ""
+
+#: ../../source/changes.rst:956
+msgid "upgraded to Mock 0.4 dependency."
+msgstr ""
+
+#: ../../source/changes.rst:958
+msgid "Replace GitPython with git in repr() outputs."
+msgstr ""
+
+#: ../../source/changes.rst:960
+msgid "Fixed packaging issue caused by ez_setup.py."
+msgstr ""
+
+#: ../../source/changes.rst:964
+msgid "No longer strip newlines from Blob data."
+msgstr ""
+
+#: ../../source/changes.rst:968
+msgid ""
+"Corrected problem with git-rev-list --bisect-all. See "
+"http://groups.google.com/group/git-"
+"python/browse_thread/thread/aed1d5c4b31d5027"
+msgstr ""
+
+#: ../../source/changes.rst:973
+msgid "Corrected problems with creating bare repositories."
+msgstr ""
+
+#: ../../source/changes.rst:975
+msgid "Repo.tree no longer accepts a path argument. Use:"
+msgstr ""
+
+#: ../../source/changes.rst:979
+msgid "Made daemon export a property of Repo. Now you can do this:"
+msgstr ""
+
+#: ../../source/changes.rst:984
+msgid "Allows modifying the project description. Do this:"
+msgstr ""
+
+#: ../../source/changes.rst:990
+msgid ""
+"Added a read-only property Repo.is_dirty which reflects the status of the"
+" working directory."
+msgstr ""
+
+#: ../../source/changes.rst:993
+msgid ""
+"Added a read-only Repo.active_branch property which returns the name of "
+"the currently active branch."
+msgstr ""
+
+#: ../../source/changes.rst:999
+msgid ""
+"Switched to using a dictionary for Tree contents since you will usually "
+"want to access them by name and order is unimportant."
+msgstr ""
+
+#: ../../source/changes.rst:1002
+msgid "Implemented a dictionary protocol for Tree objects. The following:"
+msgstr ""
+
+#: ../../source/changes.rst:1004
+msgid "child = tree.contents['grit']"
+msgstr ""
+
+#: ../../source/changes.rst:1006
+msgid "becomes:"
+msgstr ""
+
+#: ../../source/changes.rst:1008
+msgid "child = tree['grit']"
+msgstr ""
+
+#: ../../source/changes.rst:1010
+msgid "Made Tree.content_from_string a static method."
+msgstr ""
+
+#: ../../source/changes.rst:1013
+msgid "0.1.4.1"
+msgstr ""
+
+#: ../../source/changes.rst:1015
+msgid ""
+"removed ``method_missing`` stuff and replaced with a ``__getattr__`` "
+"override in ``Git``."
+msgstr ""
+
+#: ../../source/changes.rst:1019
+msgid "0.1.4"
+msgstr ""
+
+#: ../../source/changes.rst:1021
+msgid ""
+"renamed ``git_python`` to ``git``. Be sure to delete all pyc files before"
+" testing."
+msgstr ""
+
+#: ../../source/changes.rst:1026
+msgid "Fixed problem with commit stats not working under all conditions."
+msgstr ""
+
+#: ../../source/changes.rst:1029
+msgid "Git"
+msgstr ""
+
+#: ../../source/changes.rst:1030
+msgid "Renamed module to cmd."
+msgstr ""
+
+#: ../../source/changes.rst:1032
+msgid "Removed shell escaping completely."
+msgstr ""
+
+#: ../../source/changes.rst:1034
+msgid "Added support for ``stderr``, ``stdin``, and ``with_status``."
+msgstr ""
+
+#: ../../source/changes.rst:1036
+msgid ""
+"``git_dir`` is now optional in the constructor for ``git.Git``.  Git now "
+"falls back to ``os.getcwd()`` when git_dir is not specified."
+msgstr ""
+
+#: ../../source/changes.rst:1039
+msgid ""
+"add a ``with_exceptions`` keyword argument to git commands. "
+"``GitCommandError`` is raised when the exit status is non-zero."
+msgstr ""
+
+#: ../../source/changes.rst:1042
+msgid ""
+"add support for a ``GIT_PYTHON_TRACE`` environment variable. "
+"``GIT_PYTHON_TRACE`` allows us to debug GitPython's usage of git through "
+"the use of an environment variable."
+msgstr ""
+
+#: ../../source/changes.rst:1048
+msgid "Fixed up problem where ``name`` doesn't exist on root of tree."
+msgstr ""
+
+#: ../../source/changes.rst:1052
+msgid "Corrected problem with creating bare repo.  Added ``Repo.create`` alias."
+msgstr ""
+
+#: ../../source/changes.rst:1055
+msgid "0.1.2"
+msgstr ""
+
+#: ../../source/changes.rst:1059
+msgid ""
+"Corrected problem with ``Tree.__div__`` not working with zero length "
+"files. Removed ``__len__`` override and replaced with size instead. Also "
+"made size cache properly. This is a breaking change."
+msgstr ""
+
+#: ../../source/changes.rst:1064
+msgid "0.1.1"
+msgstr ""
+
+#: ../../source/changes.rst:1065
+msgid "Fixed up some urls because I'm a moron"
+msgstr ""
+
+#: ../../source/changes.rst:1068
+msgid "0.1.0"
+msgstr ""
+
+#: ../../source/changes.rst:1069
+msgid "initial release"
+msgstr ""
+

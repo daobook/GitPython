@@ -1,0 +1,5649 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Copyright (C) 2008, 2009 Michael Trier and contributors,
+# 2010-2015 Sebastian Thiel
+# This file is distributed under the same license as the GitPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitPython 3.1.24\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-16 13:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/reference.rst:4
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/reference.rst:7
+msgid "Version"
+msgstr ""
+
+#: ../../source/reference.rst:11
+msgid "Current GitPython version."
+msgstr ""
+
+#: ../../source/reference.rst:14
+msgid "Objects.Base"
+msgstr ""
+
+#: git.objects.base.IndexObject:1 of
+msgid ""
+"Base for all objects that can be part of the index file , namely Tree, "
+"Blob and SubModule objects"
+msgstr ""
+
+#: git.cmd.Git.clear_cache git.cmd.Git.execute git.cmd.Git.get_object_header
+#: git.cmd.Git.stream_object_data git.cmd.Git.update_environment
+#: git.cmd.Git.version_info git.cmd.Git.working_dir git.diff.Diff.renamed
+#: git.diff.Diff.renamed_file git.diff.DiffIndex.iter_change_type
+#: git.diff.Diffable.diff git.index.base.IndexFile.add
+#: git.index.base.IndexFile.checkout git.index.base.IndexFile.commit
+#: git.index.base.IndexFile.from_tree git.index.base.IndexFile.iter_blobs
+#: git.index.base.IndexFile.merge_tree git.index.base.IndexFile.new
+#: git.index.base.IndexFile.path git.index.base.IndexFile.remove
+#: git.index.base.IndexFile.reset git.index.base.IndexFile.resolve_blobs
+#: git.index.base.IndexFile.unmerged_blobs git.index.base.IndexFile.update
+#: git.index.base.IndexFile.write git.index.base.IndexFile.write_tree
+#: git.index.fun.entry_key git.index.fun.hook_path
+#: git.index.fun.write_tree_from_cache git.index.typ.BaseIndexEntry.from_blob
+#: git.index.typ.BaseIndexEntry.to_blob git.index.typ.IndexEntry.ctime
+#: git.index.typ.IndexEntry.from_base git.index.typ.IndexEntry.from_blob
+#: git.objects.base.IndexObject.__hash__ git.objects.base.IndexObject.abspath
+#: git.objects.base.IndexObject.name git.objects.base.Object.__eq__
+#: git.objects.base.Object.__hash__ git.objects.base.Object.__ne__
+#: git.objects.base.Object.__repr__ git.objects.base.Object.__str__
+#: git.objects.base.Object.data_stream git.objects.base.Object.hexsha
+#: git.objects.base.Object.new git.objects.base.Object.new_from_sha
+#: git.objects.blob.Blob.mime_type git.objects.commit.Commit.__init__
+#: git.objects.commit.Commit.count git.objects.commit.Commit.create_from_tree
+#: git.objects.commit.Commit.iter_items git.objects.commit.Commit.iter_parents
+#: git.objects.commit.Commit.name_rev git.objects.commit.Commit.stats
+#: git.objects.commit.Commit.summary git.objects.fun.traverse_tree_recursive
+#: git.objects.fun.traverse_trees_recursive
+#: git.objects.submodule.base.Submodule.__repr__
+#: git.objects.submodule.base.Submodule.__str__
+#: git.objects.submodule.base.Submodule.add
+#: git.objects.submodule.base.Submodule.branch
+#: git.objects.submodule.base.Submodule.branch_name
+#: git.objects.submodule.base.Submodule.branch_path
+#: git.objects.submodule.base.Submodule.children
+#: git.objects.submodule.base.Submodule.config_reader
+#: git.objects.submodule.base.Submodule.config_writer
+#: git.objects.submodule.base.Submodule.exists
+#: git.objects.submodule.base.Submodule.iter_items
+#: git.objects.submodule.base.Submodule.module
+#: git.objects.submodule.base.Submodule.module_exists
+#: git.objects.submodule.base.Submodule.move
+#: git.objects.submodule.base.Submodule.name
+#: git.objects.submodule.base.Submodule.parent_commit
+#: git.objects.submodule.base.Submodule.remove
+#: git.objects.submodule.base.Submodule.rename
+#: git.objects.submodule.base.Submodule.set_parent_commit
+#: git.objects.submodule.base.Submodule.update
+#: git.objects.submodule.base.Submodule.url
+#: git.objects.submodule.root.RootModule.module
+#: git.objects.submodule.root.RootModule.update
+#: git.objects.submodule.util.mkhead git.objects.submodule.util.sm_name
+#: git.objects.submodule.util.sm_section git.objects.tree.Tree.blobs
+#: git.objects.tree.Tree.cache git.objects.tree.Tree.list_traverse
+#: git.objects.tree.Tree.trees git.objects.tree.TreeModifier.add
+#: git.objects.util.get_object_type_by_name
+#: git.objects.util.parse_actor_and_date git.objects.util.parse_date
+#: git.objects.util.verify_utctz git.refs.head.HEAD.orig_head
+#: git.refs.head.HEAD.reset git.refs.head.Head.checkout
+#: git.refs.head.Head.config_reader git.refs.head.Head.config_writer
+#: git.refs.head.Head.rename git.refs.head.Head.set_tracking_branch
+#: git.refs.head.Head.tracking_branch git.refs.log.RefLog.append_entry
+#: git.refs.log.RefLog.entry_at git.refs.log.RefLog.from_file
+#: git.refs.log.RefLog.iter_entries git.refs.log.RefLog.path
+#: git.refs.log.RefLogEntry.format git.refs.log.RefLogEntry.from_line
+#: git.refs.log.RefLogEntry.new git.refs.reference.Reference.name
+#: git.refs.symbolic.SymbolicReference.create
+#: git.refs.symbolic.SymbolicReference.dereference_recursive
+#: git.refs.symbolic.SymbolicReference.from_path
+#: git.refs.symbolic.SymbolicReference.is_detached
+#: git.refs.symbolic.SymbolicReference.is_remote
+#: git.refs.symbolic.SymbolicReference.is_valid
+#: git.refs.symbolic.SymbolicReference.iter_items
+#: git.refs.symbolic.SymbolicReference.log
+#: git.refs.symbolic.SymbolicReference.log_append
+#: git.refs.symbolic.SymbolicReference.log_entry
+#: git.refs.symbolic.SymbolicReference.name
+#: git.refs.symbolic.SymbolicReference.rename
+#: git.refs.symbolic.SymbolicReference.set_commit
+#: git.refs.symbolic.SymbolicReference.set_object
+#: git.refs.symbolic.SymbolicReference.set_reference
+#: git.refs.symbolic.SymbolicReference.to_full_path
+#: git.refs.tag.TagReference.commit git.refs.tag.TagReference.create
+#: git.refs.tag.TagReference.tag git.remote.FetchInfo.commit
+#: git.remote.FetchInfo.name git.remote.PushInfo.remote_ref
+#: git.remote.Remote.add_url git.remote.Remote.config_reader
+#: git.remote.Remote.config_writer git.remote.Remote.delete_url
+#: git.remote.Remote.exists git.remote.Remote.fetch
+#: git.remote.Remote.iter_items git.remote.Remote.pull git.remote.Remote.push
+#: git.remote.Remote.refs git.remote.Remote.set_url
+#: git.remote.Remote.stale_refs git.remote.Remote.update git.remote.Remote.urls
+#: git.repo.base.Repo.__init__ git.repo.base.Repo.archive
+#: git.repo.base.Repo.bare git.repo.base.Repo.blame
+#: git.repo.base.Repo.blame_incremental git.repo.base.Repo.branches
+#: git.repo.base.Repo.clone git.repo.base.Repo.clone_from
+#: git.repo.base.Repo.commit git.repo.base.Repo.common_dir
+#: git.repo.base.Repo.config_reader git.repo.base.Repo.config_writer
+#: git.repo.base.Repo.create_head git.repo.base.Repo.create_remote
+#: git.repo.base.Repo.create_submodule git.repo.base.Repo.create_tag
+#: git.repo.base.Repo.currently_rebasing_on
+#: git.repo.base.Repo.has_separate_working_tree git.repo.base.Repo.head
+#: git.repo.base.Repo.heads git.repo.base.Repo.ignored git.repo.base.Repo.index
+#: git.repo.base.Repo.init git.repo.base.Repo.is_ancestor
+#: git.repo.base.Repo.is_dirty git.repo.base.Repo.iter_commits
+#: git.repo.base.Repo.iter_trees git.repo.base.Repo.merge_base
+#: git.repo.base.Repo.references git.repo.base.Repo.refs
+#: git.repo.base.Repo.remote git.repo.base.Repo.submodule
+#: git.repo.base.Repo.submodules git.repo.base.Repo.tag git.repo.base.Repo.tree
+#: git.repo.base.Repo.untracked_files git.repo.base.Repo.working_tree_dir
+#: git.repo.fun.name_to_object git.repo.fun.rev_parse
+#: git.repo.fun.short_to_long git.util.Actor.committer
+#: git.util.RemoteProgress.new_message_handler git.util.assure_directory_exists
+#: git.util.get_user_id git.util.stream_copy of
+msgid "返回"
+msgstr ""
+
+#: git.objects.base.IndexObject.__hash__:1 of
+msgid ""
+"Hash of our path as index items are uniquely identifiable by path, not by"
+" their data !"
+msgstr ""
+
+#: git.objects.base.IndexObject.__init__:1 git.objects.tree.Tree.__init__:1 of
+msgid "Initialize a newly instanced IndexObject"
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait git.cmd.Git.__call__ git.cmd.Git.__init__
+#: git.cmd.Git.custom_environment git.cmd.Git.execute
+#: git.cmd.Git.set_persistent_git_options git.cmd.Git.update_environment
+#: git.diff.DiffIndex.iter_change_type git.diff.Diffable.diff
+#: git.exc.CommandError git.index.base.IndexFile.add
+#: git.index.base.IndexFile.checkout git.index.base.IndexFile.from_tree
+#: git.index.base.IndexFile.iter_blobs git.index.base.IndexFile.merge_tree
+#: git.index.base.IndexFile.move git.index.base.IndexFile.new
+#: git.index.base.IndexFile.remove git.index.base.IndexFile.reset
+#: git.index.base.IndexFile.write git.index.fun.entry_key
+#: git.index.fun.write_cache git.index.fun.write_tree_from_cache
+#: git.index.typ.BlobFilter.__init__ git.index.typ.IndexEntry.from_base
+#: git.objects.base.IndexObject.__init__ git.objects.base.Object.__init__
+#: git.objects.base.Object.new git.objects.base.Object.new_from_sha
+#: git.objects.commit.Commit.__init__ git.objects.commit.Commit.count
+#: git.objects.commit.Commit.create_from_tree
+#: git.objects.commit.Commit.iter_items git.objects.commit.Commit.iter_parents
+#: git.objects.fun.traverse_tree_recursive
+#: git.objects.fun.traverse_trees_recursive
+#: git.objects.submodule.base.Submodule.__init__
+#: git.objects.submodule.base.Submodule.add
+#: git.objects.submodule.base.Submodule.config_writer
+#: git.objects.submodule.base.Submodule.move
+#: git.objects.submodule.base.Submodule.remove
+#: git.objects.submodule.base.Submodule.set_parent_commit
+#: git.objects.submodule.base.Submodule.update
+#: git.objects.submodule.root.RootModule.__init__
+#: git.objects.submodule.root.RootModule.update
+#: git.objects.submodule.util.SubmoduleConfigParser.__init__
+#: git.objects.tag.TagObject.__init__ git.objects.tree.Tree.__init__
+#: git.objects.tree.TreeModifier.add git.objects.util.get_object_type_by_name
+#: git.refs.head.HEAD.reset git.refs.head.Head.checkout
+#: git.refs.head.Head.delete git.refs.head.Head.rename
+#: git.refs.head.Head.set_tracking_branch git.refs.log.RefLog.append_entry
+#: git.refs.log.RefLog.entry_at git.refs.log.RefLog.from_file
+#: git.refs.log.RefLog.iter_entries git.refs.log.RefLog.path
+#: git.refs.log.RefLogEntry.from_line git.refs.reference.Reference.__init__
+#: git.refs.symbolic.SymbolicReference.create
+#: git.refs.symbolic.SymbolicReference.delete
+#: git.refs.symbolic.SymbolicReference.dereference_recursive
+#: git.refs.symbolic.SymbolicReference.from_path
+#: git.refs.symbolic.SymbolicReference.iter_items
+#: git.refs.symbolic.SymbolicReference.log_append
+#: git.refs.symbolic.SymbolicReference.log_entry
+#: git.refs.symbolic.SymbolicReference.rename
+#: git.refs.symbolic.SymbolicReference.set_object
+#: git.refs.symbolic.SymbolicReference.set_reference
+#: git.refs.tag.TagReference.create git.remote.Remote.__init__
+#: git.remote.Remote.add_url git.remote.Remote.delete_url
+#: git.remote.Remote.fetch git.remote.Remote.pull git.remote.Remote.push
+#: git.remote.Remote.set_url git.remote.Remote.update
+#: git.repo.base.Repo.__init__ git.repo.base.Repo.archive
+#: git.repo.base.Repo.blame git.repo.base.Repo.blame_incremental
+#: git.repo.base.Repo.clone git.repo.base.Repo.clone_from
+#: git.repo.base.Repo.commit git.repo.base.Repo.config_reader
+#: git.repo.base.Repo.config_writer git.repo.base.Repo.delete_head
+#: git.repo.base.Repo.ignored git.repo.base.Repo.init
+#: git.repo.base.Repo.is_ancestor git.repo.base.Repo.iter_commits
+#: git.repo.base.Repo.merge_base git.repo.base.Repo.tag git.repo.base.Repo.tree
+#: git.repo.fun.name_to_object git.repo.fun.rev_parse
+#: git.repo.fun.short_to_long git.util.Actor.committer
+#: git.util.BlockingLockFile.__init__ git.util.CallableRemoteProgress.update
+#: git.util.RemoteProgress.update git.util.assure_directory_exists of
+msgid "参数"
+msgstr ""
+
+#: git.objects.base.IndexObject.__init__:3 git.objects.tree.Tree.__init__:3 of
+msgid "is the Repo we are located in"
+msgstr ""
+
+#: git.objects.base.IndexObject.__init__:4 git.objects.commit.Commit.__init__:4
+#: git.objects.tree.Tree.__init__:4 of
+msgid "20 byte sha1"
+msgstr ""
+
+#: git.objects.base.IndexObject.__init__:5 git.objects.tree.Tree.__init__:5 of
+msgid ""
+"is the stat compatible file mode as int, use the stat module to evaluate "
+"the information"
+msgstr ""
+
+#: git.objects.base.IndexObject.__init__:8 git.objects.tree.Tree.__init__:8 of
+msgid ""
+"is the path to the file in the file system, relative to the git "
+"repository root, i.e. file.ext or folder/other.ext"
+msgstr ""
+
+#: git.cmd.Git.execute git.cmd.Git.get_object_header
+#: git.cmd.Git.stream_object_data git.config.SectionConstraint
+#: git.diff.Diff.renamed git.diff.Diffable git.diff.Diffable.diff
+#: git.index.base.IndexFile.checkout git.index.base.IndexFile.commit
+#: git.index.base.IndexFile.diff git.index.base.IndexFile.from_tree
+#: git.index.base.IndexFile.resolve_blobs
+#: git.index.base.IndexFile.unmerged_blobs git.index.base.IndexFile.update
+#: git.index.base.IndexFile.write_tree git.index.typ.BaseIndexEntry.stage
+#: git.index.util.post_clear_cache git.objects.base.IndexObject.__init__
+#: git.objects.base.Object.data_stream git.objects.base.Object.new
+#: git.objects.blob.Blob.mime_type git.objects.commit.Commit.__init__
+#: git.objects.commit.Commit.create_from_tree
+#: git.objects.fun.traverse_trees_recursive
+#: git.objects.submodule.base.Submodule.add
+#: git.objects.submodule.base.Submodule.config_reader
+#: git.objects.submodule.base.Submodule.config_writer
+#: git.objects.submodule.base.Submodule.move
+#: git.objects.submodule.base.Submodule.name
+#: git.objects.submodule.base.Submodule.parent_commit
+#: git.objects.submodule.base.Submodule.remove
+#: git.objects.submodule.base.Submodule.update git.objects.tree.Tree.__init__
+#: git.objects.util.parse_date git.refs.head.Head.checkout
+#: git.refs.head.Head.rename git.refs.log.RefLog.append_entry
+#: git.refs.remote.RemoteReference.delete
+#: git.refs.symbolic.SymbolicReference.create
+#: git.refs.symbolic.SymbolicReference.from_path
+#: git.refs.symbolic.SymbolicReference.set_object
+#: git.refs.symbolic.SymbolicReference.set_reference
+#: git.remote.Remote.config_writer git.remote.Remote.fetch
+#: git.remote.Remote.push git.repo.base.Repo.config_reader
+#: git.repo.base.Repo.create_submodule
+#: git.repo.base.Repo.has_separate_working_tree git.repo.base.Repo.index
+#: git.repo.base.Repo.iter_commits git.repo.base.Repo.iter_trees
+#: git.repo.base.Repo.tree git.repo.base.Repo.untracked_files
+#: git.util.BlockingLockFile git.util.IndexFileSHA1Writer
+#: git.util.IterableObj.list_items git.util.rmtree of
+msgid "note"
+msgstr ""
+
+#: git.objects.base.IndexObject.__init__:12 git.objects.tree.Tree.__init__:12
+#: of
+msgid ""
+"Path may not be set of the index object has been created directly as it "
+"cannot be retrieved without knowing the parent tree."
+msgstr ""
+
+#: git.objects.base.IndexObject.abspath:1 of
+msgid ""
+"Absolute path to this index object in the file system ( as opposed to the"
+" .path field which is a path relative to the git repository ).  The "
+"returned path will be native to the system and contains '' on windows."
+msgstr ""
+
+#: git.objects.base.IndexObject.abspath:2 of
+msgid ""
+"Absolute path to this index object in the file system ( as opposed to the"
+" .path field which is a path relative to the git repository )."
+msgstr ""
+
+#: git.objects.base.IndexObject.abspath:5 of
+msgid "The returned path will be native to the system and contains '' on windows."
+msgstr ""
+
+#: git.objects.base.IndexObject.name:1 of
+msgid "Name portion of the path, effectively being the basename"
+msgstr ""
+
+#: git.objects.base.Object:1 of
+msgid "Implements an Object which may be Blobs, Trees, Commits and Tags"
+msgstr ""
+
+#: git.objects.base.Object.__eq__:1 of
+msgid "True if the objects have the same SHA1"
+msgstr ""
+
+#: git.objects.base.Object.__hash__:1 of
+msgid "Hash of our id allowing objects to be used in dicts and sets"
+msgstr ""
+
+#: git.objects.base.Object.__init__:1 of
+msgid ""
+"Initialize an object by identifying it by its binary sha. All keyword "
+"arguments will be set on demand if None."
+msgstr ""
+
+#: git.objects.base.Object.__init__:4 git.objects.tag.TagObject.__init__:3 of
+msgid "repository this object is located in"
+msgstr ""
+
+#: git.objects.base.Object.__init__:6 git.objects.tag.TagObject.__init__:4 of
+msgid "20 byte SHA1"
+msgstr ""
+
+#: git.objects.base.Object.__ne__:1 of
+msgid "True if the objects do not have the same SHA1"
+msgstr ""
+
+#: git.objects.base.Object.__repr__:1
+#: git.objects.submodule.base.Submodule.__repr__:1 of
+msgid "string with pythonic representation of our object"
+msgstr ""
+
+#: git.objects.base.Object.__str__:1
+#: git.objects.submodule.base.Submodule.__str__:1 of
+msgid "string of our SHA1 as understood by all git commands"
+msgstr ""
+
+#: git.objects.base.Object.data_stream:1 of
+msgid "File Object compatible stream to the uncompressed raw data of the object"
+msgstr ""
+
+#: git.objects.base.Object.data_stream:2 of
+msgid "returned streams must be read in order"
+msgstr ""
+
+#: git.objects.base.Object.hexsha:1 of
+msgid "40 byte hex version of our 20 byte binary sha"
+msgstr ""
+
+#: git.objects.base.Object.new:1 of
+msgid ""
+"New Object instance of a type appropriate to the object type behind id. "
+"The id of the newly created object will be a binsha even though the input"
+" id may have been a Reference or Rev-Spec"
+msgstr ""
+
+#: git.objects.base.Object.new:5 of
+msgid "reference, rev-spec, or hexsha"
+msgstr ""
+
+#: git.objects.base.Object.new:7 of
+msgid ""
+"This cannot be a __new__ method as it would always call __init__ with the"
+" input id which is not necessarily a binsha."
+msgstr ""
+
+#: git.objects.base.Object.new_from_sha:1 of
+msgid ""
+"new object instance of a type appropriate to represent the given binary "
+"sha1"
+msgstr ""
+
+#: git.objects.base.Object.new_from_sha:3 of
+msgid "20 byte binary sha1"
+msgstr ""
+
+#: git.objects.base.Object.stream_data:1 of
+msgid ""
+"Writes our data directly to the given output stream :param ostream: File "
+"object compatible stream object. :return: self"
+msgstr ""
+
+#: ../../source/reference.rst:22
+msgid "Objects.Blob"
+msgstr ""
+
+#: git.objects.blob.Blob:1 of
+msgid "A Blob encapsulates a git blob object"
+msgstr ""
+
+#: git.objects.blob.Blob.mime_type:1 of
+msgid "String describing the mime type of this file (based on the filename)"
+msgstr ""
+
+#: git.objects.blob.Blob.mime_type:2 of
+msgid "Defaults to 'text/plain' in case the actual file type is unknown."
+msgstr ""
+
+#: ../../source/reference.rst:30
+msgid "Objects.Commit"
+msgstr ""
+
+#: git.objects.commit.Commit:1 of
+msgid "Wraps a git Commit object."
+msgstr ""
+
+#: git.objects.commit.Commit:3 of
+msgid ""
+"This class will act lazily on some of its attributes and will query the "
+"value on demand only if it involves calling the git binary."
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:1 of
+msgid ""
+"Instantiate a new Commit. All keyword arguments taking None as default "
+"will be implicitly set on first query."
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:5 of
+msgid "tuple( Commit, ... ) is a tuple of commit ids or actual Commits"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:7 of
+msgid "Tree Tree object"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:9 of
+msgid "Actor is the author Actor object"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:11 of
+msgid ""
+"int_seconds_since_epoch is the authored DateTime - use time.gmtime() to "
+"convert it into a different format"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:14 of
+msgid "int_seconds_west_of_utc is the timezone that the authored_date is in"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:16 of
+msgid "Actor is the committer string"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:18 of
+msgid ""
+"int_seconds_since_epoch is the committed DateTime - use time.gmtime() to "
+"convert it into a different format"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:21 of
+msgid "int_seconds_west_of_utc is the timezone that the committed_date is in"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:23 of
+msgid "string is the commit message"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:25 of
+msgid "string encoding of the message, defaults to UTF-8"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:27 of
+msgid ""
+"List or tuple of Commit objects which are our parent(s) in the commit "
+"dependency graph"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:30 of
+msgid "git.Commit"
+msgstr ""
+
+#: git.objects.commit.Commit.__init__:33 of
+msgid ""
+"Timezone information is in the same format and in the same sign as what "
+"time.altzone returns. The sign is inverted compared to git's UTC "
+"timezone."
+msgstr ""
+
+#: of typing.Protocol.__init_subclass__.<locals>._proto_hook:1
+msgid "Abstract classes can override this to customize issubclass()."
+msgstr ""
+
+#: of typing.Protocol.__init_subclass__.<locals>._proto_hook:3
+msgid ""
+"This is invoked early on by abc.ABCMeta.__subclasscheck__(). It should "
+"return True, False or NotImplemented.  If it returns NotImplemented, the "
+"normal algorithm is used.  Otherwise, it overrides the normal algorithm "
+"(and the outcome is cached)."
+msgstr ""
+
+#: git.objects.commit.Commit.count:1 of
+msgid "Count the number of commits reachable from this commit"
+msgstr ""
+
+#: git.objects.commit.Commit.count:3 of
+msgid ""
+"is an optional path or a list of paths restricting the return value to "
+"commits actually containing the paths"
+msgstr ""
+
+#: git.objects.commit.Commit.count:7 of
+msgid ""
+"Additional options to be passed to git-rev-list. They must not alter the "
+"output style of the command, or parsing will yield incorrect results"
+msgstr ""
+
+#: git.objects.commit.Commit.count:10 of
+msgid "int defining the number of reachable commits"
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:1 of
+msgid "Commit the given tree, creating a commit object."
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:3 of
+msgid "Repo object the commit should be part of"
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:4 of
+msgid "Tree object or hex or bin sha the tree of the new commit"
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:6 of
+msgid ""
+"Commit message. It may be an empty string if no message is provided. It "
+"will be converted to a string , in any case."
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:8 of
+msgid ""
+"Optional Commit objects to use as parents for the new commit. If empty "
+"list, the commit will have no parents at all and become a root commit. If"
+" None , the current head commit will be the parent of the new commit "
+"object"
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:14 of
+msgid ""
+"If True, the HEAD will be advanced to the new commit automatically. Else "
+"the HEAD will remain pointing on the previous commit. This could lead to "
+"undesired results when diffing files."
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:18 of
+msgid ""
+"The name of the author, optional. If unset, the repository configuration "
+"is used to obtain this value."
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:20 of
+msgid ""
+"The name of the committer, optional. If unset, the repository "
+"configuration is used to obtain this value."
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:22 of
+msgid "The timestamp for the author field"
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:23 of
+msgid "The timestamp for the committer field"
+msgstr ""
+
+#: git.index.base.IndexFile.commit:8
+#: git.objects.commit.Commit.create_from_tree:25 of
+msgid "Commit object representing the new commit"
+msgstr ""
+
+#: git.objects.commit.Commit.create_from_tree:28 of
+msgid ""
+"Additional information about the committer and Author are taken from the "
+"environment or from the git configuration, see git-commit-tree for more "
+"information"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_items:1 of
+msgid "Find all commits matching the given criteria."
+msgstr ""
+
+#: git.objects.commit.Commit.iter_items:3
+#: git.refs.symbolic.SymbolicReference.iter_items:3 of
+msgid "is the Repo"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_items:4 of
+msgid "revision specifier, see git-rev-parse for viable options"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_items:5 of
+msgid ""
+"is an optional path or list of paths, if set only Commits that include "
+"the path or paths will be considered"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_items:8 of
+msgid ""
+"optional keyword arguments to git rev-list where ``max_count`` is the "
+"maximum number of commits to fetch ``skip`` is the number of commits to "
+"skip ``since`` all commits since i.e. '1970-01-01'"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_items:13 of
+msgid "iterator yielding Commit items"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_parents:1 of
+msgid "Iterate _all_ parents of this commit."
+msgstr ""
+
+#: git.objects.commit.Commit.iter_parents:3 of
+msgid ""
+"Optional path or list of paths limiting the Commits to those that contain"
+" at least one of the paths"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_parents:6 of
+msgid "All arguments allowed by git-rev-list"
+msgstr ""
+
+#: git.objects.commit.Commit.iter_parents:7 of
+msgid "Iterator yielding Commit objects which are parents of self"
+msgstr ""
+
+#: git.objects.commit.Commit.name_rev:1 of
+msgid ""
+"String describing the commits hex sha based on the closest Reference. "
+"Mostly useful for UI purposes"
+msgstr ""
+
+#: git.objects.commit.Commit.replace:1 of
+msgid "Create new commit object from existing commit object."
+msgstr ""
+
+#: git.objects.commit.Commit.replace:3 of
+msgid ""
+"Any values provided as keyword arguments will replace the corresponding "
+"attribute in the new object."
+msgstr ""
+
+#: git.objects.commit.Commit.stats:1 of
+msgid ""
+"Create a git stat from changes between this commit and its first parent "
+"or from all changes done if this is the very first commit."
+msgstr ""
+
+#: git.objects.commit.Commit.stats:4 of
+msgid "git.Stats"
+msgstr ""
+
+#: git.objects.commit.Commit.summary:1 of
+msgid "First line of the commit message"
+msgstr ""
+
+#: ../../source/reference.rst:38
+msgid "Objects.Tag"
+msgstr ""
+
+#: git.objects.tag:1 of
+msgid "Module containing all object based types."
+msgstr ""
+
+#: git.objects.tag.TagObject:1 of
+msgid ""
+"Non-Lightweight tag carrying additional information about an object we "
+"are pointing to."
+msgstr ""
+
+#: git.objects.tag.TagObject.__init__:1 of
+msgid "Initialize a tag object with additional data"
+msgstr ""
+
+#: git.objects.tag.TagObject.__init__:5 of
+msgid "Object instance of object we are pointing to"
+msgstr ""
+
+#: git.objects.tag.TagObject.__init__:6 of
+msgid "name of this tag"
+msgstr ""
+
+#: git.objects.tag.TagObject.__init__:7 of
+msgid "Actor identifying the tagger"
+msgstr ""
+
+#: git.objects.tag.TagObject.__init__:8 of
+msgid ""
+"int_seconds_since_epoch is the DateTime of the tag creation - use "
+"time.gmtime to convert it into a different format"
+msgstr ""
+
+#: git.objects.tag.TagObject.__init__:11 of
+msgid ""
+"int_seconds_west_of_utc is the timezone that the authored_date is in, in "
+"a format similar to time.altzone"
+msgstr ""
+
+#: ../../source/reference.rst:46
+msgid "Objects.Tree"
+msgstr ""
+
+#: git.objects.tree.Tree:1 of
+msgid "Tree objects represent an ordered list of Blobs and other Trees."
+msgstr ""
+
+#: git.objects.tree.Tree:3 of
+msgid "``Tree as a list``::"
+msgstr ""
+
+#: git.objects.tree.Tree.__truediv__:1 of
+msgid "For PY3 only"
+msgstr ""
+
+#: git.objects.tree.Tree.blobs:1 of
+msgid "list(Blob, ...) list of blobs directly below this tree"
+msgstr ""
+
+#: git.objects.tree.Tree.cache:1 of
+msgid ""
+"An object allowing to modify the internal cache. This can be used to "
+"change the tree's contents. When done, make sure you call ``set_done`` on"
+" the tree modifier, or serialization behaviour will be incorrect. See the"
+" ``TreeModifier`` for more information on how to alter the cache"
+msgstr ""
+
+#: git.objects.tree.Tree.join:1 of
+msgid ""
+"Find the named object in this tree's contents :return: ``git.Blob`` or "
+"``git.Tree`` or ``git.Submodule``"
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait git.cmd.Git.execute
+#: git.index.base.IndexFile.add git.index.base.IndexFile.checkout
+#: git.index.base.IndexFile.merge_tree git.index.base.IndexFile.move
+#: git.index.base.IndexFile.resolve_blobs git.index.base.IndexFile.write_tree
+#: git.objects.submodule.base.Submodule.branch
+#: git.objects.submodule.base.Submodule.config_reader
+#: git.objects.submodule.base.Submodule.config_writer
+#: git.objects.submodule.base.Submodule.module
+#: git.objects.submodule.base.Submodule.move
+#: git.objects.submodule.base.Submodule.remove
+#: git.objects.submodule.base.Submodule.set_parent_commit
+#: git.objects.submodule.util.SubmoduleConfigParser.write
+#: git.objects.tree.Tree.join git.objects.util.get_object_type_by_name
+#: git.objects.util.parse_date git.objects.util.verify_utctz
+#: git.refs.log.RefLog.entry_at git.refs.log.RefLog.from_file
+#: git.refs.log.RefLogEntry.from_line
+#: git.refs.symbolic.SymbolicReference.create
+#: git.refs.symbolic.SymbolicReference.rename
+#: git.refs.symbolic.SymbolicReference.set_commit
+#: git.refs.tag.TagReference.commit git.repo.base.Repo.__init__
+#: git.repo.base.Repo.archive git.repo.base.Repo.merge_base
+#: git.repo.base.Repo.remote git.repo.base.Repo.submodule
+#: git.repo.fun.rev_parse of
+msgid "引发"
+msgstr ""
+
+#: git.objects.tree.Tree.join:4 of
+msgid "if given file or tree does not exist in tree"
+msgstr ""
+
+#: git.objects.tree.Tree.list_traverse:1 of
+msgid ""
+"IterableList with the results of the traversal as produced by traverse() "
+"Tree -> IterableList[Union['Submodule', 'Tree', 'Blob']]"
+msgstr ""
+
+#: git.objects.tree.Tree.traverse:1 of
+msgid ""
+"For documentation, see util.Traversable._traverse() Trees are set to "
+"visit_once = False to gain more performance in the traversal"
+msgstr ""
+
+#: git.objects.tree.Tree.trees:1 of
+msgid "list(Tree, ...) list of trees directly below this tree"
+msgstr ""
+
+#: git.objects.tree.TreeModifier:1 of
+msgid ""
+"A utility class providing methods to alter the underlying cache in a "
+"list-like fashion."
+msgstr ""
+
+#: git.objects.tree.TreeModifier:3 of
+msgid ""
+"Once all adjustments are complete, the _cache, which really is a "
+"reference to the cache of a tree, will be sorted. Assuring it will be in "
+"a serializable state"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.__delitem__:1 of
+msgid "Deletes an item with the given name if it exists"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.add:1 of
+msgid ""
+"Add the given item to the tree. If an item with the given name already "
+"exists, nothing will be done, but a ValueError will be raised if the sha "
+"and mode of the existing item do not match the one you add, unless force "
+"is True"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.add:6 of
+msgid "The 20 or 40 byte sha of the item to add"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.add:7 of
+msgid "int representing the stat compatible mode of the item"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.add:8 of
+msgid ""
+"If True, an item with your name and information will overwrite any "
+"existing item with the same name, no matter which information it has"
+msgstr ""
+
+#: git.cmd.Git.clear_cache:5 git.index.base.IndexFile.reset:32
+#: git.index.base.IndexFile.resolve_blobs:9 git.index.base.IndexFile.update:6
+#: git.objects.submodule.base.Submodule.move:14
+#: git.objects.submodule.base.Submodule.remove:21
+#: git.objects.submodule.base.Submodule.set_parent_commit:13
+#: git.objects.submodule.base.Submodule.update:35
+#: git.objects.submodule.root.RootModule.update:32
+#: git.objects.tree.TreeModifier.add:10 git.refs.head.HEAD.reset:25
+#: git.refs.head.Head.rename:11 git.refs.head.Head.set_tracking_branch:6
+#: git.refs.symbolic.SymbolicReference.rename:12
+#: git.refs.symbolic.SymbolicReference.set_commit:5
+#: git.refs.symbolic.SymbolicReference.set_object:9
+#: git.refs.symbolic.SymbolicReference.set_reference:15
+#: git.remote.Remote.add_url:7 git.remote.Remote.delete_url:7
+#: git.remote.Remote.set_url:7 git.remote.Remote.update:8
+#: git.repo.base.Repo.archive:14 of
+msgid "self"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.add_unchecked:1 of
+msgid ""
+"Add the given item to the tree, its correctness is assumed, which puts "
+"the caller into responsibility to assure the input is correct. For more "
+"information on the parameters, see ``add`` :param binsha: 20 byte binary "
+"sha"
+msgstr ""
+
+#: git.objects.tree.TreeModifier.set_done:1 of
+msgid ""
+"Call this method once you are done modifying the tree information. It may"
+" be called several times, but be aware that each call will cause a sort "
+"operation :return self:"
+msgstr ""
+
+#: ../../source/reference.rst:54
+msgid "Objects.Functions"
+msgstr ""
+
+#: git.objects.fun:1 of
+msgid "Module with functions which are supposed to be as fast as possible"
+msgstr ""
+
+#: git.objects.fun.traverse_tree_recursive:1 of
+msgid ""
+"list of entries of the tree pointed to by the binary tree_sha. An entry "
+"has the following format: * [0] 20 byte sha * [1] mode as int * [2] path "
+"relative to the repository"
+msgstr ""
+
+#: git.objects.fun.traverse_tree_recursive:6 of
+msgid "prefix to prepend to the front of all returned paths"
+msgstr ""
+
+#: git.objects.fun.traverse_trees_recursive:1 of
+msgid ""
+"list of list with entries according to the given binary tree-shas. The "
+"result is encoded in a list of n tuple|None per blob/commit, (n == "
+"len(tree_shas)), where * [0] == 20 byte sha * [1] == mode as int * [2] =="
+" path relative to working tree root The entry tuple is None if the "
+"respective blob/commit did not exist in the given tree."
+msgstr ""
+
+#: git.objects.fun.traverse_trees_recursive:9 of
+msgid ""
+"iterable of shas pointing to trees. All trees must be on the same level. "
+"A tree-sha may be None in which case None"
+msgstr ""
+
+#: git.objects.fun.traverse_trees_recursive:11 of
+msgid ""
+"a prefix to be added to the returned paths on this level, set it '' for "
+"the first iteration"
+msgstr ""
+
+#: git.objects.fun.traverse_trees_recursive:13 of
+msgid "The ordering of the returned items will be partially lost"
+msgstr ""
+
+#: git.objects.fun.tree_entries_from_data:1 of
+msgid ""
+"Reads the binary representation of a tree and returns tuples of Tree "
+"items :param data: data block with tree data (as bytes) :return: "
+"list(tuple(binsha, mode, tree_relative_path), ...)"
+msgstr ""
+
+#: git.objects.fun.tree_to_stream:1 of
+msgid ""
+"Write the give list of entries into a stream using its write method "
+":param entries: **sorted** list of tuples with (binsha, mode, name) "
+":param write: write method which takes a data string"
+msgstr ""
+
+#: ../../source/reference.rst:62
+msgid "Objects.Submodule.base"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule:1 of
+msgid ""
+"Implements access to a git submodule. They are special in that their sha "
+"represents a commit in the submodule's repository which is to be checked "
+"out at the path of this instance. The submodule type does not have a "
+"string type associated with it, as it exists solely as a marker in the "
+"tree and index."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule:7 of
+msgid "All methods work in bare and non-bare repositories."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__eq__:1 of
+msgid "Compare with another submodule"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__hash__:1 of
+msgid "Hash this instance using its logical id, not the sha"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__init__:1
+#: git.objects.submodule.root.RootModule.__init__:1 of
+msgid ""
+"Initialize this instance with its attributes. We only document the ones "
+"that differ from ``IndexObject``"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__init__:4
+#: git.objects.submodule.root.RootModule.__init__:4 of
+msgid "Our parent repository"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__init__:5
+#: git.objects.submodule.root.RootModule.__init__:5 of
+msgid ""
+"binary sha referring to a commit in the remote repository, see url "
+"parameter"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__init__:6
+#: git.objects.submodule.root.RootModule.__init__:6 of
+msgid "see set_parent_commit()"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__init__:7
+#: git.objects.submodule.root.RootModule.__init__:7 of
+msgid "The url to the remote repository which is the submodule"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__init__:8
+#: git.objects.submodule.root.RootModule.__init__:8 of
+msgid "full (relative) path to ref to checkout when cloning the remote repository"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.__ne__:1 of
+msgid "Compare with another submodule for inequality"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:1 of
+msgid ""
+"Add a new submodule to the given repository. This will alter the index as"
+" well as the .gitmodules file, but will not create a new commit. If the "
+"submodule already exists, no matter if the configuration differs from the"
+" one provided, the existing submodule will be returned."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:6 of
+msgid "Repository instance which should receive the submodule"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:7 of
+msgid "The name/identifier for the submodule"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:8 of
+msgid ""
+"repository-relative or absolute path at which the submodule should be "
+"located It will be created as required during the repository "
+"initialization."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:11 of
+msgid ""
+"git-clone compatible URL, see git-clone reference for more information If"
+" None, the repository is assumed to exist, and the url of the first "
+"remote is taken instead. This is useful if you want to make an existing "
+"repository a submodule of anotherone."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:15 of
+msgid ""
+"name of branch at which the submodule should (later) be checked out. The "
+"given branch must exist in the remote repository, and will be checked out"
+" locally as a tracking branch. It will only be written into the "
+"configuration if it not None, which is when the checked out branch will "
+"be the one the remote HEAD pointed to. The result you get in these "
+"situation is somewhat fuzzy, and it is recommended to specify at least "
+"'master' here. Examples are 'master' or 'feature/new'"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:23 of
+msgid ""
+"if True, and if the repository has to be cloned manually, no checkout "
+"will be performed"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:25 of
+msgid ""
+"Create a shallow clone with a history truncated to the specified number "
+"of commits."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:27
+#: git.objects.submodule.base.Submodule.update:25
+#: git.repo.base.Repo.clone_from:6 of
+msgid ""
+"Optional dictionary containing the desired environment variables. Note: "
+"Provided variables will be used to update the execution environment for "
+"`git`. If some variable is not specified in `env` and is defined in "
+"`os.environ`, value from `os.environ` will be used. If you want to unset "
+"some variable, consider providing empty string as its value."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:33 of
+msgid ""
+"A list of Clone options. Please see ``git.repo.base.Repo.clone`` for "
+"details."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:35 of
+msgid "The newly created submodule instance"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.add:36 of
+msgid ""
+"works atomically, such that no change will be done if the repository "
+"update fails for instance"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.branch:1 of
+msgid "The branch instance that we are to checkout"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.branch:2 of
+msgid "if our module is not yet checked out"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.branch_name:1 of
+msgid "the name of the branch, which is the shortest possible branch name"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.branch_path:1 of
+msgid ""
+"full(relative) path as string to the branch we would checkout from the "
+"remote and track"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.children:1 of
+msgid ""
+"IterableList(Submodule, ...) an iterable list of submodules instances "
+"which are children of this submodule or 0 if the submodule is not checked"
+" out"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_reader:1 of
+msgid ""
+"ConfigReader instance which allows you to qurey the configuration values "
+"of this submodule, as provided by the .gitmodules file"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_reader:3 of
+msgid ""
+"The config reader will actually read the data directly from the "
+"repository and thus does not need nor care about your working tree."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_reader:5 of
+msgid "Should be cached by the caller and only kept as long as needed"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_reader:6
+#: git.objects.submodule.base.Submodule.config_writer:13 of
+msgid "If the .gitmodules file/blob could not be read"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_writer:1 of
+msgid ""
+"a config writer instance allowing you to read and write the data "
+"belonging to this submodule into the .gitmodules file."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_writer:4 of
+msgid ""
+"if not None, an IndexFile instance which should be written. defaults to "
+"the index of the Submodule's parent repository."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_writer:6 of
+msgid ""
+"if True, the index will be written each time a configuration value "
+"changes."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_writer:8 of
+msgid ""
+"the parameters allow for a more efficient writing of the index, as you "
+"can pass in a modified index on your own, prevent automatic writing, and "
+"write yourself once the whole operation is complete"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.config_writer:11 of
+msgid ""
+"if trying to get a writer on a parent_commit which does not match the "
+"current head commit"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.exists:1 of
+msgid ""
+"True if the submodule exists, False otherwise. Please note that a "
+"submodule may exist ( in the .gitmodules file) even though its module "
+"doesn't exist on disk"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.iter_items:1 of
+msgid "iterator yielding Submodule instances available in the given repository"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.module:1 of
+msgid "Repo instance initialized from the repository at our submodule path"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.module:2 of
+msgid ""
+"if a repository was not available. This could also mean that it was not "
+"yet initialized"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.module_exists:1 of
+msgid ""
+"True if our module exists and is a valid git repository. See module() "
+"method"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.move:1 of
+msgid ""
+"Move the submodule to a another module path. This involves physically "
+"moving the repository at our current path, changing the configuration, as"
+" well as adjusting our index entry accordingly."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.move:5 of
+msgid ""
+"the path to which to move our module in the parent repostory's working "
+"tree, given as repository - relative or absolute path. Intermediate "
+"directories will be created accordingly. If the path already exists, it "
+"must be empty. Trailing(back)slashes are removed automatically"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.move:9 of
+msgid ""
+"if True, the configuration will be adjusted to let the submodule point to"
+" the given path."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.move:11 of
+msgid ""
+"if True, the repository managed by this submodule will be moved as well. "
+"If False, we don't move the submodule's checkout, which may leave the "
+"parent repository in an inconsistent state."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.move:15 of
+msgid "if the module path existed and was not empty, or was a file"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.move:16 of
+msgid ""
+"Currently the method is not atomic, and it could leave the repository in "
+"an inconsistent state if a sub - step fails for some reason"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.name:1 of
+msgid ""
+"The name of this submodule. It is used to identify it within the "
+".gitmodules file."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.name:3 of
+msgid ""
+"by default, the name is the path at which to find the submodule, but in "
+"git - python it should be a unique identifier similar to the identifiers "
+"used for remotes, which allows to change the path of the submodule easily"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.parent_commit:1 of
+msgid "Commit instance with the tree containing the .gitmodules file"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.parent_commit:2 of
+msgid ""
+"will always point to the current head's commit if it was not set "
+"explicitly"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:1 of
+msgid ""
+"Remove this submodule from the repository. This will remove our entry "
+"from the .gitmodules file and the entry in the .git / config file."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:4 of
+msgid ""
+"If True, the module checkout we point to will be deleted as well. If the "
+"module is currently on a commit which is not part of any branch in the "
+"remote, if the currently checked out branch working tree, or untracked "
+"files, is ahead of its tracking branch, if you have modifications in the "
+"In case the removal of the repository fails for these reasons, the "
+"submodule status will not have been altered. If this submodule has child "
+"- modules on its own, these will be deleted prior to touching the own "
+"module."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:13 of
+msgid ""
+"Enforces the deletion of the module even though it contains "
+"modifications. This basically enforces a brute - force file system based "
+"deletion."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:16 of
+msgid ""
+"if True, the submodule is deleted from the configuration, otherwise it "
+"isn't. Although this should be enabled most of the times, this flag "
+"enables you to safely delete the repository of your submodule."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:19 of
+msgid ""
+"if True, we will not actually do anything, but throw the errors we would "
+"usually throw"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:22 of
+msgid "doesn't work in bare repositories"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:23 of
+msgid ""
+"doesn't work atomically, as failure to remove any part of the submodule "
+"will leave an inconsistent state"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:25 of
+msgid "thrown if the repository cannot be deleted"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.remove:26 of
+msgid "if directories or files could not be removed"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.rename:1 of
+msgid ""
+"Rename this submodule :note: This method takes care of renaming the "
+"submodule in various places, such as"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.rename:4 of
+msgid "$parent_git_dir / config"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.rename:5 of
+msgid "$working_tree_dir / .gitmodules"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.rename:6 of
+msgid "(git >= v1.8.0: move submodule repository to new name)"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.rename:8 of
+msgid ""
+"As .gitmodules will be changed, you would need to make a commit "
+"afterwards. The changed .gitmodules file will already be added to the "
+"index"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.rename:11 of
+msgid "this submodule instance"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.set_parent_commit:1 of
+msgid ""
+"Set this instance to use the given commit whose tree is supposed to "
+"contain the .gitmodules blob."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.set_parent_commit:4 of
+msgid ""
+"Commit'ish reference pointing at the root_tree, or None to always point "
+"to the most recent commit"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.set_parent_commit:7 of
+msgid ""
+"if True, relatively expensive checks will be performed to verify validity"
+" of the submodule."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.set_parent_commit:10 of
+msgid "if the commit's tree didn't contain the .gitmodules blob."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.set_parent_commit:11 of
+msgid "if the parent commit didn't store this submodule under the current path"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:1 of
+msgid ""
+"Update the repository of this submodule to point to the checkout we point"
+" at with the binsha of this instance."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:4 of
+msgid "if True, we will operate recursively and update child- modules as well."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:6 of
+msgid "if True, the module repository will be cloned into place if necessary"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:7 of
+msgid ""
+"if True, the submodule's sha will be ignored during checkout. Instead, "
+"the remote will be fetched, and the local tracking branch updated. This "
+"only works if we have a local tracking branch, which is the case if the "
+"remote repository had a master branch, or of the 'branch' option was "
+"specified for this submodule and the branch existed remotely"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:12 of
+msgid "UpdateProgress instance or None if no progress should be shown"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:13 of
+msgid ""
+"if True, the operation will only be simulated, but not performed. All "
+"performed operations are read - only"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:15 of
+msgid ""
+"If True, we may reset heads even if the repository in question is dirty. "
+"Additinoally we will be allowed to set a tracking branch which is ahead "
+"of its remote branch back into the past or the location of the remote "
+"branch. This will essentially 'forget' commits. If False, local tracking "
+"branches that are in the future of their respective remote branches will "
+"simply not be moved."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:21 of
+msgid ""
+"if True, we will ignore but log all errors, and keep going recursively. "
+"Unless dry_run is set as well, keep_going could cause subsequent / "
+"inherited errors you wouldn't see otherwise. In conjunction with dry_run,"
+" it can be useful to anticipate all errors when updating submodules"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:31 of
+msgid ""
+"list of Clone options. Please see ``git.repo.base.Repo.clone`` for "
+"details. Only take effect with `init` option."
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:33 of
+msgid "does nothing in bare repositories"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.update:34 of
+msgid "method is definitely not atomic if recurisve is True"
+msgstr ""
+
+#: git.objects.submodule.base.Submodule.url:1 of
+msgid "The url to the repository which our module - repository refers to"
+msgstr ""
+
+#: git.objects.submodule.base.UpdateProgress:1 of
+msgid ""
+"Class providing detailed progress information to the caller who should "
+"derive from it and implement the ``update(...)`` message"
+msgstr ""
+
+#: ../../source/reference.rst:70
+msgid "Objects.Submodule.root"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule:1 of
+msgid ""
+"A (virtual) Root of all submodules in the given repository. It can be "
+"used to more easily traverse all submodules of the master repository"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.module:1 of
+msgid "the actual repository containing the submodules"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:1 of
+msgid ""
+"Update the submodules of this repository to the current HEAD commit. This"
+" method behaves smartly by determining changes of the path of a "
+"submodules repository, next to changes to the to-be-checked-out commit or"
+" the branch to be checked out. This works if the submodules ID does not "
+"change. Additionally it will detect addition and removal of submodules, "
+"which will be handled gracefully."
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:8 of
+msgid ""
+"If set to a commit'ish, the commit we should use as the previous commit "
+"the HEAD pointed to before it was set to the commit it points to now. If "
+"None, it defaults to HEAD@{1} otherwise"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:11 of
+msgid ""
+"if True, the children of submodules will be updated as well using the "
+"same technique"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:13 of
+msgid ""
+"If submodules have been deleted, they will be forcibly removed. Otherwise"
+" the update may fail if a submodule's repository cannot be deleted as "
+"changes have been made to it (see Submodule.update() for more "
+"information)"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:16 of
+msgid ""
+"If we encounter a new module which would need to be initialized, then do "
+"it."
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:17 of
+msgid ""
+"If True, instead of checking out the revision pointed to by this "
+"submodule's sha, the checked out tracking branch will be merged with the "
+"latest remote branch fetched from the repository's origin. Unless "
+"force_reset is specified, a local tracking branch will never be reset "
+"into its past, therefore the remote branch must be in the future for this"
+" to have an effect."
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:22 of
+msgid ""
+"if True, submodules may checkout or reset their branch even if the "
+"repository has pending changes that would be overwritten, or if the local"
+" tracking branch is in the future of the remote tracking branch and would"
+" be reset into its past."
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:25 of
+msgid "RootUpdateProgress instance or None if no progress should be sent"
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:26 of
+msgid ""
+"if True, operations will not actually be performed. Progress messages "
+"will change accordingly to indicate the WOULD DO state of the operation."
+msgstr ""
+
+#: git.objects.submodule.root.RootModule.update:28 of
+msgid ""
+"if True, we will ignore but log all errors, and keep going recursively. "
+"Unless dry_run is set as well, keep_going could cause "
+"subsequent/inherited errors you wouldn't see otherwise. In conjunction "
+"with dry_run, it can be useful to anticipate all errors when updating "
+"submodules"
+msgstr ""
+
+#: git.objects.submodule.root.RootUpdateProgress:1 of
+msgid "Utility class which adds more opcodes to the UpdateProgress"
+msgstr ""
+
+#: ../../source/reference.rst:78
+msgid "Objects.Submodule.util"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser:1 of
+msgid ""
+"Catches calls to _write, and updates the .gitmodules blob in the index "
+"with the new data, if we have written into a stream. Otherwise it will "
+"add the local file to the index to make it correspond with the working "
+"tree. Additionally, the cache must be cleared"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser:6 of
+msgid "Please note that no mutating method will work in bare mode"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.__init__:1 of
+msgid ""
+"Initialize a configuration reader to read the given file_or_files and to "
+"possibly allow changes to it by setting read_only False"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.__init__:4 of
+msgid "A single file path or file objects or multiple of these"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.__init__:7 of
+msgid ""
+"If True, the ConfigParser may only read the data , but not change it. If "
+"False, only a single file path or file object may be given. We will write"
+" back the changes when they happen, or when the ConfigParser is released."
+" This will not happen if other configuration files have been included"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.__init__:12 of
+msgid ""
+"if True, we will read files mentioned in [include] sections and merge "
+"their contents into ours. This makes it impossible to write back an "
+"individual configuration file. Thus, if you want to modify a single "
+"configuration file, turn this off to leave the original dataset unaltered"
+" when reading it."
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.__init__:16 of
+msgid ""
+"Reference to repository to use if [includeIf] sections are found in "
+"configuration files."
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.flush_to_index:1 of
+msgid "Flush changes in our configuration file to the index"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.set_submodule:1 of
+msgid ""
+"Set this instance's submodule. It must be called before the first write "
+"operation begins"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.write:1 of
+msgid "Write changes to our file, if there are changes at all"
+msgstr ""
+
+#: git.objects.submodule.util.SubmoduleConfigParser.write:3 of
+msgid ""
+"if this is a read-only writer instance or if we could not obtain a file "
+"lock"
+msgstr ""
+
+#: git.objects.submodule.util.find_first_remote_branch:1 of
+msgid ""
+"Find the remote branch matching the name of the given branch or raise "
+"InvalidGitRepositoryError"
+msgstr ""
+
+#: git.objects.submodule.util.mkhead:1 of
+msgid "New branch/head instance"
+msgstr ""
+
+#: git.objects.submodule.util.sm_name:1 of
+msgid "name of the submodule as parsed from the section name"
+msgstr ""
+
+#: git.objects.submodule.util.sm_section:1 of
+msgid "section title used in .gitmodules configuration file"
+msgstr ""
+
+#: ../../source/reference.rst:86
+msgid "Objects.Util"
+msgstr ""
+
+#: git.objects.util:1 of
+msgid "Module for general utility functions"
+msgstr ""
+
+#: git.util.Actor:1 of
+msgid ""
+"Actors hold information about a person acting on the repository. They can"
+" be committers and authors or anything with a name and an email as "
+"mentioned in the git log entries."
+msgstr ""
+
+#: git.diff.Diff.__eq__:1 git.refs.symbolic.SymbolicReference.__eq__:1
+#: git.remote.Remote.__eq__:1 git.repo.base.Repo.__eq__:1
+#: git.util.Actor.__eq__:1 of
+msgid "Return self==value."
+msgstr ""
+
+#: git.diff.Diff.__hash__:1 git.refs.symbolic.SymbolicReference.__hash__:1
+#: git.remote.Remote.__hash__:1 git.repo.base.Repo.__hash__:1
+#: git.util.Actor.__hash__:1 of
+msgid "Return hash(self)."
+msgstr ""
+
+#: git.diff.Diff.__ne__:1 git.refs.symbolic.SymbolicReference.__ne__:1
+#: git.remote.Remote.__ne__:1 git.repo.base.Repo.__ne__:1
+#: git.util.Actor.__ne__:1 of
+msgid "Return self!=value."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.__repr__:1 git.remote.Remote.__repr__:1
+#: git.repo.base.Repo.__repr__:1 git.util.Actor.__repr__:1 of
+msgid "Return repr(self)."
+msgstr ""
+
+#: git.diff.Diff.__str__:1 git.exc.CheckoutError.__str__:1
+#: git.exc.CommandError.__str__:1 git.exc.RepositoryDirtyError.__str__:1
+#: git.index.typ.BaseIndexEntry.__str__:1
+#: git.refs.reference.Reference.__str__:1
+#: git.refs.symbolic.SymbolicReference.__str__:1 git.remote.FetchInfo.__str__:1
+#: git.remote.Remote.__str__:1 git.util.Actor.__str__:1 of
+msgid "Return str(self)."
+msgstr ""
+
+#: git.util.Actor.author:1 of
+msgid ""
+"Same as committer(), but defines the main author. It may be specified in "
+"the environment, but defaults to the committer"
+msgstr ""
+
+#: git.util.Actor.committer:1 of
+msgid ""
+"Actor instance corresponding to the configured committer. It behaves "
+"similar to the git implementation, such that the environment will "
+"override configuration values of config_reader. If no value is set at "
+"all, it will be generated"
+msgstr ""
+
+#: git.util.Actor.committer:5 of
+msgid ""
+"ConfigReader to use to retrieve the values from in case they are not set "
+"in the environment"
+msgstr ""
+
+#: git.objects.util.ProcessStreamAdapter:1 of
+msgid "Class wireing all calls to the contained Process instance."
+msgstr ""
+
+#: git.objects.util.ProcessStreamAdapter:3 of
+msgid ""
+"Use this type to hide the underlying process to provide access only to a "
+"specified stream. The process is usually wrapped into an AutoInterrupt "
+"class to kill it if the instance goes out of scope."
+msgstr ""
+
+#: git.objects.util.Traversable:1 of
+msgid ""
+"Simple interface to perform depth-first or breadth-first traversals into "
+"one direction. Subclasses only need to implement one function. Instances "
+"of the Subclass must be hashable"
+msgstr ""
+
+#: git.objects.util.Traversable:6 of
+msgid "Defined subclasses = [Commit, Tree, SubModule]"
+msgstr ""
+
+#: git.objects.util.altz_to_utctz_str:1 of
+msgid ""
+"As above, but inverses the operation, returning a string that can be used"
+" in commit objects"
+msgstr ""
+
+#: git.objects.util.get_object_type_by_name:1 of
+msgid ""
+"type suitable to handle the given object type name. Use the type to "
+"create new instances."
+msgstr ""
+
+#: git.objects.util.get_object_type_by_name:4 of
+msgid "Member of TYPES"
+msgstr ""
+
+#: git.objects.util.get_object_type_by_name:6 of
+msgid "In case object_type_name is unknown"
+msgstr ""
+
+#: git.objects.util.parse_actor_and_date:1 of
+msgid "Parse out the actor (author or committer) info from a line like::"
+msgstr ""
+
+#: git.objects.util.parse_actor_and_date:5 of
+msgid "[Actor, int_seconds_since_epoch, int_timezone_offset]"
+msgstr ""
+
+#: git.objects.util.parse_date:1 of
+msgid "Parse the given date as one of the following"
+msgstr ""
+
+#: git.objects.util.parse_date:3 of
+msgid "aware datetime instance"
+msgstr ""
+
+#: git.objects.util.parse_date:4 of
+msgid "Git internal format: timestamp offset"
+msgstr ""
+
+#: git.objects.util.parse_date:5 of
+msgid "RFC 2822: Thu, 07 Apr 2005 22:13:13 +0200."
+msgstr ""
+
+#: git.objects.util.parse_date:7 of
+msgid "ISO 8601 2005-04-07T22:13:13"
+msgstr ""
+
+#: git.objects.util.parse_date:7 of
+msgid "The T can be a space as well"
+msgstr ""
+
+#: git.objects.util.parse_date:9 of
+msgid "Tuple(int(timestamp_UTC), int(offset)), both in seconds since epoch"
+msgstr ""
+
+#: git.objects.util.parse_date:10 of
+msgid "If the format could not be understood"
+msgstr ""
+
+#: git.objects.util.parse_date:11 of
+msgid "Date can also be YYYY.MM.DD, MM/DD/YYYY and DD.MM.YYYY."
+msgstr ""
+
+#: git.objects.util.tzoffset.__reduce__:1 of
+msgid "-> (cls, state)"
+msgstr ""
+
+#: ../../docstring git.diff.DiffIndex.__weakref__:1
+#: git.diff.Diffable.Index.__weakref__:1 git.exc.GitError.__weakref__:1
+#: git.exc.NoSuchPathError.__weakref__:1
+#: git.objects.util.tzoffset.__weakref__:1 git.refs.head.Head.__weakref__:1
+#: git.repo.base.Repo.__weakref__:1 of
+msgid "list of weak references to the object (if defined)"
+msgstr ""
+
+#: git.objects.util.tzoffset.dst:1 of
+msgid "datetime -> DST offset as timedelta positive east of UTC."
+msgstr ""
+
+#: git.objects.util.tzoffset.tzname:1 of
+msgid "datetime -> string name of time zone."
+msgstr ""
+
+#: git.objects.util.tzoffset.utcoffset:1 of
+msgid ""
+"datetime -> timedelta showing offset from UTC, negative values indicating"
+" West of UTC"
+msgstr ""
+
+#: git.objects.util.utctz_to_altz:1 of
+msgid ""
+"we convert utctz to the timezone in seconds, it is the format "
+"time.altzone returns. Git stores it as UTC timezone which has the "
+"opposite sign as well, which explains the -1 * ( that was made explicit "
+"here ) :param utctz: git utc timezone string, i.e. +0200"
+msgstr ""
+
+#: git.objects.util.verify_utctz:1 of
+msgid "if offset is incorrect"
+msgstr ""
+
+#: git.objects.util.verify_utctz:2 of
+msgid "offset"
+msgstr ""
+
+#: ../../source/reference.rst:94
+msgid "Index.Base"
+msgstr ""
+
+#: git.exc.CheckoutError:1 of
+msgid ""
+"Thrown if a file could not be checked out from the index as it contained "
+"changes."
+msgstr ""
+
+#: git.exc.CheckoutError:4 of
+msgid ""
+"The .failed_files attribute contains a list of relative paths that failed"
+" to be checked out as they contained changes that did not exist in the "
+"index."
+msgstr ""
+
+#: git.exc.CheckoutError:7 of
+msgid ""
+"The .failed_reasons attribute contains a string informing about the "
+"actual cause of the issue."
+msgstr ""
+
+#: git.exc.CheckoutError:10 of
+msgid ""
+"The .valid_files attribute contains a list of relative paths to files "
+"that were checked out successfully and hence match the version stored in "
+"the index"
+msgstr ""
+
+#: git.index.base.IndexFile:1 of
+msgid ""
+"Implements an Index that can be manipulated using a native implementation"
+" in order to save git command function calls wherever possible."
+msgstr ""
+
+#: git.index.base.IndexFile:4 of
+msgid ""
+"It provides custom merging facilities allowing to merge without actually "
+"changing your index or your working tree. This way you can perform own "
+"test-merges based on the index only without having to deal with the "
+"working copy. This is useful in case of partial working trees."
+msgstr ""
+
+#: git.index.base.IndexFile:9 of
+msgid "``Entries``"
+msgstr ""
+
+#: git.index.base.IndexFile:11 of
+msgid ""
+"The index contains an entries dict whose keys are tuples of type "
+"IndexEntry to facilitate access."
+msgstr ""
+
+#: git.index.base.IndexFile:14 of
+msgid ""
+"You may read the entries dict or manipulate it using IndexEntry instance,"
+" i.e.::"
+msgstr ""
+
+#: git.index.base.IndexFile:18 of
+msgid ""
+"Make sure you use index.write() once you are done manipulating the index "
+"directly before operating on it using the git command"
+msgstr ""
+
+#: git.index.base.IndexFile.__init__:1 of
+msgid ""
+"Initialize this Index instance, optionally from the given ``file_path``. "
+"If no file_path is given, we will be created from the current index file."
+msgstr ""
+
+#: git.index.base.IndexFile.__init__:4 of
+msgid ""
+"If a stream is not given, the stream will be initialized from the current"
+" repository's index on demand."
+msgstr ""
+
+#: git.index.base.IndexFile.add:1 of
+msgid ""
+"Add files from the working tree, specific blobs or BaseIndexEntries to "
+"the index."
+msgstr ""
+
+#: git.index.base.IndexFile.add:4 of
+msgid ""
+"Multiple types of items are supported, types can be mixed within one "
+"call. Different types imply a different handling. File paths may "
+"generally be relative or absolute.  - path string     strings denote a "
+"relative or absolute path into the repository pointing to     an existing"
+" file, i.e. CHANGES, lib/myfile.ext, '/home/gitrepo/lib/myfile.ext'."
+"      Absolute paths must start with working tree directory of this "
+"index's repository     to be considered valid. For example, if it was "
+"initialized with a non-normalized path, like     `/root/repo/../repo`, "
+"absolute paths to be added must start with `/root/repo/../repo`.      "
+"Paths provided like this must exist. When added, they will be written"
+"     into the object database.      PathStrings may contain globs, such "
+"as 'lib/__init__*' or can be directories     like 'lib', the latter ones "
+"will add all the files within the dirctory and     subdirectories.      "
+"This equals a straight git-add.      They are added at stage 0  - Blob or"
+" Submodule object     Blobs are added as they are assuming a valid mode "
+"is set.     The file they refer to may or may not exist in the file "
+"system, but     must be a path relative to our repository.      If their "
+"sha is null ( 40*0 ), their path must exist in the file system     "
+"relative to the git repository as an object will be created from     the "
+"data at the path.     The handling now very much equals the way string "
+"paths are processed, except that     the mode you have set will be kept. "
+"This allows you to create symlinks     by settings the mode respectively "
+"and writing the target of the symlink     directly into the file. This "
+"equals a default Linux-Symlink which     is not dereferenced "
+"automatically, except that it can be created on     filesystems not "
+"supporting it as well.      Please note that globs or directories are not"
+" allowed in Blob objects.      They are added at stage 0  - "
+"BaseIndexEntry or type     Handling equals the one of Blob objects, but "
+"the stage may be     explicitly set. Please note that Index Entries "
+"require binary sha's."
+msgstr ""
+
+#: git.index.base.IndexFile.add:5 of
+msgid ""
+"Multiple types of items are supported, types can be mixed within one "
+"call. Different types imply a different handling. File paths may "
+"generally be relative or absolute."
+msgstr ""
+
+#: git.index.base.IndexFile.add:26 git.index.base.IndexFile.remove:14 of
+msgid "path string"
+msgstr ""
+
+#: git.index.base.IndexFile.add:10 of
+msgid ""
+"strings denote a relative or absolute path into the repository pointing "
+"to an existing file, i.e. CHANGES, lib/myfile.ext, "
+"'/home/gitrepo/lib/myfile.ext'."
+msgstr ""
+
+#: git.index.base.IndexFile.add:13 of
+msgid ""
+"Absolute paths must start with working tree directory of this index's "
+"repository to be considered valid. For example, if it was initialized "
+"with a non-normalized path, like `/root/repo/../repo`, absolute paths to "
+"be added must start with `/root/repo/../repo`."
+msgstr ""
+
+#: git.index.base.IndexFile.add:17 of
+msgid ""
+"Paths provided like this must exist. When added, they will be written "
+"into the object database."
+msgstr ""
+
+#: git.index.base.IndexFile.add:20 of
+msgid ""
+"PathStrings may contain globs, such as 'lib/__init__*' or can be "
+"directories like 'lib', the latter ones will add all the files within the"
+" dirctory and subdirectories."
+msgstr ""
+
+#: git.index.base.IndexFile.add:24 of
+msgid "This equals a straight git-add."
+msgstr ""
+
+#: git.index.base.IndexFile.add:26 git.index.base.IndexFile.add:45 of
+msgid "They are added at stage 0"
+msgstr ""
+
+#: git.index.base.IndexFile.add:45 of
+msgid "Blob or Submodule object"
+msgstr ""
+
+#: git.index.base.IndexFile.add:29 of
+msgid ""
+"Blobs are added as they are assuming a valid mode is set. The file they "
+"refer to may or may not exist in the file system, but must be a path "
+"relative to our repository."
+msgstr ""
+
+#: git.index.base.IndexFile.add:33 of
+msgid ""
+"If their sha is null ( 40*0 ), their path must exist in the file system "
+"relative to the git repository as an object will be created from the data"
+" at the path. The handling now very much equals the way string paths are "
+"processed, except that the mode you have set will be kept. This allows "
+"you to create symlinks by settings the mode respectively and writing the "
+"target of the symlink directly into the file. This equals a default "
+"Linux-Symlink which is not dereferenced automatically, except that it can"
+" be created on filesystems not supporting it as well."
+msgstr ""
+
+#: git.index.base.IndexFile.add:43 of
+msgid "Please note that globs or directories are not allowed in Blob objects."
+msgstr ""
+
+#: git.index.base.IndexFile.add:49 of
+msgid "BaseIndexEntry or type"
+msgstr ""
+
+#: git.index.base.IndexFile.add:48 of
+msgid ""
+"Handling equals the one of Blob objects, but the stage may be explicitly "
+"set. Please note that Index Entries require binary sha's."
+msgstr ""
+
+#: git.index.base.IndexFile.add:51 of
+msgid ""
+"**CURRENTLY INEFFECTIVE** If True, otherwise ignored or excluded files "
+"will be added anyway. As opposed to the git-add command, we enable this "
+"flag by default as the API user usually wants the item to be added even "
+"though they might be excluded."
+msgstr ""
+
+#: git.index.base.IndexFile.add:59 of
+msgid ""
+"Function with signature f(path, done=False, item=item) called for each "
+"path to be added, one time once it is about to be added where done==False"
+" and once after it was added where done=True. item is set to the actual "
+"item we handle, either a Path or a BaseIndexEntry Please note that the "
+"processed path is not guaranteed to be present in the index already as "
+"the index is currently being processed."
+msgstr ""
+
+#: git.index.base.IndexFile.add:67 of
+msgid ""
+"Function with signature (string) func(BaseIndexEntry) function returning "
+"a path for each passed entry which is the path to be actually recorded "
+"for the object created from entry.path. This allows you to write an index"
+" which is not identical to the layout of the actual files on your hard-"
+"disk. If not None and ``items`` contain plain paths, these paths will be "
+"converted to Entries beforehand and passed to the path_rewriter. Please "
+"note that entry.path is relative to the git repository."
+msgstr ""
+
+#: git.index.base.IndexFile.add:76 of
+msgid ""
+"If True, the index will be written once it was altered. Otherwise the "
+"changes only exist in memory and are not available to git commands."
+msgstr ""
+
+#: git.index.base.IndexFile.add:80 of
+msgid ""
+"If True, extension data will be written back to the index. This can lead "
+"to issues in case it is containing the 'TREE' extension, which will cause"
+" the `git commit` command to write an old tree, instead of a new one "
+"representing the now changed index. This doesn't matter if you use "
+"`IndexFile.commit()`, which ignores the `TREE` extension altogether. You "
+"should set it to True if you intend to use `IndexFile.commit()` "
+"exclusively while maintaining support for third-party extensions. Besides"
+" that, you can usually safely ignore the built-in extensions when using "
+"GitPython on repositories that are not handled manually at all. All "
+"current built-in extensions are listed here: "
+"http://opensource.apple.com/source/Git/Git-26/src/git-htmldocs/technical"
+"/index-format.txt"
+msgstr ""
+
+#: git.index.base.IndexFile.add:91 of
+msgid "List(BaseIndexEntries) representing the entries just actually added."
+msgstr ""
+
+#: git.index.base.IndexFile.add:94 of
+msgid ""
+"if a supplied Path did not exist. Please note that BaseIndexEntry Objects"
+" that do not have a null sha will be added even if their paths do not "
+"exist."
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:1 of
+msgid ""
+"Checkout the given paths or all files from the version known to the index"
+" into the working tree."
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:4 of
+msgid ""
+"Be sure you have written pending changes using the ``write`` method in "
+"case you have altered the enties dictionary directly"
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:7 of
+msgid ""
+"If None, all paths in the index will be checked out. Otherwise an "
+"iterable of relative or absolute paths or a single path pointing to files"
+" or directories in the index is expected."
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:12 of
+msgid ""
+"If True, existing files will be overwritten even if they contain local "
+"modifications. If False, these will trigger a CheckoutError."
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:16 of
+msgid ""
+"see :func:`IndexFile.add` for signature and explanation. The provided "
+"progress information will contain None as path and item if no explicit "
+"paths are given. Otherwise progress information will be send prior and "
+"after a file has been checked out"
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:22 of
+msgid "Additional arguments to be passed to git-checkout-index"
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:25 of
+msgid ""
+"iterable yielding paths to files which have been checked out and are "
+"guaranteed to match the version stored in the index"
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:29 of
+msgid ""
+"If at least one file failed to be checked out. This is a summary, hence "
+"it will checkout as many files as it can anyway. If one of files or "
+"directories do not exist in the index ( as opposed to the  original git "
+"command who ignores them ). Raise GitCommandError if error lines could "
+"not be parsed - this truly is an exceptional state"
+msgstr ""
+
+#: git.index.base.IndexFile.checkout:37 of
+msgid ""
+"The checkout is limited to checking out the files in the index. Files "
+"which are not in the index anymore and exist in the working tree will not"
+" be deleted. This behaviour is fundamentally different to "
+"*head.checkout*, i.e. if you want git-checkout like behaviour, use "
+"head.checkout instead of index.checkout."
+msgstr ""
+
+#: git.index.base.IndexFile.commit:1 of
+msgid ""
+"Commit the current default index file, creating a commit object. For more"
+" information on the arguments, see tree.commit."
+msgstr ""
+
+#: git.index.base.IndexFile.commit:4 of
+msgid ""
+"If you have manually altered the .entries member of this instance, don't "
+"forget to write() your changes to disk beforehand. Passing "
+"skip_hooks=True is the equivalent of using `-n` or `--no-verify` on the "
+"command line."
+msgstr ""
+
+#: git.index.base.IndexFile.diff:1 of
+msgid "Diff this index against the working copy or a Tree or Commit object"
+msgstr ""
+
+#: git.index.base.IndexFile.diff:3 of
+msgid ""
+"For a documentation of the parameters and return values, see, "
+"Diffable.diff"
+msgstr ""
+
+#: git.index.base.IndexFile.diff:7 of
+msgid ""
+"Will only work with indices that represent the default git index as they "
+"have not been initialized with a stream."
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:1 of
+msgid ""
+"Merge the given treeish revisions into a new index which is returned. The"
+" original index will remain unaltered"
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:4 git.index.base.IndexFile.new:4 of
+msgid "The repository treeish are located in."
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:7 of
+msgid ""
+"One, two or three Tree Objects, Commits or 40 byte hexshas. The result "
+"changes according to the amount of trees. If 1 Tree is given, it will "
+"just be read into a new index If 2 Trees are given, they will be merged "
+"into a new index using a two way merge algorithm. Tree 1 is the 'current'"
+" tree, tree 2 is the 'other' one. It behaves like a fast-forward. If 3 "
+"Trees are given, a 3-way merge will be performed with the first tree "
+"being the common ancestor of tree 2 and tree 3. Tree 2 is the 'current' "
+"tree, tree 3 is the 'other' one"
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:18 of
+msgid "Additional arguments passed to git-read-tree"
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:21 of
+msgid ""
+"New IndexFile instance. It will point to a temporary index location which"
+" does not exist anymore. If you intend to write such a merged Index, "
+"supply an alternate file_path to its 'write' method."
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:27 of
+msgid ""
+"In the three-way merge case, --aggressive will be specified to "
+"automatically resolve more cases in a commonly correct manner. Specify "
+"trivial=True as kwarg to override that."
+msgstr ""
+
+#: git.index.base.IndexFile.from_tree:31 of
+msgid ""
+"As the underlying git-read-tree command takes into account the current "
+"index, it will be temporarily moved out of the way to assure there are no"
+" unsuspected interferences."
+msgstr ""
+
+#: git.index.base.IndexFile.iter_blobs:1 of
+msgid "Iterator yielding tuples of Blob objects and stages, tuple(stage, Blob)"
+msgstr ""
+
+#: git.index.base.IndexFile.iter_blobs:3 of
+msgid ""
+"Function(t) returning True if tuple(stage, Blob) should be yielded by the"
+" iterator. A default filter, the BlobFilter, allows you to yield blobs "
+"only if they match a given list of paths."
+msgstr ""
+
+#: git.index.base.IndexFile.merge_tree:1 of
+msgid ""
+"Merge the given rhs treeish into the current index, possibly taking a "
+"common base treeish into account."
+msgstr ""
+
+#: git.index.base.IndexFile.merge_tree:4 of
+msgid ""
+"As opposed to the :func:`IndexFile.from_tree` method, this allows you to "
+"use an already existing tree as the left side of the merge"
+msgstr ""
+
+#: git.index.base.IndexFile.merge_tree:7 of
+msgid "treeish reference pointing to the 'other' side of the merge."
+msgstr ""
+
+#: git.index.base.IndexFile.merge_tree:10 of
+msgid ""
+"optional treeish reference pointing to the common base of 'rhs' and this "
+"index which equals lhs"
+msgstr ""
+
+#: git.index.base.IndexFile.merge_tree:14 of
+msgid ""
+"self ( containing the merge and possibly unmerged entries in case of "
+"conflicts )"
+msgstr ""
+
+#: git.index.base.IndexFile.merge_tree:18 of
+msgid ""
+"If there is a merge conflict. The error will be raised at the first "
+"conflicting path. If you want to have proper merge resolution to be done "
+"by yourself, you have to commit the changed index ( or make a valid tree "
+"from it ) and retry with a three-way index.from_tree call."
+msgstr ""
+
+#: git.index.base.IndexFile.move:1 of
+msgid ""
+"Rename/move the items, whereas the last item is considered the "
+"destination of the move operation. If the destination is a file, the "
+"first item ( of two ) must be a file as well. If the destination is a "
+"directory, it may be preceded by one or more directories or files."
+msgstr ""
+
+#: git.index.base.IndexFile.move:6 of
+msgid "The working tree will be affected in non-bare repositories."
+msgstr ""
+
+#: git.index.base.IndexFile.move of
+msgid "parma items"
+msgstr ""
+
+#: git.index.base.IndexFile.move:9 of
+msgid ""
+"Multiple types of items are supported, please see the 'remove' method for"
+" reference."
+msgstr ""
+
+#: git.index.base.IndexFile.move:11 of
+msgid ""
+"If True, errors such as ones resulting from missing source files will be "
+"skipped."
+msgstr ""
+
+#: git.index.base.IndexFile.move:14 of
+msgid ""
+"Additional arguments you would like to pass to git-mv, such as dry_run or"
+" force."
+msgstr ""
+
+#: git.index.base.IndexFile.move:20 of
+msgid ":return:List(tuple(source_path_string, destination_path_string), ...)"
+msgstr ""
+
+#: git.index.base.IndexFile.move:19 of
+msgid ""
+"A list of pairs, containing the source file moved as well as its actual "
+"destination. Relative to the repository root."
+msgstr ""
+
+#: git.index.base.IndexFile.move:22 of
+msgid ""
+"If only one item was given GitCommandError: If git could not handle your "
+"request"
+msgstr ""
+
+#: git.index.base.IndexFile.new:1 of
+msgid ""
+"Merge the given treeish revisions into a new index which is returned. "
+"This method behaves like git-read-tree --aggressive when doing the merge."
+msgstr ""
+
+#: git.index.base.IndexFile.new:6 of
+msgid "20 byte or 40 byte tree sha or tree objects"
+msgstr ""
+
+#: git.index.base.IndexFile.new:9 of
+msgid ""
+"New IndexFile instance. Its path will be undefined. If you intend to "
+"write such a merged Index, supply an alternate file_path to its 'write' "
+"method."
+msgstr ""
+
+#: git.index.base.IndexFile.path:1 of
+msgid "Path to the index file we are representing"
+msgstr ""
+
+#: git.index.base.IndexFile.remove:1 of
+msgid ""
+"Remove the given items from the index and optionally from the working "
+"tree as well."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:4 of
+msgid ""
+"Multiple types of items are supported which may be be freely mixed.  - "
+"path string     Remove the given path at all stages. If it is a "
+"directory, you must     specify the r=True keyword argument to remove all"
+" file entries     below it. If absolute paths are given, they will be "
+"converted     to a path relative to the git repository directory "
+"containing     the working tree      The path string may include globs, "
+"such as \\*.c.  - Blob Object     Only the path portion is used in this "
+"case.  - BaseIndexEntry or compatible type     The only relevant "
+"information here Yis the path. The stage is ignored."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:5 of
+msgid "Multiple types of items are supported which may be be freely mixed."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:8 of
+msgid ""
+"Remove the given path at all stages. If it is a directory, you must "
+"specify the r=True keyword argument to remove all file entries below it. "
+"If absolute paths are given, they will be converted to a path relative to"
+" the git repository directory containing the working tree"
+msgstr ""
+
+#: git.index.base.IndexFile.remove:14 of
+msgid "The path string may include globs, such as \\*.c."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:17 of
+msgid "Blob Object"
+msgstr ""
+
+#: git.index.base.IndexFile.remove:17 of
+msgid "Only the path portion is used in this case."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:20 of
+msgid "BaseIndexEntry or compatible type"
+msgstr ""
+
+#: git.index.base.IndexFile.remove:20 of
+msgid "The only relevant information here Yis the path. The stage is ignored."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:22 of
+msgid ""
+"If True, the entry will also be removed from the working tree, physically"
+" removing the respective file. This may fail if there are uncommitted "
+"changes in it."
+msgstr ""
+
+#: git.index.base.IndexFile.remove:27 of
+msgid ""
+"Additional keyword arguments to be passed to git-rm, such as 'r' to allow"
+" recursive removal of"
+msgstr ""
+
+#: git.index.base.IndexFile.remove:31 of
+msgid ""
+"List(path_string, ...) list of repository relative paths that have been "
+"removed effectively. This is interesting to know in case you have "
+"provided a directory or globs. Paths are relative to the repository."
+msgstr ""
+
+#: git.index.base.IndexFile.reset:1 of
+msgid ""
+"Reset the index to reflect the tree at the given commit. This will not "
+"adjust our HEAD reference as opposed to HEAD.reset by default."
+msgstr ""
+
+#: git.index.base.IndexFile.reset:4 of
+msgid ""
+"Revision, Reference or Commit specifying the commit we should represent. "
+"If you want to specify a tree only, use IndexFile.from_tree and overwrite"
+" the default index."
+msgstr ""
+
+#: git.index.base.IndexFile.reset:9 of
+msgid ""
+"If True, the files in the working tree will reflect the changed index. If"
+" False, the working tree will not be touched Please note that changes to "
+"the working copy will be discarded without warning !"
+msgstr ""
+
+#: git.index.base.IndexFile.reset:15 of
+msgid ""
+"If True, the head will be set to the given commit. This is False by "
+"default, but if True, this method behaves like HEAD.reset."
+msgstr ""
+
+#: git.index.base.IndexFile.reset:19 of
+msgid ""
+"if given as an iterable of absolute or repository-relative paths, only "
+"these will be reset to their state at the given commit'ish. The paths "
+"need to exist at the commit, otherwise an exception will be raised."
+msgstr ""
+
+#: git.index.base.IndexFile.reset:24 of
+msgid "Additional keyword arguments passed to git-reset"
+msgstr ""
+
+#: git.index.base.IndexFile.reset:27 of
+msgid ""
+"IndexFile.reset, as opposed to HEAD.reset, will not delete anyfiles in "
+"order to maintain a consistent working tree. Instead, it will just "
+"checkout the files according to their state in the index. If you want "
+"git-reset like behaviour, use *HEAD.reset* instead."
+msgstr ""
+
+#: git.index.base.IndexFile.resolve_blobs:1 of
+msgid ""
+"Resolve the blobs given in blob iterator. This will effectively remove "
+"the index entries of the respective path at all non-null stages and add "
+"the given blob as new stage null blob."
+msgstr ""
+
+#: git.index.base.IndexFile.resolve_blobs:5 of
+msgid ""
+"For each path there may only be one blob, otherwise a ValueError will be "
+"raised claiming the path is already at stage 0."
+msgstr ""
+
+#: git.index.base.IndexFile.resolve_blobs:8 of
+msgid "if one of the blobs already existed at stage 0"
+msgstr ""
+
+#: git.index.base.IndexFile.resolve_blobs:12 of
+msgid ""
+"You will have to write the index manually once you are done, i.e. "
+"index.resolve_blobs(blobs).write()"
+msgstr ""
+
+#: git.index.base.IndexFile.unmerged_blobs:1 of
+msgid ""
+"Dict(path : list( tuple( stage, Blob, ...))), being a dictionary "
+"associating a path in the index with a list containing sorted stage/blob "
+"pairs"
+msgstr ""
+
+#: git.index.base.IndexFile.unmerged_blobs:8 of
+msgid ""
+"Blobs that have been removed in one side simply do not exist in the given"
+" stage. I.e. a file removed on the 'other' branch whose entries are at "
+"stage 3 will not have a stage 3 entry."
+msgstr ""
+
+#: git.index.base.IndexFile.update:1 of
+msgid ""
+"Reread the contents of our index file, discarding all cached information "
+"we might have."
+msgstr ""
+
+#: git.index.base.IndexFile.update:4 of
+msgid ""
+"This is a possibly dangerious operations as it will discard your changes "
+"to index.entries"
+msgstr ""
+
+#: git.index.base.IndexFile.write:1 of
+msgid "Write the current state to our file path or to the given one"
+msgstr ""
+
+#: git.index.base.IndexFile.write:3 of
+msgid ""
+"If None, we will write to our stored file path from which we have been "
+"initialized. Otherwise we write to the given file path. Please note that "
+"this will change the file_path of this index to the one you gave."
+msgstr ""
+
+#: git.index.base.IndexFile.write:9 of
+msgid ""
+"If True, the TREE type extension data read in the index will not be "
+"written to disk. NOTE that no extension data is actually written. Use "
+"this if you have altered the index and would like to use git-write-tree "
+"afterwards to create a tree representing your written changes. If this "
+"data is present in the written index, git-write-tree will instead write "
+"the stored/cached tree. Alternatively, use IndexFile.write_tree() to "
+"handle this case automatically"
+msgstr ""
+
+#: git.index.base.IndexFile.write:20 of
+msgid "self  # does it? or returns None?"
+msgstr ""
+
+#: git.index.base.IndexFile.write_tree:1 of
+msgid ""
+"Writes this index to a corresponding Tree object into the repository's "
+"object database and return it."
+msgstr ""
+
+#: git.index.base.IndexFile.write_tree:4 of
+msgid "Tree object representing this index"
+msgstr ""
+
+#: git.index.base.IndexFile.write_tree:5 of
+msgid ""
+"The tree will be written even if one or more objects the tree refers to "
+"does not yet exist in the object database. This could happen if you added"
+" Entries to the index directly."
+msgstr ""
+
+#: git.index.base.IndexFile.write_tree:8 of
+msgid "if there are no entries in the cache"
+msgstr ""
+
+#: ../../source/reference.rst:102
+msgid "Index.Functions"
+msgstr ""
+
+#: git.index.fun.entry_key:1 of
+msgid "Key suitable to be used for the index.entries dictionary"
+msgstr ""
+
+#: git.index.fun.entry_key:2 of
+msgid "One instance of type BaseIndexEntry or the path and the stage"
+msgstr ""
+
+#: git.index.fun.hook_path:1 of
+msgid "path to the given named hook in the given git repository directory"
+msgstr ""
+
+#: git.index.fun.read_cache:1 of
+msgid ""
+"Read a cache file from the given stream :return: tuple(version, "
+"entries_dict, extension_data, content_sha) * version is the integer "
+"version number * entries dict is a dictionary which maps IndexEntry "
+"instances to a path at a stage * extension_data is '' or 4 bytes of type "
+"+ 4 bytes of size + size bytes * content_sha is a 20 byte sha on all "
+"cache file contents"
+msgstr ""
+
+#: git.index.fun.run_commit_hook:1 of
+msgid ""
+"Run the commit hook of the given name. Silently ignores hooks that do not"
+" exist. :param name: name of hook, like 'pre-commit' :param index: "
+"IndexFile instance :param args: arguments passed to hook file :raises "
+"HookExecutionError:"
+msgstr ""
+
+#: git.index.fun.stat_mode_to_index_mode:1 of
+msgid ""
+"Convert the given mode from a stat call to the corresponding index mode "
+"and return it"
+msgstr ""
+
+#: git.index.fun.write_cache:1 of
+msgid "Write the cache represented by entries to a stream"
+msgstr ""
+
+#: git.index.fun.write_cache:3 of
+msgid "**sorted** list of entries"
+msgstr ""
+
+#: git.index.fun.write_cache:4 of
+msgid "stream to wrap into the AdapterStreamCls - it is used for final output."
+msgstr ""
+
+#: git.index.fun.write_cache:7 of
+msgid ""
+"Type to use when writing to the stream. It produces a sha while writing "
+"to it, before the data is passed on to the wrapped stream"
+msgstr ""
+
+#: git.index.fun.write_cache:10 of
+msgid ""
+"any kind of data to write as a trailer, it must begin a 4 byte "
+"identifier, followed by its size ( 4 bytes )"
+msgstr ""
+
+#: git.index.fun.write_tree_from_cache:1 of
+msgid ""
+"Create a tree from the given sorted list of entries and put the "
+"respective trees into the given object database"
+msgstr ""
+
+#: git.index.fun.write_tree_from_cache:4 of
+msgid "**sorted** list of IndexEntries"
+msgstr ""
+
+#: git.index.fun.write_tree_from_cache:5 of
+msgid "object database to store the trees in"
+msgstr ""
+
+#: git.index.fun.write_tree_from_cache:6 of
+msgid "start index at which we should start creating subtrees"
+msgstr ""
+
+#: git.index.fun.write_tree_from_cache:7 of
+msgid "slice indicating the range we should process on the entries list"
+msgstr ""
+
+#: git.index.fun.write_tree_from_cache:8 of
+msgid ""
+"tuple(binsha, list(tree_entry, ...)) a tuple of a sha and a list of tree "
+"entries being a tuple of hexsha, mode, name"
+msgstr ""
+
+#: ../../source/reference.rst:110
+msgid "Index.Types"
+msgstr ""
+
+#: git.index.typ:1 of
+msgid "Module with additional types used by the index"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry:1 of
+msgid ""
+"Small Brother of an index entry which can be created to describe changes "
+"done to the index in which case plenty of additional information is not "
+"required."
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry:4 of
+msgid ""
+"As the first 4 data members match exactly to the IndexEntry type, methods"
+" expecting a BaseIndexEntry can also handle full IndexEntries even if "
+"they use numeric indices for performance reasons."
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.__new__:1 of
+msgid ""
+"Override __new__ to allow construction from a tuple for backwards "
+"compatibility"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.__repr__:1 of
+msgid "Return a nicely formatted representation string"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.from_blob:1 of
+msgid "Fully equipped BaseIndexEntry at the given stage"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.hexsha:1 of
+msgid "hex version of our sha"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.stage:1 of
+msgid "Stage of the entry, either:"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.stage:3 of
+msgid "0 = default stage"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.stage:4 of
+msgid "1 = stage before a merge or common ancestor entry in case of a 3 way merge"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.stage:5 of
+msgid "2 = stage of entries from the 'left' side of the merge"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.stage:6 of
+msgid "3 = stage of entries from the right side of the merge"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.stage:8 of
+msgid ""
+"For more information, see http://www.kernel.org/pub/software/scm/git/docs"
+"/git-read-tree.html"
+msgstr ""
+
+#: git.index.typ.BaseIndexEntry.to_blob:1 of
+msgid "Blob using the information of this index entry"
+msgstr ""
+
+#: git.index.typ.BlobFilter:1 of
+msgid ""
+"Predicate to be used by iter_blobs allowing to filter only return blobs "
+"which match the given list of directories or files."
+msgstr ""
+
+#: git.index.typ.BlobFilter:4 of
+msgid "The given paths are given relative to the repository."
+msgstr ""
+
+#: git.index.typ.BlobFilter.__call__:1 of
+msgid "Call self as a function."
+msgstr ""
+
+#: git.index.typ.BlobFilter.__init__:1 of
+msgid ""
+"tuple or list of paths which are either pointing to directories or to "
+"files relative to the current repository"
+msgstr ""
+
+#: git.index.typ.IndexEntry:1 of
+msgid ""
+"Allows convenient access to IndexEntry data without completely unpacking "
+"it."
+msgstr ""
+
+#: git.index.typ.IndexEntry:3 of
+msgid ""
+"Attributes usully accessed often are cached in the tuple whereas others "
+"are unpacked on demand."
+msgstr ""
+
+#: git.index.typ.IndexEntry:6 of
+msgid "See the properties for a mapping between names and tuple indices."
+msgstr ""
+
+#: git.index.typ.IndexEntry.ctime:1 of
+msgid ""
+"Tuple(int_time_seconds_since_epoch, int_nano_seconds) of the file's "
+"creation time"
+msgstr ""
+
+#: git.index.typ.IndexEntry.from_base:1 of
+msgid ""
+"Minimal entry as created from the given BaseIndexEntry instance. Missing "
+"values will be set to null-like values"
+msgstr ""
+
+#: git.index.typ.IndexEntry.from_base:5 of
+msgid "Instance of type BaseIndexEntry"
+msgstr ""
+
+#: git.index.typ.IndexEntry.from_blob:1 of
+msgid "Minimal entry resembling the given blob object"
+msgstr ""
+
+#: git.index.typ.IndexEntry.mtime:1 of
+msgid "See ctime property, but returns modification time"
+msgstr ""
+
+#: ../../source/reference.rst:118
+msgid "Index.Util"
+msgstr ""
+
+#: git.index.util:1 of
+msgid "Module containing index utilities"
+msgstr ""
+
+#: git.index.util.TemporaryFileSwap:1 of
+msgid ""
+"Utility class moving a file to a temporary location within the same "
+"directory and moving it back on to where on object deletion."
+msgstr ""
+
+#: git.index.util.default_index:1 of
+msgid ""
+"Decorator assuring the wrapped method may only run if we are the default "
+"repository index. This is as we rely on git commands that operate on that"
+" index only."
+msgstr ""
+
+#: git.index.util.git_working_dir:1 of
+msgid ""
+"Decorator which changes the current working dir to the one of the git "
+"repository in order to assure relative paths are handled correctly"
+msgstr ""
+
+#: git.index.util.post_clear_cache:1 of
+msgid ""
+"Decorator for functions that alter the index using the git command. This "
+"would invalidate our possibly existing entries dictionary which is why it"
+" must be deleted to allow it to be lazily reread later."
+msgstr ""
+
+#: git.index.util.post_clear_cache:6 of
+msgid ""
+"This decorator will not be required once all functions are implemented "
+"natively which in fact is possible, but probably not feasible performance"
+" wise."
+msgstr ""
+
+#: ../../source/reference.rst:126
+msgid "GitCmd"
+msgstr ""
+
+#: git.cmd.Git:1 of
+msgid "The Git class manages communication with the Git binary."
+msgstr ""
+
+#: git.cmd.Git:3 of
+msgid "It provides a convenient interface to calling the Git binary, such as in::"
+msgstr ""
+
+#: git.cmd.Git:13 of
+msgid "``Debugging``"
+msgstr ""
+
+#: git.cmd.Git:10 of
+msgid ""
+"Set the GIT_PYTHON_TRACE environment variable print each invocation of "
+"the command to stdout. Set its value to 'full' to see details about the "
+"returned values."
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt:1 of
+msgid ""
+"Kill/Interrupt the stored process instance once this instance goes out of"
+" scope. It is used to prevent processes piling up in case iterators stop "
+"reading. Besides all attributes are wired through to the contained "
+"process object."
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt:5 of
+msgid ""
+"The wait method was overridden to perform automatic status code checking "
+"and possibly raise."
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait:1 of
+msgid "Wait for the process and return its status code."
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait:3 of
+msgid "Previously read value of stderr, in case stderr is already closed."
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait of
+msgid "warn"
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait:4 of
+msgid "may deadlock if output or error pipes are used and not handled separately."
+msgstr ""
+
+#: git.cmd.Git.AutoInterrupt.wait:5 of
+msgid "if the return status is not 0"
+msgstr ""
+
+#: git.cmd.Git.CatFileContentStream:1 of
+msgid ""
+"Object representing a sized read-only stream returning the contents of an"
+" object. It behaves like a stream, but counts the data read and simulates"
+" an empty stream once our sized content region is empty. If not all data "
+"is read to the end of the objects's lifetime, we read the rest to assure "
+"the underlying stream continues to work"
+msgstr ""
+
+#: git.cmd.Git.__call__:1 of
+msgid "Specify command line options to the git executable for a subcommand call"
+msgstr ""
+
+#: git.cmd.Git.__call__:4 git.cmd.Git.set_persistent_git_options:4 of
+msgid ""
+"is a dict of keyword arguments. these arguments are passed as in "
+"_call_process but will be passed to the git command rather than the "
+"subcommand."
+msgstr ""
+
+#: git.cmd.Git.__call__:10 git.cmd.Git.custom_environment:4
+#: git.cmd.Git.update_environment:5 of
+msgid "``Examples``::"
+msgstr ""
+
+#: git.cmd.Git.__call__:11 of
+msgid "git(work_tree='/tmp').difftool()"
+msgstr ""
+
+#: git.cmd.Git.__getattr__:1 of
+msgid ""
+"A convenience method as it allows to call the command as if it was an "
+"object. :return: Callable object that will execute call _call_process "
+"with your arguments."
+msgstr ""
+
+#: git.cmd.Git.__init__:1 of
+msgid "Initialize this instance with:"
+msgstr ""
+
+#: git.cmd.Git.__init__:3 of
+msgid ""
+"Git directory we should work in. If None, we always work in the current "
+"directory as returned by os.getcwd(). It is meant to be the working tree "
+"directory if available, or the .git directory in case of bare "
+"repositories."
+msgstr ""
+
+#: git.cmd.Git.clear_cache:1 of
+msgid "Clear all kinds of internal caches to release resources."
+msgstr ""
+
+#: git.cmd.Git.clear_cache:3 of
+msgid "Currently persistent commands will be interrupted."
+msgstr ""
+
+#: git.cmd.Git.custom_environment:1 of
+msgid ""
+"A context manager around the above ``update_environment`` method to "
+"restore the environment back to its previous state after operation."
+msgstr ""
+
+#: git.cmd.Git.custom_environment:9 of
+msgid "see update_environment"
+msgstr ""
+
+#: git.cmd.Git.execute:1 of
+msgid ""
+"Handles executing the command on the shell and consumes and returns the "
+"returned information (stdout)"
+msgstr ""
+
+#: git.cmd.Git.execute:4 of
+msgid ""
+"The command argument list to execute. It should be a string, or a "
+"sequence of program arguments. The program to execute is the first item "
+"in the args sequence or string."
+msgstr ""
+
+#: git.cmd.Git.execute:9 of
+msgid "Standard input filehandle passed to subprocess.Popen."
+msgstr ""
+
+#: git.cmd.Git.execute:12 of
+msgid "Whether to return a (status, stdout, stderr) tuple."
+msgstr ""
+
+#: git.cmd.Git.execute:15 of
+msgid "Whether to raise an exception when git returns a non-zero status."
+msgstr ""
+
+#: git.cmd.Git.execute:18 of
+msgid ""
+"Whether to return the created process instance directly from which "
+"streams can be read on demand. This will render with_extended_output and "
+"with_exceptions ineffective - the caller will have to deal with the "
+"details himself. It is important to note that the process will be placed "
+"into an AutoInterrupt wrapper that will interrupt the process once it "
+"goes out of scope. If you use the command in iterators, you should pass "
+"the whole process instance instead of a single stream."
+msgstr ""
+
+#: git.cmd.Git.execute:28 of
+msgid ""
+"If set to a file-like object, data produced by the git command will be "
+"output to the given stream directly. This feature only has any effect if "
+"as_process is False. Processes will always be created with a pipe due to "
+"issues with subprocess. This merely is a workaround as data will be "
+"copied from the output pipe to the given output stream directly. Judging "
+"from the implementation, you shouldn't use this flag !"
+msgstr ""
+
+#: git.cmd.Git.execute:37 of
+msgid ""
+"if False, the commands standard output will be bytes. Otherwise, it will "
+"be decoded into a string using the default encoding (usually utf-8). The "
+"latter can fail, if the output contains binary data."
+msgstr ""
+
+#: git.cmd.Git.execute:42 of
+msgid "A dictionary of environment variables to be passed to `subprocess.Popen`."
+msgstr ""
+
+#: git.cmd.Git.execute:45 of
+msgid ""
+"Maximum number of bytes in one chunk of data passed to the output_stream "
+"in one invocation of write() method. If the given number is not positive "
+"then the default value is used."
+msgstr ""
+
+#: git.cmd.Git.execute:50 of
+msgid ""
+"Keyword arguments to be passed to subprocess.Popen. Please note that some"
+" of the valid kwargs are already set by this method, the ones you specify"
+" may not be the same ones."
+msgstr ""
+
+#: git.cmd.Git.execute:55 of
+msgid "If True, default True, we open stdout on the created process"
+msgstr ""
+
+#: git.cmd.Git.execute:56 of
+msgid ""
+"if True, pipes will be opened as text, and lines are split at all known "
+"line endings."
+msgstr ""
+
+#: git.cmd.Git.execute:59 of
+msgid ""
+"Whether to invoke commands through a shell (see `Popen(..., "
+"shell=True)`). It overrides :attr:`USE_SHELL` if it is not `None`."
+msgstr ""
+
+#: git.cmd.Git.execute:62 of
+msgid ""
+"To specify a timeout in seconds for the git command, after which the "
+"process should be killed. This will have no effect if as_process is set "
+"to True. It is set to None by default and will let the process run until "
+"the timeout is explicitly specified. This feature is not supported on "
+"Windows. It's also worth noting that kill_after_timeout uses SIGKILL, "
+"which can have negative side effects on a repository. For example, stale "
+"locks in case of git gc could render the repository incapable of "
+"accepting changes until the lock is manually removed."
+msgstr ""
+
+#: git.cmd.Git.execute:72 of
+msgid ""
+"* str(output) if extended_output = False (Default) * tuple(int(status), "
+"str(stdout), str(stderr)) if extended_output = True  if output_stream is "
+"True, the stdout value will be your output stream: * output_stream if "
+"extended_output = False * tuple(int(status), output_stream, str(stderr)) "
+"if extended_output = True  Note git is executed with LC_MESSAGES=\"C\" to"
+" ensure consistent output regardless of system language."
+msgstr ""
+
+#: git.cmd.Git.execute:73 of
+msgid "str(output) if extended_output = False (Default)"
+msgstr ""
+
+#: git.cmd.Git.execute:74 of
+msgid "tuple(int(status), str(stdout), str(stderr)) if extended_output = True"
+msgstr ""
+
+#: git.cmd.Git.execute:76 of
+msgid ""
+"if output_stream is True, the stdout value will be your output stream: * "
+"output_stream if extended_output = False * tuple(int(status), "
+"output_stream, str(stderr)) if extended_output = True"
+msgstr ""
+
+#: git.cmd.Git.execute:80 of
+msgid ""
+"Note git is executed with LC_MESSAGES=\"C\" to ensure consistent output "
+"regardless of system language."
+msgstr ""
+
+#: git.cmd.Git.execute:86 of
+msgid ""
+"If you add additional keyword arguments to the signature of this method, "
+"you must update the execute_kwargs tuple housed in this module."
+msgstr ""
+
+#: git.cmd.Git.get_object_data:1 of
+msgid ""
+"As get_object_header, but returns object data as well :return: (hexsha, "
+"type_string, size_as_int,data_string) :note: not threadsafe"
+msgstr ""
+
+#: git.cmd.Git.get_object_header:1 of
+msgid ""
+"Use this method to quickly examine the type and size of the object behind"
+" the given ref."
+msgstr ""
+
+#: git.cmd.Git.get_object_header:4 of
+msgid ""
+"The method will only suffer from the costs of command invocation once and"
+" reuses the command in subsequent calls."
+msgstr ""
+
+#: git.cmd.Git.get_object_header:7 of
+msgid "(hexsha, type_string, size_as_int)"
+msgstr ""
+
+#: git.cmd.Git.refresh:1 git.remote.FetchInfo.refresh:1 of
+msgid "This gets called by the refresh function (see the top level __init__)."
+msgstr ""
+
+#: git.cmd.Git.set_persistent_git_options:1 of
+msgid ""
+"Specify command line options to the git executable for subsequent "
+"subcommand calls"
+msgstr ""
+
+#: git.cmd.Git.stream_object_data:1 of
+msgid "As get_object_header, but returns the data as a stream"
+msgstr ""
+
+#: git.cmd.Git.stream_object_data:3 of
+msgid "(hexsha, type_string, size_as_int, stream)"
+msgstr ""
+
+#: git.cmd.Git.stream_object_data:4 of
+msgid ""
+"This method is not threadsafe, you need one independent Command instance "
+"per thread to be safe !"
+msgstr ""
+
+#: git.cmd.Git.transform_kwargs:1 of
+msgid "Transforms Python style kwargs into git command line options."
+msgstr ""
+
+#: git.cmd.Git.update_environment:1 of
+msgid ""
+"Set environment variables for future git invocations. Return all changed "
+"values in a format that can be passed back into this function to revert "
+"the changes:"
+msgstr ""
+
+#: git.cmd.Git.update_environment:10 of
+msgid "environment variables to use for git processes"
+msgstr ""
+
+#: git.cmd.Git.update_environment:11 of
+msgid "dict that maps environment variables to their old values"
+msgstr ""
+
+#: git.cmd.Git.version_info:1 of
+msgid ""
+"tuple(int, int, int, int) tuple with integers representing the major, "
+"minor and additional version numbers as parsed from git version. This "
+"value is generated on demand and is cached"
+msgstr ""
+
+#: git.cmd.Git.working_dir:1 of
+msgid "Git directory we are working on"
+msgstr ""
+
+#: ../../source/reference.rst:134
+msgid "Config"
+msgstr ""
+
+#: git.config:1 of
+msgid ""
+"Module containing module parser implementation able to properly read and "
+"write configuration files"
+msgstr ""
+
+#: git.config.SectionConstraint:1 of
+msgid ""
+"Constrains a ConfigParser to only option commands which are constrained "
+"to always use the section we have been initialized with."
+msgstr ""
+
+#: git.config.SectionConstraint:4 of
+msgid "It supports all ConfigParser methods that operate on an option."
+msgstr ""
+
+#: git.config.SectionConstraint:7 of
+msgid "If used as a context manager, will release the wrapped ConfigParser."
+msgstr ""
+
+#: git.config.SectionConstraint.config:1 of
+msgid "return: Configparser instance we constrain"
+msgstr ""
+
+#: git.config.SectionConstraint.release:1 of
+msgid ""
+"Equivalent to GitConfigParser.release(), which is called on our "
+"underlying parser instance"
+msgstr ""
+
+#: ../../source/reference.rst:142
+msgid "Diff"
+msgstr ""
+
+#: git.diff.Diff:1 of
+msgid "A Diff contains diff information between two Trees."
+msgstr ""
+
+#: git.diff.Diff:3 of
+msgid ""
+"It contains two sides a and b of the diff, members are prefixed with "
+"\"a\" and \"b\" respectively to inidcate that."
+msgstr ""
+
+#: git.diff.Diff:6 of
+msgid ""
+"Diffs keep information about the changed blob objects, the file mode, "
+"renames, deletions and new files."
+msgstr ""
+
+#: git.diff.Diff:9 of
+msgid ""
+"There are a few cases where None has to be expected as member variable "
+"value:"
+msgstr ""
+
+#: git.diff.Diff:11 of
+msgid "``New File``::"
+msgstr ""
+
+#: git.diff.Diff:17 of
+msgid "``Deleted File``::"
+msgstr ""
+
+#: git.diff.Diff:23 of
+msgid "``Working Tree Blobs``"
+msgstr ""
+
+#: git.diff.Diff:25 of
+msgid ""
+"When comparing to working trees, the working tree blob will have a null "
+"hexsha as a corresponding object does not yet exist. The mode will be "
+"null as well. But the path will be available though. If it is listed in a"
+" diff the working tree version of the file must be different to the "
+"version in the index or tree, and hence has been modified."
+msgstr ""
+
+#: git.diff.Diff.renamed:1 git.diff.Diff.renamed_file:1 of
+msgid "True if the blob of our diff has been renamed"
+msgstr ""
+
+#: git.diff.Diff.renamed:2 of
+msgid "This property is deprecated, please use ``renamed_file`` instead."
+msgstr ""
+
+#: git.diff.DiffIndex:1 of
+msgid ""
+"Implements an Index for diffs, allowing a list of Diffs to be queried by "
+"the diff properties."
+msgstr ""
+
+#: git.diff.DiffIndex:4 of
+msgid "The class improves the diff handling convenience"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:1 of
+msgid "iterator yielding Diff instances that match the given change_type"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:4 of
+msgid ""
+"Member of DiffIndex.change_type, namely:  * 'A' for added paths * 'D' for"
+" deleted paths * 'R' for renamed paths * 'M' for paths with modified data"
+" * 'T' for changed in the type paths"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:5 of
+msgid "Member of DiffIndex.change_type, namely:"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:7 of
+msgid "'A' for added paths"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:8 of
+msgid "'D' for deleted paths"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:9 of
+msgid "'R' for renamed paths"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:10 of
+msgid "'M' for paths with modified data"
+msgstr ""
+
+#: git.diff.DiffIndex.iter_change_type:11 of
+msgid "'T' for changed in the type paths"
+msgstr ""
+
+#: git.diff.Diffable:1 of
+msgid ""
+"Common interface for all object that can be diffed against another object"
+" of compatible type."
+msgstr ""
+
+#: git.diff.Diffable:4 of
+msgid ""
+"Subclasses require a repo member as it is the case for Object instances, "
+"for practical reasons we do not derive from Object."
+msgstr ""
+
+#: git.diff.Diffable.diff:1 of
+msgid ""
+"Creates diffs between two items being trees, trees and index or an index "
+"and the working tree. It will detect renames automatically."
+msgstr ""
+
+#: git.diff.Diffable.diff:4 of
+msgid ""
+"Is the item to compare us with. If None, we will be compared to the "
+"working tree. If Treeish, it will be compared against the respective tree"
+" If Index ( type ), it will be compared against the index. If "
+"git.NULL_TREE, it will compare against the empty tree. It defaults to "
+"Index to assure the method will not by-default fail on bare repositories."
+msgstr ""
+
+#: git.diff.Diffable.diff:13 of
+msgid ""
+"is a list of paths or a single path to limit the diff to. It will only "
+"include at least one of the given path or paths."
+msgstr ""
+
+#: git.diff.Diffable.diff:17 of
+msgid ""
+"If True, the returned Diff contains a detailed patch that if applied "
+"makes the self to other. Patches are somewhat costly as blobs have to be "
+"read and diffed."
+msgstr ""
+
+#: git.diff.Diffable.diff:22 of
+msgid ""
+"Additional arguments passed to git-diff, such as R=True to swap both "
+"sides of the diff."
+msgstr ""
+
+#: git.diff.Diffable.diff:26 of
+msgid "git.DiffIndex"
+msgstr ""
+
+#: git.diff.Diffable.diff:29 of
+msgid ""
+"On a bare repository, 'other' needs to be provided as Index or as as "
+"Tree/Commit, or a git command error will occur"
+msgstr ""
+
+#: ../../source/reference.rst:150
+msgid "Exceptions"
+msgstr ""
+
+#: git.exc:1 of
+msgid "Module containing all exceptions thrown throughout the git package,"
+msgstr ""
+
+#: git.exc.CacheError:1 of
+msgid ""
+"Base for all errors related to the git index, which is called cache "
+"internally"
+msgstr ""
+
+#: git.exc.CommandError:1 of
+msgid "Base class for exceptions thrown at every stage of `Popen()` execution."
+msgstr ""
+
+#: git.exc.CommandError:3 of
+msgid "A non-empty list of argv comprising the command-line."
+msgstr ""
+
+#: git.exc.GitCommandError:1 of
+msgid "Thrown if execution of the git command fails with non-zero status code."
+msgstr ""
+
+#: git.exc.GitCommandNotFound:1 of
+msgid ""
+"Thrown if we cannot find the `git` executable in the PATH or at the path "
+"given by the GIT_PYTHON_GIT_EXECUTABLE environment variable"
+msgstr ""
+
+#: git.exc.GitError:1 of
+msgid "Base class for all package exceptions"
+msgstr ""
+
+#: git.exc.HookExecutionError:1 of
+msgid ""
+"Thrown if a hook exits with a non-zero exit code. It provides access to "
+"the exit code and the string returned via standard output"
+msgstr ""
+
+#: git.exc.InvalidGitRepositoryError:1 of
+msgid "Thrown if the given repository appears to have an invalid format."
+msgstr ""
+
+#: git.exc.NoSuchPathError:1 of
+msgid "Thrown if a path could not be access by the system."
+msgstr ""
+
+#: git.exc.RepositoryDirtyError:1 of
+msgid ""
+"Thrown whenever an operation on a repository fails as it has uncommitted "
+"changes that would be overwritten"
+msgstr ""
+
+#: git.exc.UnmergedEntriesError:1 of
+msgid ""
+"Thrown if an operation cannot proceed as there are still unmerged entries"
+" in the cache"
+msgstr ""
+
+#: git.exc.WorkTreeRepositoryUnsupported:1 of
+msgid "Thrown to indicate we can't handle work tree repositories"
+msgstr ""
+
+#: ../../source/reference.rst:159
+msgid "Refs.symbolic"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference:1 of
+msgid ""
+"Represents a special case of a reference such that this reference is "
+"symbolic. It does not point to a specific commit, but to another Head, "
+"which itself specifies a commit."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference:5 of
+msgid "A typical example for a symbolic reference is HEAD."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.commit:1 of
+msgid "Query or set commits directly"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:1 of
+msgid ""
+"Create a new symbolic reference, hence a reference pointing , to another "
+"reference."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:3 of
+msgid "Repository to create the reference in"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:6 of
+msgid ""
+"full path at which the new symbolic reference is supposed to be created "
+"at, i.e. \"NEW_HEAD\" or \"symrefs/my_new_symref\""
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:10 of
+msgid ""
+"The reference to which the new symbolic reference should point to. If it "
+"is a commit'ish, the symbolic ref will be detached."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:14 of
+msgid ""
+"if True, force creation even if a symbolic reference with that name "
+"already exists. Raise OSError otherwise"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:18 of
+msgid ""
+"If not None, the message to append to the reflog. Otherwise no reflog "
+"entry is written."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:22 of
+msgid "Newly created symbolic Reference"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:24 of
+msgid ""
+"If a (Symbolic)Reference with the same name but different contents "
+"already exists."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.create:28 of
+msgid "This does not alter the current HEAD, index or Working Tree"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.delete:1 of
+msgid "Delete the reference at the given path"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.delete:3 of
+msgid "Repository to delete the reference from"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.delete:6 of
+msgid ""
+"Short or full path pointing to the reference, i.e. refs/myreference or "
+"just \"myreference\", hence 'refs/' is implied. Alternatively the "
+"symbolic reference to be deleted"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.dereference_recursive:1 of
+msgid ""
+"hexsha stored in the reference at the given ref_path, recursively "
+"dereferencing all intermediate references as required"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.dereference_recursive:3 of
+msgid "the repository containing the reference at ref_path"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.from_path:1 of
+msgid "full .git-directory-relative path name to the Reference to instantiate"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.from_path:2 of
+msgid ""
+"use to_full_path() if you only have a partial path of a known Reference "
+"Type"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.from_path:3 of
+msgid "Instance of type Reference, Head, or Tag depending on the given path"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.is_detached:1 of
+msgid ""
+"True if we are a detached reference, hence we point to a specific commit "
+"instead to another reference"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.is_remote:1 of
+msgid "True if this symbolic reference points to a remote branch"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.is_valid:1 of
+msgid ""
+"True if the reference is valid, hence it can be read and points to a "
+"valid object or reference."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.iter_items:1 of
+msgid "Find all refs in the repository"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.iter_items:5 of
+msgid ""
+"Optional keyword argument to the path which is to be shared by all "
+"returned Ref objects. Defaults to class specific portion if None assuring"
+" that only refs suitable for the actual class are returned."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.iter_items:11 of
+msgid ""
+"git.SymbolicReference[], each of them is guaranteed to be a symbolic ref "
+"which is not detached and pointing to a valid ref  List is "
+"lexicographically sorted The returned objects represent actual "
+"subclasses, such as Head or TagReference"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.iter_items:12 of
+msgid ""
+"git.SymbolicReference[], each of them is guaranteed to be a symbolic ref "
+"which is not detached and pointing to a valid ref"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.iter_items:15 of
+msgid ""
+"List is lexicographically sorted The returned objects represent actual "
+"subclasses, such as Head or TagReference"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log:1 of
+msgid ""
+"RefLog for this reference. Its last entry reflects the latest change "
+"applied to this reference"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log:4 of
+msgid ""
+"As the log is parsed every time, its recommended to cache it for use "
+"instead of calling this method repeatedly. It should be considered read-"
+"only."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_append:1 of
+msgid "Append a logentry to the logfile of this ref"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_append:3 of
+msgid "binary sha this ref used to point to"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_append:4 of
+msgid "A message describing the change"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_append:5 of
+msgid ""
+"The sha the ref points to now. If None, our current commit sha will be "
+"used"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_append:7 of
+msgid "added RefLogEntry instance"
+msgstr ""
+
+#: git.refs.log.RefLog.entry_at:1
+#: git.refs.symbolic.SymbolicReference.log_entry:1 of
+msgid "RefLogEntry at the given index"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_entry:2 of
+msgid "python list compatible positive or negative index"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.log_entry:4 of
+msgid ""
+"This method must read part of the reflog during execution, hence it "
+"should be used sparringly, or only if you need just one index. In that "
+"case, it will be faster than the ``log()`` method"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.name:1 of
+msgid ""
+"In case of symbolic references, the shortest assumable name is the path "
+"itself."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.object:1
+#: git.refs.tag.TagReference.object:1 of
+msgid "Return the object our ref currently refers to"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.ref:1
+#: git.refs.symbolic.SymbolicReference.reference:1 of
+msgid "Returns the Reference we point to"
+msgstr ""
+
+#: git.refs.head.Head.rename:1 git.refs.symbolic.SymbolicReference.rename:1 of
+msgid "Rename self to a new path"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.rename:3 of
+msgid ""
+"Either a simple name or a full path, i.e. new_name or features/new_name. "
+"The prefix refs/ is implied for references and will be set as needed. In "
+"case this is a symbolic ref, there is no implied prefix"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.rename:8 of
+msgid ""
+"If True, the rename will succeed even if a head with the target name "
+"already exists. It will be overwritten in that case"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.rename:13 of
+msgid "In case a file at path but a different contents already exists"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_commit:1 of
+msgid "As set_object, but restricts the type of object to be a Commit"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_commit:3 of
+msgid "If commit is not a Commit object or doesn't point to a commit"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_object:1 of
+msgid ""
+"Set the object we point to, possibly dereference our symbolic reference "
+"first. If the reference does not exist, it will be created"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_object:4 of
+msgid ""
+"a refspec, a SymbolicReference or an Object instance. SymbolicReferences "
+"will be dereferenced beforehand to obtain the object they point to"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_object:6 of
+msgid ""
+"If not None, the message will be used in the reflog entry to be written. "
+"Otherwise the reflog is not altered"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_object:8 of
+msgid "plain SymbolicReferences may not actually point to objects by convention"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_reference:1 of
+msgid ""
+"Set ourselves to the given ref. It will stay a symbol if the ref is a "
+"Reference. Otherwise an Object, given as Object instance or refspec, is "
+"assumed and if valid, will be set which effectively detaches the "
+"refererence if it was a purely symbolic one."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_reference:6 of
+msgid ""
+"SymbolicReference instance, Object instance or refspec string Only if the"
+" ref is a SymbolicRef instance, we will point to it. Everything else is "
+"dereferenced to obtain the actual object."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_reference:9 of
+msgid ""
+"If set to a string, the message will be used in the reflog. Otherwise, a "
+"reflog entry is not written for the changed reference. The previous "
+"commit of the entry will be the commit we point to now.  See also: "
+"log_append()"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_reference:9 of
+msgid ""
+"If set to a string, the message will be used in the reflog. Otherwise, a "
+"reflog entry is not written for the changed reference. The previous "
+"commit of the entry will be the commit we point to now."
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_reference:13 of
+msgid "See also: log_append()"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.set_reference:16 of
+msgid ""
+"This symbolic reference will not be dereferenced. For that, see "
+"``set_object(...)``"
+msgstr ""
+
+#: git.refs.symbolic.SymbolicReference.to_full_path:1 of
+msgid ""
+"string with a full repository-relative path which can be used to "
+"initialize a Reference instance, for instance by using "
+"``Reference.from_path``"
+msgstr ""
+
+#: ../../source/reference.rst:167
+msgid "Refs.reference"
+msgstr ""
+
+#: git.refs.reference.Reference:1 of
+msgid ""
+"Represents a named reference to any object. Subclasses may apply "
+"restrictions though, i.e. Heads can only point to commits."
+msgstr ""
+
+#: git.refs.reference.Reference.__init__:1 of
+msgid "Initialize this instance :param repo: Our parent repository"
+msgstr ""
+
+#: git.refs.reference.Reference.__init__:4 of
+msgid ""
+"Path relative to the .git/ directory pointing to the ref in question, "
+"i.e. refs/heads/master"
+msgstr ""
+
+#: git.refs.reference.Reference.__init__:7 of
+msgid ""
+"if False, you can provide any path. Otherwise the path must start with "
+"the default path prefix of this type."
+msgstr ""
+
+#: git.refs.reference.Reference.iter_items:1 of
+msgid ""
+"Equivalent to SymbolicReference.iter_items, but will return non-detached "
+"references as well."
+msgstr ""
+
+#: git.refs.reference.Reference.name:1 of
+msgid "(shortest) Name of this reference - it may contain path components"
+msgstr ""
+
+#: git.refs.reference.Reference.set_object:1 of
+msgid ""
+"Special version which checks if the head-log needs an update as well "
+":return: self"
+msgstr ""
+
+#: ../../source/reference.rst:175
+msgid "Refs.head"
+msgstr ""
+
+#: git.refs.head.HEAD:1 of
+msgid ""
+"Special case of a Symbolic Reference as it represents the repository's "
+"HEAD reference."
+msgstr ""
+
+#: git.refs.head.HEAD.orig_head:1 of
+msgid ""
+"SymbolicReference pointing at the ORIG_HEAD, which is maintained to "
+"contain the previous value of HEAD"
+msgstr ""
+
+#: git.refs.head.HEAD.reset:1 of
+msgid ""
+"Reset our HEAD to the given commit optionally synchronizing the index and"
+" working tree. The reference we refer to will be set to commit as well."
+msgstr ""
+
+#: git.refs.head.HEAD.reset:5 of
+msgid ""
+"Commit object, Reference Object or string identifying a revision we "
+"should reset HEAD to."
+msgstr ""
+
+#: git.refs.head.HEAD.reset:9 of
+msgid ""
+"If True, the index will be set to match the given commit. Otherwise it "
+"will not be touched."
+msgstr ""
+
+#: git.refs.head.HEAD.reset:13 of
+msgid ""
+"If True, the working tree will be forcefully adjusted to match the given "
+"commit, possibly overwriting uncommitted changes without warning. If "
+"working_tree is True, index must be true as well"
+msgstr ""
+
+#: git.refs.head.HEAD.reset:18 of
+msgid ""
+"Single path or list of paths relative to the git root directory that are "
+"to be reset. This allows to partially reset individual files."
+msgstr ""
+
+#: git.refs.head.HEAD.reset:22 of
+msgid "Additional arguments passed to git-reset."
+msgstr ""
+
+#: git.refs.head.Head:1 of
+msgid ""
+"A Head is a named reference to a Commit. Every Head instance contains a "
+"name and a Commit object."
+msgstr ""
+
+#: git.refs.head.Head:4 of
+msgid "Examples::"
+msgstr ""
+
+#: git.refs.head.Head.checkout:1 of
+msgid ""
+"Checkout this head by setting the HEAD to this reference, by updating the"
+" index to reflect the tree we point to and by updating the working tree "
+"to reflect the latest index."
+msgstr ""
+
+#: git.refs.head.Head.checkout:5 of
+msgid "The command will fail if changed working tree files would be overwritten."
+msgstr ""
+
+#: git.refs.head.Head.checkout:7 of
+msgid ""
+"If True, changes to the index and the working tree will be discarded. If "
+"False, GitCommandError will be raised in that situation."
+msgstr ""
+
+#: git.refs.head.Head.checkout:11 of
+msgid ""
+"Additional keyword arguments to be passed to git checkout, i.e. "
+"b='new_branch' to create a new branch at the given spot."
+msgstr ""
+
+#: git.refs.head.Head.checkout:15 of
+msgid ""
+"The active branch after the checkout operation, usually self unless a new"
+" branch has been created. If there is no active branch, as the HEAD is "
+"now detached, the HEAD reference will be returned instead."
+msgstr ""
+
+#: git.refs.head.Head.checkout:22 of
+msgid ""
+"By default it is only allowed to checkout heads - everything else will "
+"leave the HEAD detached which is allowed and possible, but remains a "
+"special state that some tools might not be able to handle."
+msgstr ""
+
+#: git.refs.head.Head.config_reader:1 of
+msgid ""
+"A configuration parser instance constrained to only read this instance's "
+"values"
+msgstr ""
+
+#: git.refs.head.Head.config_writer:1 of
+msgid ""
+"A configuration writer instance with read-and write access to options of "
+"this head"
+msgstr ""
+
+#: git.refs.head.Head.delete:1 git.repo.base.Repo.delete_head:1 of
+msgid "Delete the given heads"
+msgstr ""
+
+#: git.refs.head.Head.delete:3 of
+msgid ""
+"If True, the heads will be deleted even if they are not yet merged into "
+"the main development stream. Default False"
+msgstr ""
+
+#: git.refs.head.Head.rename:3 of
+msgid ""
+"Either a simple name or a path, i.e. new_name or features/new_name. The "
+"prefix refs/heads is implied"
+msgstr ""
+
+#: git.refs.head.Head.rename:7 of
+msgid ""
+"If True, the rename will succeed even if a head with the target name "
+"already exists."
+msgstr ""
+
+#: git.refs.head.Head.rename:12 of
+msgid "respects the ref log as git commands are used"
+msgstr ""
+
+#: git.refs.head.Head.set_tracking_branch:2 of
+msgid "Configure this branch to track the given remote reference. This will alter"
+msgstr ""
+
+#: git.refs.head.Head.set_tracking_branch:2 of
+msgid "this branch's configuration accordingly."
+msgstr ""
+
+#: git.refs.head.Head.set_tracking_branch:4 of
+msgid "The remote reference to track or None to untrack any references"
+msgstr ""
+
+#: git.refs.head.Head.tracking_branch:1 of
+msgid ""
+"The remote_reference we are tracking, or None if we are not a tracking "
+"branch"
+msgstr ""
+
+#: ../../source/reference.rst:183
+msgid "Refs.tag"
+msgstr ""
+
+#: git.refs.tag.TagReference:1 of
+msgid ""
+"Class representing a lightweight tag reference which either points to a "
+"commit ,a tag object or any other object. In the latter case additional "
+"information, like the signature or the tag-creator, is available."
+msgstr ""
+
+#: git.refs.tag.TagReference:5 of
+msgid ""
+"This tag object will always point to a commit object, but may carry "
+"additional information in a tag object::"
+msgstr ""
+
+#: git.refs.tag.TagReference.commit:1 of
+msgid "Commit object the tag ref points to"
+msgstr ""
+
+#: git.refs.tag.TagReference.commit:3 of
+msgid "if the tag points to a tree or blob"
+msgstr ""
+
+#: git.refs.tag.TagReference.create:1 of
+msgid "Create a new tag reference."
+msgstr ""
+
+#: git.refs.tag.TagReference.create:3 of
+msgid ""
+"The name of the tag, i.e. 1.0 or releases/1.0. The prefix refs/tags is "
+"implied"
+msgstr ""
+
+#: git.refs.tag.TagReference.create:7 of
+msgid ""
+"A reference to the Object you want to tag. The Object can be a commit, "
+"tree or blob."
+msgstr ""
+
+#: git.refs.tag.TagReference.create:11 of
+msgid ""
+"If not None, the message will be used in your tag object. This will also "
+"create an additional tag object that allows to obtain that information, "
+"i.e.::      tagref.tag.message"
+msgstr ""
+
+#: git.refs.tag.TagReference.create:12 of
+msgid ""
+"If not None, the message will be used in your tag object. This will also "
+"create an additional tag object that allows to obtain that information, "
+"i.e.::"
+msgstr ""
+
+#: git.refs.tag.TagReference.create:17 of
+msgid ""
+"Synonym for :param logmsg: Included for backwards compatability. :param "
+"logmsg is used in preference if both given."
+msgstr ""
+
+#: git.refs.tag.TagReference.create:21 of
+msgid "If True, to force creation of a tag even though that tag already exists."
+msgstr ""
+
+#: git.refs.tag.TagReference.create:24 of
+msgid "Additional keyword arguments to be passed to git-tag"
+msgstr ""
+
+#: git.refs.tag.TagReference.create:27 of
+msgid "A new TagReference"
+msgstr ""
+
+#: git.refs.tag.TagReference.delete:1 of
+msgid "Delete the given existing tag or tags"
+msgstr ""
+
+#: git.refs.tag.TagReference.tag:1 of
+msgid ""
+"Tag object this tag ref points to or None in case we are a light weight "
+"tag"
+msgstr ""
+
+#: ../../source/reference.rst:191
+msgid "Refs.remote"
+msgstr ""
+
+#: git.refs.remote.RemoteReference:1 of
+msgid "Represents a reference pointing to a remote head."
+msgstr ""
+
+#: git.refs.remote.RemoteReference.create:1 of
+msgid "Used to disable this method"
+msgstr ""
+
+#: git.refs.remote.RemoteReference.delete:1 of
+msgid "Delete the given remote references"
+msgstr ""
+
+#: git.refs.remote.RemoteReference.delete:4 of
+msgid ""
+"kwargs are given for comparability with the base class method as we "
+"should not narrow the signature."
+msgstr ""
+
+#: git.refs.remote.RemoteReference.iter_items:1 of
+msgid ""
+"Iterate remote references, and if given, constrain them to the given "
+"remote"
+msgstr ""
+
+#: ../../source/reference.rst:199
+msgid "Refs.log"
+msgstr ""
+
+#: git.refs.log.RefLog:1 of
+msgid ""
+"A reflog contains RefLogEntrys, each of which defines a certain state of "
+"the head in question. Custom query methods allow to retrieve log entries "
+"by date or by other criteria."
+msgstr ""
+
+#: git.refs.log.RefLog:5 of
+msgid ""
+"Reflog entries are ordered, the first added entry is first in the list, "
+"the last entry, i.e. the last change of the head or reference, is last in"
+" the list."
+msgstr ""
+
+#: git.refs.log.RefLog.__init__:1 of
+msgid ""
+"Initialize this instance with an optional filepath, from which we will "
+"initialize our data. The path is also used to write changes back using "
+"the write() method"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:1 of
+msgid "Append a new log entry to the revlog at filepath."
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:3 of
+msgid ""
+"configuration reader of the repository - used to obtain user information."
+" May also be an Actor instance identifying the committer directly or "
+"None."
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:5 of
+msgid "full path to the log file"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:6 of
+msgid "binary sha of the previous commit"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:7 of
+msgid "binary sha of the current commit"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:8 of
+msgid "message describing the change to the reference"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:9 of
+msgid ""
+"If True, the changes will be written right away. Otherwise the change "
+"will not be written"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:12 of
+msgid "RefLogEntry objects which was appended to the log"
+msgstr ""
+
+#: git.refs.log.RefLog.append_entry:14 of
+msgid ""
+"As we are append-only, concurrent access is not a problem as we do not "
+"interfere with readers."
+msgstr ""
+
+#: git.refs.log.RefLog.entry_at:3 of
+msgid "full path to the index file from which to read the entry"
+msgstr ""
+
+#: git.refs.log.RefLog.entry_at:5 of
+msgid ""
+"python list compatible index, i.e. it may be negative to specify an entry"
+" counted from the end of the list"
+msgstr ""
+
+#: git.refs.log.RefLog.entry_at:8 of
+msgid "If the entry didn't exist"
+msgstr ""
+
+#: git.refs.log.RefLog.entry_at:10 of
+msgid ""
+"This method is faster as it only parses the entry at index, skipping all "
+"other lines. Nonetheless, the whole file has to be read if the index is "
+"negative"
+msgstr ""
+
+#: git.refs.log.RefLog.from_file:1 of
+msgid ""
+"a new RefLog instance containing all entries from the reflog at the given"
+" filepath"
+msgstr ""
+
+#: git.refs.log.RefLog.from_file:3 of
+msgid "path to reflog"
+msgstr ""
+
+#: git.refs.log.RefLog.from_file:4 of
+msgid "If the file could not be read or was corrupted in some way"
+msgstr ""
+
+#: git.refs.log.RefLog.iter_entries:1 of
+msgid ""
+"Iterator yielding RefLogEntry instances, one for each line read sfrom the"
+" given stream."
+msgstr ""
+
+#: git.refs.log.RefLog.iter_entries:3 of
+msgid ""
+"file-like object containing the revlog in its native format or string "
+"instance pointing to a file to read"
+msgstr ""
+
+#: git.refs.log.RefLog.path:1 of
+msgid ""
+"string to absolute path at which the reflog of the given ref instance "
+"would be found. The path is not guaranteed to point to a valid file "
+"though."
+msgstr ""
+
+#: git.refs.log.RefLog.path:4 of
+msgid "SymbolicReference instance"
+msgstr ""
+
+#: git.refs.log.RefLog.to_file:1 of
+msgid ""
+"Write the contents of the reflog instance to a file at the given "
+"filepath. :param filepath: path to file, parent directories are assumed "
+"to exist"
+msgstr ""
+
+#: git.refs.log.RefLog.write:1 of
+msgid ""
+"Write this instance's data to the file we are originating from :return: "
+"self"
+msgstr ""
+
+#: git.refs.log.RefLogEntry:1 of
+msgid "Named tuple allowing easy access to the revlog data fields"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.__repr__:1 of
+msgid "Representation of ourselves in git reflog format"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.actor:1 of
+msgid "Actor instance, providing access"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.format:1 of
+msgid "a string suitable to be placed in a reflog file"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.from_line:1 of
+msgid "New RefLogEntry instance from the given revlog line."
+msgstr ""
+
+#: git.refs.log.RefLogEntry.from_line:2 of
+msgid "line bytes without trailing newline"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.from_line:3 of
+msgid "If line could not be parsed"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.message:1 of
+msgid "Message describing the operation that acted on the reference"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.new:1 of
+msgid "New instance of a RefLogEntry"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.newhexsha:1 of
+msgid "The hexsha to the commit the ref now points to, after the change"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.oldhexsha:1 of
+msgid "The hexsha to the commit the ref pointed to before the change"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.time:1 of
+msgid "time as tuple:"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.time:3 of
+msgid "[0] = int(time)"
+msgstr ""
+
+#: git.refs.log.RefLogEntry.time:4 of
+msgid "[1] = int(timezone_offset) in time.altzone format"
+msgstr ""
+
+#: ../../source/reference.rst:207
+msgid "Remote"
+msgstr ""
+
+#: git.remote.FetchInfo:1 of
+msgid ""
+"Carries information about the results of a fetch operation of a single "
+"head::"
+msgstr ""
+
+#: git.remote.FetchInfo.__init__:1 of
+msgid "Initialize a new instance"
+msgstr ""
+
+#: git.remote.FetchInfo.commit:1 of
+msgid "Commit of our remote ref"
+msgstr ""
+
+#: git.remote.FetchInfo.iter_items:1 git.remote.PushInfo.iter_items:1
+#: git.util.IterableObj.iter_items:1 of
+msgid ""
+"For more information about the arguments, see list_items :return:  "
+"iterator yielding Items"
+msgstr ""
+
+#: git.remote.FetchInfo.name:1 of
+msgid "Name of our remote ref"
+msgstr ""
+
+#: git.remote.PushInfo:1 of
+msgid ""
+"Carries information about the result of a push operation of a single "
+"head::"
+msgstr ""
+
+#: git.remote.PushInfo.__init__:1 of
+msgid ""
+"Initialize a new instance local_ref: HEAD | Head | RemoteReference | "
+"TagReference | Reference | SymbolicReference | None"
+msgstr ""
+
+#: git.remote.PushInfo.remote_ref:1 of
+msgid ""
+"Remote Reference or TagReference in the local repository corresponding to"
+" the remote_ref_string kept in this instance."
+msgstr ""
+
+#: git.remote.Remote:1 of
+msgid "Provides easy read and write access to a git remote."
+msgstr ""
+
+#: git.remote.Remote:3 of
+msgid ""
+"Everything not part of this interface is considered an option for the "
+"current remote, allowing constructs like remote.pushurl to query the "
+"pushurl."
+msgstr ""
+
+#: git.remote.Remote:6 of
+msgid ""
+"NOTE: When querying configuration, the configuration accessor will be "
+"cached to speed up subsequent accesses."
+msgstr ""
+
+#: git.remote.Remote.__getattr__:1 of
+msgid ""
+"Allows to call this instance like remote.special( \\*args, \\*\\*kwargs) "
+"to call git-remote special self.name"
+msgstr ""
+
+#: git.remote.Remote.__init__:1 of
+msgid "Initialize a remote instance"
+msgstr ""
+
+#: git.remote.Remote.__init__:3 of
+msgid "The repository we are a remote of"
+msgstr ""
+
+#: git.remote.Remote.__init__:4 of
+msgid "the name of the remote, i.e. 'origin'"
+msgstr ""
+
+#: git.remote.Remote.add_url:1 of
+msgid "Adds a new url on current remote (special case of git remote set_url)"
+msgstr ""
+
+#: git.remote.Remote.add_url:3 of
+msgid ""
+"This command adds new URLs to a given remote, making it possible to have "
+"multiple URLs for a single remote."
+msgstr ""
+
+#: git.remote.Remote.add_url:6 git.remote.Remote.set_url:5 of
+msgid "string being the URL to add as an extra remote URL"
+msgstr ""
+
+#: git.remote.Remote.config_reader:1 of
+msgid ""
+"GitConfigParser compatible object able to read options for only our "
+"remote. Hence you may simple type config.get(\"pushurl\") to obtain the "
+"information"
+msgstr ""
+
+#: git.remote.Remote.config_writer:1 of
+msgid "GitConfigParser compatible object able to write options for this remote."
+msgstr ""
+
+#: git.remote.Remote.config_writer:3 of
+msgid ""
+"You can only own one writer at a time - delete it to release the "
+"configuration file and make it usable by others."
+msgstr ""
+
+#: git.remote.Remote.config_writer:6 of
+msgid ""
+"To assure consistent results, you should only query options through the "
+"writer. Once you are done writing, you are free to use the config reader "
+"once again."
+msgstr ""
+
+#: git.remote.Remote.create:1 of
+msgid ""
+"Create a new remote to the given repository :param repo: Repository "
+"instance that is to receive the new remote :param name: Desired name of "
+"the remote :param url: URL which corresponds to the remote's name :param "
+"kwargs: Additional arguments to be passed to the git-remote add command "
+":return: New Remote instance :raise GitCommandError: in case an origin "
+"with that name already exists"
+msgstr ""
+
+#: git.remote.Remote.delete_url:1 of
+msgid "Deletes a new url on current remote (special case of git remote set_url)"
+msgstr ""
+
+#: git.remote.Remote.delete_url:3 of
+msgid ""
+"This command deletes new URLs to a given remote, making it possible to "
+"have multiple URLs for a single remote."
+msgstr ""
+
+#: git.remote.Remote.delete_url:6 of
+msgid "string being the URL to delete from the remote"
+msgstr ""
+
+#: git.remote.Remote.exists:1 of
+msgid ""
+"True if this is a valid, existing remote. Valid remotes have an entry in "
+"the repository's configuration"
+msgstr ""
+
+#: git.remote.Remote.fetch:1 of
+msgid "Fetch the latest changes for this remote"
+msgstr ""
+
+#: git.remote.Remote.fetch:3 of
+msgid ""
+"A \"refspec\" is used by fetch and push to describe the mapping between "
+"remote ref and local ref. They are combined with a colon in the format "
+"<src>:<dst>, preceded by an optional plus sign, +. For example: git fetch"
+" $URL refs/heads/master:refs/heads/origin means \"grab the master branch "
+"head from the $URL and store it as my origin branch head\". And git push "
+"$URL refs/heads/master:refs/heads/to-upstream means \"publish my master "
+"branch head as to-upstream branch at $URL\". See also git-push(1).  Taken"
+" from the git manual  Fetch supports multiple refspecs (as the underlying"
+" git-fetch does) - supplying a list rather than a string for 'refspec' "
+"will make use of this facility."
+msgstr ""
+
+#: git.remote.Remote.fetch:4 of
+msgid ""
+"A \"refspec\" is used by fetch and push to describe the mapping between "
+"remote ref and local ref. They are combined with a colon in the format "
+"<src>:<dst>, preceded by an optional plus sign, +. For example: git fetch"
+" $URL refs/heads/master:refs/heads/origin means \"grab the master branch "
+"head from the $URL and store it as my origin branch head\". And git push "
+"$URL refs/heads/master:refs/heads/to-upstream means \"publish my master "
+"branch head as to-upstream branch at $URL\". See also git-push(1)."
+msgstr ""
+
+#: git.remote.Remote.fetch:13 of
+msgid "Taken from the git manual"
+msgstr ""
+
+#: git.remote.Remote.fetch:15 of
+msgid ""
+"Fetch supports multiple refspecs (as the underlying git-fetch does) - "
+"supplying a list rather than a string for 'refspec' will make use of this"
+" facility."
+msgstr ""
+
+#: git.remote.Remote.fetch:18 of
+msgid "See 'push' method"
+msgstr ""
+
+#: git.remote.Remote.fetch:19 of
+msgid "Boolean for verbose output"
+msgstr ""
+
+#: git.remote.Remote.fetch:20 git.remote.Remote.push:16 of
+msgid ""
+"To specify a timeout in seconds for the git command, after which the "
+"process should be killed. It is set to None by default."
+msgstr ""
+
+#: git.remote.Remote.fetch:23 of
+msgid "Additional arguments to be passed to git-fetch"
+msgstr ""
+
+#: git.remote.Remote.fetch:24 of
+msgid ""
+"IterableList(FetchInfo, ...) list of FetchInfo instances providing "
+"detailed information about the fetch results"
+msgstr ""
+
+#: git.remote.Remote.fetch:29 of
+msgid ""
+"As fetch does not provide progress information to non-ttys, we cannot "
+"make it available here unfortunately as in the 'push' method."
+msgstr ""
+
+#: git.remote.Remote.iter_items:1 of
+msgid "Iterator yielding Remote objects of the given repository"
+msgstr ""
+
+#: git.remote.Remote.pull:1 of
+msgid ""
+"Pull changes from the given branch, being the same as a fetch followed by"
+" a merge of branch with your local branch."
+msgstr ""
+
+#: git.remote.Remote.pull:4 git.remote.Remote.pull:6 git.remote.Remote.push:3
+#: of
+msgid "see 'fetch' method"
+msgstr ""
+
+#: git.remote.Remote.pull:5 of
+msgid "see 'push' method"
+msgstr ""
+
+#: git.remote.Remote.pull:7 of
+msgid "Additional arguments to be passed to git-pull"
+msgstr ""
+
+#: git.remote.Remote.pull:8 of
+msgid "Please see 'fetch' method"
+msgstr ""
+
+#: git.remote.Remote.push:1 of
+msgid "Push changes from source branch in refspec to target branch in refspec."
+msgstr ""
+
+#: git.remote.Remote.push:4 of
+msgid ""
+"Can take one of many value types:  * None to discard progress information"
+" * A function (callable) that is called with the progress information.   "
+"Signature: ``progress(op_code, cur_count, max_count=None, message='')``."
+"   `Click here <http://goo.gl/NPa7st>`__ for a description of all "
+"arguments   given to the function. * An instance of a class derived from "
+"``git.RemoteProgress`` that   overrides the ``update()`` function."
+msgstr ""
+
+#: git.remote.Remote.push:5 of
+msgid "Can take one of many value types:"
+msgstr ""
+
+#: git.remote.Remote.push:7 of
+msgid "None to discard progress information"
+msgstr ""
+
+#: git.remote.Remote.push:8 of
+msgid ""
+"A function (callable) that is called with the progress information. "
+"Signature: ``progress(op_code, cur_count, max_count=None, message='')``. "
+"`Click here <http://goo.gl/NPa7st>`__ for a description of all arguments "
+"given to the function."
+msgstr ""
+
+#: git.remote.Remote.push:12 of
+msgid ""
+"An instance of a class derived from ``git.RemoteProgress`` that overrides"
+" the ``update()`` function."
+msgstr ""
+
+#: git.remote.Remote.push:19 of
+msgid "Additional arguments to be passed to git-push"
+msgstr ""
+
+#: git.remote.Remote.push:15 of
+msgid "No further progress information is returned after push returns."
+msgstr ""
+
+#: git.remote.Remote.push:20 of
+msgid ""
+"list(PushInfo, ...) list of PushInfo instances, each one informing about "
+"an individual head which had been updated on the remote side. If the push"
+" contains rejected heads, these will have the PushInfo.ERROR bit set in "
+"their flags. If the operation fails completely, the length of the "
+"returned IterableList will be 0."
+msgstr ""
+
+#: git.remote.Remote.refs:1 of
+msgid ""
+"IterableList of RemoteReference objects. It is prefixed, allowing you to "
+"omit the remote path portion, i.e.:: remote.refs.master # yields "
+"RemoteReference('/refs/remotes/origin/master')"
+msgstr ""
+
+#: git.remote.Remote.remove:1 of
+msgid ""
+"Remove the remote with the given name :return: the passed remote name to "
+"remove"
+msgstr ""
+
+#: git.remote.Remote.rename:1 of
+msgid "Rename self to the given new_name :return: self"
+msgstr ""
+
+#: git.remote.Remote.set_url:1 of
+msgid "Configure URLs on current remote (cf command git remote set_url)"
+msgstr ""
+
+#: git.remote.Remote.set_url:3 of
+msgid "This command manages URLs on the remote."
+msgstr ""
+
+#: git.remote.Remote.set_url:6 of
+msgid "when set, replaces this URL with new_url for the remote"
+msgstr ""
+
+#: git.remote.Remote.stale_refs:1 of
+msgid ""
+"IterableList RemoteReference objects that do not have a corresponding "
+"head in the remote reference anymore as they have been deleted on the "
+"remote side, but are still available locally.  The IterableList is "
+"prefixed, hence the 'origin' must be omitted. See 'refs' property for an "
+"example.  To make things more complicated, it can be possible for the "
+"list to include other kinds of references, for example, tag references, "
+"if these are stale as well. This is a fix for the issue described here: "
+"https://github.com/gitpython-developers/GitPython/issues/260"
+msgstr ""
+
+#: git.remote.Remote.stale_refs:2 of
+msgid ""
+"IterableList RemoteReference objects that do not have a corresponding "
+"head in the remote reference anymore as they have been deleted on the "
+"remote side, but are still available locally."
+msgstr ""
+
+#: git.remote.Remote.stale_refs:6 of
+msgid ""
+"The IterableList is prefixed, hence the 'origin' must be omitted. See "
+"'refs' property for an example."
+msgstr ""
+
+#: git.remote.Remote.stale_refs:9 of
+msgid ""
+"To make things more complicated, it can be possible for the list to "
+"include other kinds of references, for example, tag references, if these "
+"are stale as well. This is a fix for the issue described here: "
+"https://github.com/gitpython-developers/GitPython/issues/260"
+msgstr ""
+
+#: git.remote.Remote.update:1 of
+msgid ""
+"Fetch all changes for this remote, including new branches which will be "
+"forced in ( in case your local remote branch is not part the new remote "
+"branches ancestry anymore )."
+msgstr ""
+
+#: git.remote.Remote.update:5 of
+msgid "Additional arguments passed to git-remote update"
+msgstr ""
+
+#: git.remote.Remote.urls:1 of
+msgid "Iterator yielding all configured URL targets on a remote as strings"
+msgstr ""
+
+#: git.util.RemoteProgress:1 of
+msgid ""
+"Handler providing an interface to parse progress information emitted by "
+"git-push and git-fetch and to dispatch callbacks allowing subclasses to "
+"react to the progress."
+msgstr ""
+
+#: git.util.RemoteProgress.line_dropped:1 of
+msgid "Called whenever a line could not be understood and was therefore dropped."
+msgstr ""
+
+#: git.util.RemoteProgress.new_message_handler:1 of
+msgid ""
+"a progress handler suitable for handle_process_output(), passing lines on"
+" to this Progress handler in a suitable format"
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:1 git.util.RemoteProgress.update:1 of
+msgid "Called whenever the progress changes"
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:3 git.util.RemoteProgress.update:3 of
+msgid ""
+"Integer allowing to be compared against Operation IDs and stage IDs.  "
+"Stage IDs are BEGIN and END. BEGIN will only be set once for each "
+"Operation ID as well as END. It may be that BEGIN and END are set at once"
+" in case only one progress message was emitted due to the speed of the "
+"operation. Between BEGIN and END, none of these flags will be set  "
+"Operation IDs are all held within the OP_MASK. Only one Operation ID will"
+" be active per call."
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:4 git.util.RemoteProgress.update:4 of
+msgid "Integer allowing to be compared against Operation IDs and stage IDs."
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:6 git.util.RemoteProgress.update:6 of
+msgid ""
+"Stage IDs are BEGIN and END. BEGIN will only be set once for each "
+"Operation ID as well as END. It may be that BEGIN and END are set at once"
+" in case only one progress message was emitted due to the speed of the "
+"operation. Between BEGIN and END, none of these flags will be set"
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:11 git.util.RemoteProgress.update:11
+#: of
+msgid ""
+"Operation IDs are all held within the OP_MASK. Only one Operation ID will"
+" be active per call."
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:13 git.util.RemoteProgress.update:13
+#: of
+msgid "Current absolute count of items"
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:15 git.util.RemoteProgress.update:15
+#: of
+msgid ""
+"The maximum count of items we expect. It may be None in case there is no "
+"maximum number of items or if it is (yet) unknown."
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:19 git.util.RemoteProgress.update:19
+#: of
+msgid ""
+"In case of the 'WRITING' operation, it contains the amount of bytes "
+"transferred. It may possibly be used for other purposes as well."
+msgstr ""
+
+#: git.util.CallableRemoteProgress.update:23 git.util.RemoteProgress.update:23
+#: of
+msgid "You may read the contents of the current line in self._cur_line"
+msgstr ""
+
+#: ../../source/reference.rst:215
+msgid "Repo.Base"
+msgstr ""
+
+#: git.repo.base.Repo:1 of
+msgid ""
+"Represents a git repository and allows you to query references, gather "
+"commit information, generate diffs, create and clone repositories query "
+"the log."
+msgstr ""
+
+#: git.repo.base.Repo:5 of
+msgid "The following attributes are worth using:"
+msgstr ""
+
+#: git.repo.base.Repo:7 of
+msgid ""
+"'working_dir' is the working directory of the git command, which is the "
+"working tree directory if available or the .git directory in case of bare"
+" repositories"
+msgstr ""
+
+#: git.repo.base.Repo:10 of
+msgid ""
+"'working_tree_dir' is the working tree directory, but will raise "
+"AssertionError if we are a bare repository."
+msgstr ""
+
+#: git.repo.base.Repo:13 of
+msgid "'git_dir' is the .git repository directory, which is always set."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:1 of
+msgid "Create a new Repo instance"
+msgstr ""
+
+#: git.repo.base.Repo.__init__:3 of
+msgid ""
+"the path to either the root git directory or the bare git repo::      "
+"repo = Repo(\"/Users/mtrier/Development/git-python\")     repo = "
+"Repo(\"/Users/mtrier/Development/git-python.git\")     repo = "
+"Repo(\"~/Development/git-python.git\")     repo = "
+"Repo(\"$REPOSITORIES/Development/git-python.git\")     repo = "
+"Repo(\"C:\\Users\\mtrier\\Development\\git-python\\.git\")  - In "
+"*Cygwin*, path may be a `'cygdrive/...'` prefixed path. - If it evaluates"
+" to false, :envvar:`GIT_DIR` is used, and if this also evals to false,   "
+"the current-directory is used."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:4 of
+msgid "the path to either the root git directory or the bare git repo::"
+msgstr ""
+
+#: git.repo.base.Repo.__init__:12 of
+msgid "In *Cygwin*, path may be a `'cygdrive/...'` prefixed path."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:13 of
+msgid ""
+"If it evaluates to false, :envvar:`GIT_DIR` is used, and if this also "
+"evals to false, the current-directory is used."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:15 git.repo.base.Repo.init:13 of
+msgid ""
+"Object DataBase type - a type which is constructed by providing the "
+"directory containing the database objects, i.e. .git/objects. It will be "
+"used to access all object data"
+msgstr ""
+
+#: git.repo.base.Repo.__init__:19 of
+msgid ""
+"if True, all parent directories will be searched for a valid repo as "
+"well.  Please note that this was the default behaviour in older versions "
+"of GitPython, which is considered a bug though."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:20 of
+msgid "if True, all parent directories will be searched for a valid repo as well."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:22 of
+msgid ""
+"Please note that this was the default behaviour in older versions of "
+"GitPython, which is considered a bug though."
+msgstr ""
+
+#: git.repo.base.Repo.__init__:26 of
+msgid "git.Repo"
+msgstr ""
+
+#: git.repo.base.Repo.active_branch:1 of
+msgid ""
+"The name of the currently active branch. :return: Head to the active "
+"branch"
+msgstr ""
+
+#: git.repo.base.Repo.alternates:1 of
+msgid ""
+"Retrieve a list of alternates paths or set a list paths to be used as "
+"alternates"
+msgstr ""
+
+#: git.repo.base.Repo.archive:1 of
+msgid "Archive the tree at the given revision."
+msgstr ""
+
+#: git.repo.base.Repo.archive:3 of
+msgid ""
+"file compatible stream object to which the archive will be written as "
+"bytes"
+msgstr ""
+
+#: git.repo.base.Repo.archive:4 of
+msgid "is the treeish name/id, defaults to active branch"
+msgstr ""
+
+#: git.repo.base.Repo.archive:5 of
+msgid "is the optional prefix to prepend to each filename in the archive"
+msgstr ""
+
+#: git.repo.base.Repo.archive:6 of
+msgid ""
+"Additional arguments passed to git-archive  * Use the 'format' argument "
+"to define the kind of format. Use   specialized ostreams to write any "
+"format supported by python. * You may specify the special **path** "
+"keyword, which may either be a repository-relative   path to a directory "
+"or file to place into the archive, or a list or tuple of multiple paths."
+msgstr ""
+
+#: git.repo.base.Repo.archive:6 of
+msgid "Additional arguments passed to git-archive"
+msgstr ""
+
+#: git.repo.base.Repo.archive:8 of
+msgid ""
+"Use the 'format' argument to define the kind of format. Use specialized "
+"ostreams to write any format supported by python."
+msgstr ""
+
+#: git.repo.base.Repo.archive:10 of
+msgid ""
+"You may specify the special **path** keyword, which may either be a "
+"repository-relative path to a directory or file to place into the "
+"archive, or a list or tuple of multiple paths."
+msgstr ""
+
+#: git.repo.base.Repo.archive:13 of
+msgid "in case something went wrong"
+msgstr ""
+
+#: git.repo.base.Repo.bare:1 of
+msgid "True if the repository is bare"
+msgstr ""
+
+#: git.repo.base.Repo.blame:1 of
+msgid "The blame information for the given file at the given revision."
+msgstr ""
+
+#: git.repo.base.Repo.blame:3 git.repo.base.Repo.blame_incremental:6
+#: git.repo.base.Repo.commit:3 of
+msgid "revision specifier, see git-rev-parse for viable options."
+msgstr ""
+
+#: git.repo.base.Repo.blame:4 of
+msgid ""
+"list: [git.Commit, list: [<line>]] A list of lists associating a Commit "
+"object with a list of lines that changed within the given commit. The "
+"Commit objects will be given in order of appearance."
+msgstr ""
+
+#: git.repo.base.Repo.blame_incremental:1 of
+msgid "Iterator for blame information for the given file at the given revision."
+msgstr ""
+
+#: git.repo.base.Repo.blame_incremental:3 of
+msgid ""
+"Unlike .blame(), this does not return the actual file's contents, only a "
+"stream of BlameEntry tuples."
+msgstr ""
+
+#: git.repo.base.Repo.blame_incremental:7 of
+msgid ""
+"lazy iterator of BlameEntry tuples, where the commit indicates the commit"
+" to blame for the line, and range indicates a span of line numbers in the"
+" resulting file."
+msgstr ""
+
+#: git.repo.base.Repo.blame_incremental:11 of
+msgid ""
+"If you combine all line number ranges outputted by this command, you "
+"should get a continuous range spanning all line numbers in the file."
+msgstr ""
+
+#: git.repo.base.Repo.branches:1 git.repo.base.Repo.heads:1 of
+msgid "A list of ``Head`` objects representing the branch heads in this repo"
+msgstr ""
+
+#: git.repo.base.Repo.branches:4 git.repo.base.Repo.heads:4 of
+msgid "``git.IterableList(Head, ...)``"
+msgstr ""
+
+#: git.repo.base.Repo.clone:1 of
+msgid "Create a clone from this repository."
+msgstr ""
+
+#: git.repo.base.Repo.clone:3 of
+msgid "is the full path of the new repo (traditionally ends with ./<name>.git)."
+msgstr ""
+
+#: git.repo.base.Repo.clone:4 git.repo.base.Repo.clone_from:5 of
+msgid "See 'git.remote.Remote.push'."
+msgstr ""
+
+#: git.repo.base.Repo.clone:5 of
+msgid ""
+"A list of Clone options that can be provided multiple times.  One option "
+"per list item which is passed exactly as specified to clone. For example "
+"['--config core.filemode=false', '--config core.ignorecase', '--recurse-"
+"submodule=repo1_path', '--recurse-submodule=repo2_path']"
+msgstr ""
+
+#: git.repo.base.Repo.clone:9 of
+msgid ""
+"* odbt = ObjectDatabase Type, allowing to determine the object database"
+"   implementation used by the returned Repo instance * All remaining "
+"keyword arguments are given to the git-clone command"
+msgstr ""
+
+#: git.repo.base.Repo.clone:10 of
+msgid ""
+"odbt = ObjectDatabase Type, allowing to determine the object database "
+"implementation used by the returned Repo instance"
+msgstr ""
+
+#: git.repo.base.Repo.clone:12 of
+msgid "All remaining keyword arguments are given to the git-clone command"
+msgstr ""
+
+#: git.repo.base.Repo.clone:14 of
+msgid "``git.Repo`` (the newly cloned repo)"
+msgstr ""
+
+#: git.repo.base.Repo.clone_from:1 of
+msgid "Create a clone from the given URL"
+msgstr ""
+
+#: git.repo.base.Repo.clone_from:3 of
+msgid ""
+"valid git url, see http://www.kernel.org/pub/software/scm/git/docs/git-"
+"clone.html#URLS"
+msgstr ""
+
+#: git.repo.base.Repo.clone_from:4 of
+msgid "Path to which the repository should be cloned to"
+msgstr ""
+
+#: git.repo.base.Repo.clone_from:12 of
+msgid "See ``clone`` method"
+msgstr ""
+
+#: git.repo.base.Repo.clone_from:13 of
+msgid "see the ``clone`` method"
+msgstr ""
+
+#: git.repo.base.Repo.clone_from:14 of
+msgid "Repo instance pointing to the cloned directory"
+msgstr ""
+
+#: git.repo.base.Repo.commit:1 of
+msgid "The Commit object for the specified revision"
+msgstr ""
+
+#: git.repo.base.Repo.commit:4 of
+msgid "``git.Commit``"
+msgstr ""
+
+#: git.repo.base.Repo.common_dir:1 of
+msgid ""
+"The git dir that holds everything except possibly HEAD, FETCH_HEAD, "
+"ORIG_HEAD, COMMIT_EDITMSG, index, and logs/."
+msgstr ""
+
+#: git.repo.base.Repo.config_reader:1 of
+msgid ""
+"GitConfigParser allowing to read the full git configuration, but not to "
+"write it  The configuration will include values from the system, user and"
+" repository configuration files."
+msgstr ""
+
+#: git.repo.base.Repo.config_reader:2 of
+msgid ""
+"GitConfigParser allowing to read the full git configuration, but not to "
+"write it"
+msgstr ""
+
+#: git.repo.base.Repo.config_reader:4 of
+msgid ""
+"The configuration will include values from the system, user and "
+"repository configuration files."
+msgstr ""
+
+#: git.repo.base.Repo.config_reader:7 of
+msgid ""
+"For possible values, see config_writer method If None, all applicable "
+"levels will be used. Specify a level in case you know which file you wish"
+" to read to prevent reading multiple files."
+msgstr ""
+
+#: git.repo.base.Repo.config_reader:11 of
+msgid ""
+"On windows, system configuration cannot currently be read as the path is "
+"unknown, instead the global path will be used."
+msgstr ""
+
+#: git.repo.base.Repo.config_writer:1 of
+msgid ""
+"GitConfigParser allowing to write values of the specified configuration "
+"file level. Config writers should be retrieved, used to change the "
+"configuration, and written right away as they will lock the configuration"
+" file in question and prevent other's to write it."
+msgstr ""
+
+#: git.repo.base.Repo.config_writer:7 of
+msgid ""
+"One of the following values system = system wide configuration file "
+"global = user level configuration file repository = configuration file "
+"for this repository only"
+msgstr ""
+
+#: git.repo.base.Repo.create_head:1 of
+msgid ""
+"Create a new head within the repository. For more documentation, please "
+"see the Head.create method."
+msgstr ""
+
+#: git.repo.base.Repo.create_head:4 of
+msgid "newly created Head Reference"
+msgstr ""
+
+#: git.repo.base.Repo.create_remote:1 of
+msgid "Create a new remote."
+msgstr ""
+
+#: git.repo.base.Repo.create_remote:3 of
+msgid ""
+"For more information, please see the documentation of the Remote.create "
+"methods"
+msgstr ""
+
+#: git.repo.base.Repo.create_remote:6 of
+msgid "Remote reference"
+msgstr ""
+
+#: git.repo.base.Repo.create_submodule:1 of
+msgid "Create a new submodule"
+msgstr ""
+
+#: git.repo.base.Repo.create_submodule:3 of
+msgid ""
+"See the documentation of Submodule.add for a description of the "
+"applicable parameters"
+msgstr ""
+
+#: git.repo.base.Repo.create_submodule:5 of
+msgid "created submodules"
+msgstr ""
+
+#: git.repo.base.Repo.create_tag:1 of
+msgid ""
+"Create a new tag reference. For more documentation, please see the "
+"TagReference.create method."
+msgstr ""
+
+#: git.repo.base.Repo.create_tag:4 of
+msgid "TagReference object"
+msgstr ""
+
+#: git.repo.base.Repo.currently_rebasing_on:1 of
+msgid "The commit which is currently being replayed while rebasing."
+msgstr ""
+
+#: git.repo.base.Repo.currently_rebasing_on:3 of
+msgid "None if we are not currently rebasing."
+msgstr ""
+
+#: git.repo.base.Repo.daemon_export:1 of
+msgid "If True, git-daemon may export this repository"
+msgstr ""
+
+#: git.repo.base.Repo.delete_head:3 of
+msgid "Additional keyword arguments to be passed to git-branch"
+msgstr ""
+
+#: git.repo.base.Repo.delete_remote:1 of
+msgid "Delete the given remote."
+msgstr ""
+
+#: git.repo.base.Repo.delete_tag:1 of
+msgid "Delete the given tag references"
+msgstr ""
+
+#: git.repo.base.Repo.description:1 of
+msgid "the project's description"
+msgstr ""
+
+#: git.repo.base.Repo.has_separate_working_tree:1 of
+msgid ""
+"True if our git_dir is not at the root of our working_tree_dir, but a "
+".git file with a platform agnositic symbolic link. Our git_dir will be "
+"wherever the .git file points to"
+msgstr ""
+
+#: git.repo.base.Repo.has_separate_working_tree:3 of
+msgid "bare repositories will always return False here"
+msgstr ""
+
+#: git.repo.base.Repo.head:1 of
+msgid "HEAD Object pointing to the current head reference"
+msgstr ""
+
+#: git.repo.base.Repo.ignored:1 of
+msgid ""
+"Checks if paths are ignored via .gitignore Doing so using the \"git "
+"check-ignore\" method."
+msgstr ""
+
+#: git.repo.base.Repo.ignored:4 of
+msgid "List of paths to check whether they are ignored or not"
+msgstr ""
+
+#: git.repo.base.Repo.ignored:5 of
+msgid "subset of those paths which are ignored"
+msgstr ""
+
+#: git.repo.base.Repo.index:1 of
+msgid "IndexFile representing this repository's index."
+msgstr ""
+
+#: git.repo.base.Repo.index:2 of
+msgid ""
+"This property can be expensive, as the returned ``IndexFile`` will be "
+"reinitialized. It's recommended to re-use the object."
+msgstr ""
+
+#: git.repo.base.Repo.init:1 of
+msgid "Initialize a git repository at the given path if specified"
+msgstr ""
+
+#: git.repo.base.Repo.init:3 of
+msgid ""
+"is the full path to the repo (traditionally ends with /<name>.git) or "
+"None in which case the repository will be created in the current working "
+"directory"
+msgstr ""
+
+#: git.repo.base.Repo.init:8 of
+msgid ""
+"if specified will create the repository directory if it doesn't already "
+"exists. Creates the directory with a mode=0755. Only effective if a path "
+"is explicitly given"
+msgstr ""
+
+#: git.repo.base.Repo.init:18 of
+msgid ""
+"if specified, environment variables will not be escaped. This can lead to"
+" information disclosure, allowing attackers to access the contents of "
+"environment variables"
+msgstr ""
+
+#: git.repo.base.Repo.init:23 of
+msgid "keyword arguments serving as additional options to the git-init command"
+msgstr ""
+
+#: git.repo.base.Repo.init:26 of
+msgid "``git.Repo`` (the newly created repo)"
+msgstr ""
+
+#: git.repo.base.Repo.is_ancestor:1 of
+msgid "Check if a commit is an ancestor of another"
+msgstr ""
+
+#: git.repo.base.Repo.is_ancestor:3 of
+msgid "Rev which should be an ancestor"
+msgstr ""
+
+#: git.repo.base.Repo.is_ancestor:4 of
+msgid "Rev to test against ancestor_rev"
+msgstr ""
+
+#: git.repo.base.Repo.is_ancestor:5 of
+msgid "``True``, ancestor_rev is an ancestor to rev."
+msgstr ""
+
+#: git.repo.base.Repo.is_dirty:1 of
+msgid ""
+"``True``, the repository is considered dirty. By default it will react "
+"like a git-status without untracked files, hence it is dirty if the index"
+" or the working copy have changes."
+msgstr ""
+
+#: git.repo.base.Repo.iter_commits:1 of
+msgid "A list of Commit objects representing the history of a given ref/commit"
+msgstr ""
+
+#: git.repo.base.Repo.iter_commits:3 of
+msgid ""
+"revision specifier, see git-rev-parse for viable options. If None, the "
+"active branch will be used."
+msgstr ""
+
+#: git.repo.base.Repo.iter_commits:7 of
+msgid ""
+"is an optional path or a list of paths to limit the returned commits to "
+"Commits that do not contain that path or the paths will not be returned."
+msgstr ""
+
+#: git.repo.base.Repo.iter_commits:11 of
+msgid ""
+"Arguments to be passed to git-rev-list - common ones are max_count and "
+"skip"
+msgstr ""
+
+#: git.repo.base.Repo.iter_commits:15 of
+msgid ""
+"to receive only commits between two named revisions, use the "
+"\"revA...revB\" revision specifier"
+msgstr ""
+
+#: git.repo.base.Repo.iter_commits:18 of
+msgid "``git.Commit[]``"
+msgstr ""
+
+#: git.repo.base.Repo.iter_submodules:1 of
+msgid ""
+"An iterator yielding Submodule instances, see Traversable interface for a"
+" description of args and kwargs :return: Iterator"
+msgstr ""
+
+#: git.repo.base.Repo.iter_trees:1 of
+msgid "Iterator yielding Tree objects"
+msgstr ""
+
+#: git.repo.base.Repo.iter_trees:2 of
+msgid "Takes all arguments known to iter_commits method"
+msgstr ""
+
+#: git.repo.base.Repo.merge_base:1 of
+msgid ""
+"Find the closest common ancestor for the given revision (e.g. Commits, "
+"Tags, References, etc)"
+msgstr ""
+
+#: git.repo.base.Repo.merge_base:3 of
+msgid "At least two revs to find the common ancestor for."
+msgstr ""
+
+#: git.repo.base.Repo.merge_base:4 of
+msgid ""
+"Additional arguments to be passed to the repo.git.merge_base() command "
+"which does all the work."
+msgstr ""
+
+#: git.repo.base.Repo.merge_base:5 of
+msgid ""
+"A list of Commit objects. If --all was not specified as kwarg, the list "
+"will have at max one Commit, or is empty if no common merge base exists."
+msgstr ""
+
+#: git.repo.base.Repo.merge_base:7 of
+msgid "If not at least two revs are provided"
+msgstr ""
+
+#: git.repo.base.Repo.references:1 git.repo.base.Repo.refs:1 of
+msgid ""
+"A list of Reference objects representing tags, heads and remote "
+"references."
+msgstr ""
+
+#: git.repo.base.Repo.references:3 git.repo.base.Repo.refs:3 of
+msgid "IterableList(Reference, ...)"
+msgstr ""
+
+#: git.repo.base.Repo.remote:1 of
+msgid "Remote with the specified name"
+msgstr ""
+
+#: git.repo.base.Repo.remote:2 of
+msgid "if no remote with such a name exists"
+msgstr ""
+
+#: git.repo.base.Repo.remotes:1 of
+msgid ""
+"A list of Remote objects allowing to access and manipulate remotes "
+":return: ``git.IterableList(Remote, ...)``"
+msgstr ""
+
+#: git.repo.fun.rev_parse:1 of
+msgid "Object at the given revision, either Commit, Tag, Tree or Blob"
+msgstr ""
+
+#: git.repo.fun.rev_parse:2 of
+msgid ""
+"git-rev-parse compatible revision specification as string, please see "
+"http://www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html for "
+"details"
+msgstr ""
+
+#: git.repo.fun.rev_parse:5 of
+msgid "if the given revision could not be found"
+msgstr ""
+
+#: git.repo.fun.rev_parse:6 of
+msgid "If rev couldn't be parsed"
+msgstr ""
+
+#: git.repo.fun.rev_parse:7 of
+msgid "If invalid reflog index is specified"
+msgstr ""
+
+#: git.repo.base.Repo.submodule:1 of
+msgid "Submodule with the given name"
+msgstr ""
+
+#: git.repo.base.Repo.submodule:2 of
+msgid "If no such submodule exists"
+msgstr ""
+
+#: git.repo.base.Repo.submodule_update:1 of
+msgid ""
+"Update the submodules, keeping the repository consistent as it will take "
+"the previous state into consideration. For more information, please see "
+"the documentation of RootModule.update"
+msgstr ""
+
+#: git.repo.base.Repo.submodules:1 of
+msgid ""
+"git.IterableList(Submodule, ...) of direct submodules available from the "
+"current head"
+msgstr ""
+
+#: git.repo.base.Repo.tag:1 of
+msgid "TagReference Object, reference pointing to a Commit or Tag"
+msgstr ""
+
+#: git.repo.base.Repo.tag:2 of
+msgid "path to the tag reference, i.e. 0.1.5 or tags/0.1.5"
+msgstr ""
+
+#: git.repo.base.Repo.tags:1 of
+msgid ""
+"A list of ``Tag`` objects that are available in this repo :return: "
+"``git.IterableList(TagReference, ...)``"
+msgstr ""
+
+#: git.repo.base.Repo.tree:1 of
+msgid "The Tree object for the given treeish revision Examples::"
+msgstr ""
+
+#: git.repo.base.Repo.tree:6 of
+msgid "is a revision pointing to a Treeish ( being a commit or tree )"
+msgstr ""
+
+#: git.repo.base.Repo.tree:7 of
+msgid "``git.Tree``"
+msgstr ""
+
+#: git.repo.base.Repo.tree:10 of
+msgid ""
+"If you need a non-root level tree, find it by iterating the root tree. "
+"Otherwise it cannot know about its path relative to the repository root "
+"and subsequent operations might have unexpected results."
+msgstr ""
+
+#: git.repo.base.Repo.untracked_files:1 of
+msgid ""
+"list(str,...)  Files currently untracked as they have not been staged "
+"yet. Paths are relative to the current working directory of the git "
+"command."
+msgstr ""
+
+#: git.repo.base.Repo.untracked_files:2 of
+msgid "list(str,...)"
+msgstr ""
+
+#: git.repo.base.Repo.untracked_files:4 of
+msgid ""
+"Files currently untracked as they have not been staged yet. Paths are "
+"relative to the current working directory of the git command."
+msgstr ""
+
+#: git.repo.base.Repo.untracked_files:8 of
+msgid "ignored files will not appear here, i.e. files mentioned in .gitignore"
+msgstr ""
+
+#: git.repo.base.Repo.untracked_files:10 of
+msgid ""
+"This property is expensive, as no cache is involved. To process the "
+"result, please consider caching it yourself."
+msgstr ""
+
+#: git.repo.base.Repo.working_tree_dir:1 of
+msgid ""
+"The working tree directory of our git repository. If this is a bare "
+"repository, None is returned."
+msgstr ""
+
+#: ../../source/reference.rst:223
+msgid "Repo.Functions"
+msgstr ""
+
+#: git.repo.fun:1 of
+msgid "Package with general repository related functions"
+msgstr ""
+
+#: git.repo.fun.deref_tag:1 of
+msgid "Recursively dereference a tag and return the resulting object"
+msgstr ""
+
+#: git.repo.fun.find_submodule_git_dir:1 of
+msgid "Search for a submodule repo."
+msgstr ""
+
+#: git.repo.fun.find_worktree_git_dir:1 of
+msgid "Search for a gitdir for this worktree."
+msgstr ""
+
+#: git.repo.fun.is_git_dir:1 of
+msgid "This is taken from the git setup.c:is_git_directory function."
+msgstr ""
+
+#: git.repo.fun.is_git_dir:6 of
+msgid ""
+"@throws WorkTreeRepositoryUnsupported if it sees a worktree directory. "
+"It's quite hacky to do that here,"
+msgstr ""
+
+#: git.repo.fun.is_git_dir:5 of
+msgid ""
+"but at least clearly indicates that we don't support it. There is the "
+"unlikely danger to throw if we see directories which just look like a "
+"worktree dir, but are none."
+msgstr ""
+
+#: git.repo.fun.name_to_object:1 of
+msgid ""
+"object specified by the given name, hexshas ( short and long ) as well as"
+" references are supported"
+msgstr ""
+
+#: git.repo.fun.name_to_object:3 of
+msgid ""
+"if name specifies a reference, we will return the reference instead of "
+"the object. Otherwise it will raise BadObject or BadName"
+msgstr ""
+
+#: git.repo.fun.short_to_long:1 of
+msgid ""
+"long hexadecimal sha1 from the given less-than-40 byte hexsha or None if "
+"no candidate could be found."
+msgstr ""
+
+#: git.repo.fun.short_to_long:3 of
+msgid "hexsha with less than 40 byte"
+msgstr ""
+
+#: git.repo.fun.to_commit:1 of
+msgid "Convert the given object to a commit if possible and return it"
+msgstr ""
+
+#: ../../source/reference.rst:231
+msgid "Util"
+msgstr ""
+
+#: git.util.BlockingLockFile:1 of
+msgid ""
+"The lock file will block until a lock could be obtained, or fail after a "
+"specified timeout."
+msgstr ""
+
+#: git.util.BlockingLockFile:4 of
+msgid ""
+"If the directory containing the lock was removed, an exception will be "
+"raised during the blocking period, preventing hangs as the lock can never"
+" be obtained."
+msgstr ""
+
+#: git.util.BlockingLockFile.__init__:1 of
+msgid "Configure the instance"
+msgstr ""
+
+#: git.util.BlockingLockFile.__init__:3 of
+msgid ""
+"Period of time to sleep until the lock is checked the next time. By "
+"default, it waits a nearly unlimited time"
+msgstr ""
+
+#: git.util.BlockingLockFile.__init__:7 of
+msgid "Maximum amount of seconds we may lock"
+msgstr ""
+
+#: git.util.CallableRemoteProgress:1 of
+msgid "An implementation forwarding updates to any callable"
+msgstr ""
+
+#: ../../docstring git.util.HIDE_WINDOWS_KNOWN_ERRORS:1 of
+msgid ""
+"We need an easy way to see if Appveyor TCs start failing, so the errors "
+"marked with this var are considered \"acknowledged\" ones, awaiting "
+"remedy, till then, we wish to hide them."
+msgstr ""
+
+#: git.util.IndexFileSHA1Writer:1 of
+msgid ""
+"Wrapper around a file-like object that remembers the SHA1 of the data "
+"written to it. It will write a sha when the stream is closed or if the "
+"asked for explicitly using write_sha."
+msgstr ""
+
+#: git.util.IndexFileSHA1Writer:5 of
+msgid "Only useful to the indexfile"
+msgstr ""
+
+#: git.util.IndexFileSHA1Writer:7 of
+msgid "Based on the dulwich project"
+msgstr ""
+
+#: git.util.IterableList:1 of
+msgid ""
+"List of iterable objects allowing to query an object by id or by named "
+"index::"
+msgstr ""
+
+#: git.util.IterableList:8 of
+msgid ""
+"Iterable parent objects = [Commit, SubModule, Reference, FetchInfo, "
+"PushInfo] Iterable via inheritance = [Head, TagReference, "
+"RemoteReference] ] It requires an id_attribute name to be set which will "
+"be queried from its contained items to have a means for comparison."
+msgstr ""
+
+#: git.util.IterableList:14 of
+msgid ""
+"A prefix can be specified which is to be used in case the id returned by "
+"the items always contains a prefix that does not matter to the user, so "
+"it can be left out."
+msgstr ""
+
+#: git.util.IterableList.__contains__:1 of
+msgid "Return key in self."
+msgstr ""
+
+#: git.util.IterableList.__delitem__:1 of
+msgid "Delete self[key]."
+msgstr ""
+
+#: git.util.IterableList.__getitem__:1 of
+msgid "x.__getitem__(y) <==> x[y]"
+msgstr ""
+
+#: git.util.IterableObj:1 of
+msgid ""
+"Defines an interface for iterable items which is to assure a uniform way "
+"to retrieve and iterate items within the git repository"
+msgstr ""
+
+#: git.util.IterableObj:4 of
+msgid "Subclasses = [Submodule, Commit, Reference, PushInfo, FetchInfo, Remote]"
+msgstr ""
+
+#: git.util.IterableObj.list_items:1 of
+msgid ""
+"Find all items of this type - subclasses can specify args and kwargs "
+"differently. If no args are given, subclasses are obliged to return all "
+"items if no additional arguments arg given."
+msgstr ""
+
+#: git.util.IterableObj.list_items:5 of
+msgid "Favor the iter_items method as it will"
+msgstr ""
+
+#: git.util.IterableObj.list_items:7 of
+msgid ":return:list(Item,...) list of item instances"
+msgstr ""
+
+#: git.util.LockFile:1 of
+msgid ""
+"Provides methods to obtain, check for, and release a file based lock "
+"which should be used to handle concurrent access to the same file."
+msgstr ""
+
+#: git.util.LockFile:4 of
+msgid ""
+"As we are a utility class to be derived from, we only use protected "
+"methods."
+msgstr ""
+
+#: git.util.LockFile:6 of
+msgid "Locks will automatically be released on destruction"
+msgstr ""
+
+#: git.util.Stats:1 of
+msgid ""
+"Represents stat information as presented by git at the end of a merge. It"
+" is created from the output of a diff operation."
+msgstr ""
+
+#: git.util.Stats:4 of
+msgid "``Example``::"
+msgstr ""
+
+#: git.util.Stats:11 of
+msgid "``stat-dict``"
+msgstr ""
+
+#: git.util.Stats:13 of
+msgid "A dictionary with the following keys and values::"
+msgstr ""
+
+#: git.util.Stats:19 of
+msgid "``full-stat-dict``"
+msgstr ""
+
+#: git.util.Stats:21 of
+msgid ""
+"In addition to the items in the stat-dict, it features additional "
+"information::"
+msgstr ""
+
+#: git.util.assure_directory_exists:1 of
+msgid "Assure that the directory pointed to by path exists."
+msgstr ""
+
+#: git.util.assure_directory_exists:3 of
+msgid ""
+"If True, path is assumed to be a file and handled correctly. Otherwise it"
+" must be a directory"
+msgstr ""
+
+#: git.util.assure_directory_exists:5 of
+msgid "True if the directory was created, False if it already existed"
+msgstr ""
+
+#: git.util.get_user_id:1 of
+msgid "string identifying the currently active system user as name@node"
+msgstr ""
+
+#: git.util.join_path:1 of
+msgid ""
+"Join path tokens together similar to osp.join, but always use '/' instead"
+" of possibly '' on windows."
+msgstr ""
+
+#: git.util.join_path_native:2 of
+msgid "As join path, but makes sure an OS native path is returned. This is only"
+msgstr ""
+
+#: git.util.join_path_native:2 of
+msgid ""
+"needed to play it safe on my dear windows and to assure nice paths that "
+"only use ''"
+msgstr ""
+
+#: git.util.rmtree:1 of
+msgid "Remove the given recursively."
+msgstr ""
+
+#: git.util.rmtree:3 of
+msgid ""
+"we use shutil rmtree but adjust its behaviour to see whether files that "
+"couldn't be deleted are read-only. Windows will not remove them in that "
+"case"
+msgstr ""
+
+#: git.util.stream_copy:1 of
+msgid ""
+"Copy all data from the source stream into the destination stream in "
+"chunks of size chunk_size"
+msgstr ""
+
+#: git.util.stream_copy:4 of
+msgid "amount of bytes written"
+msgstr ""
+
+#: git.util.unbare_repo:1 of
+msgid ""
+"Methods with this decorator raise InvalidGitRepositoryError if they "
+"encounter a bare repository"
+msgstr ""
+
