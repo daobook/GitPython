@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitPython Tutorial &mdash; GitPython 3.1.24 文档</title>
+  <title>GitPython 教程 &mdash; GitPython 3.1.24 文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="API Reference" href="reference.html" />
-    <link rel="prev" title="Overview / Install" href="intro.html" /> 
+    <link rel="next" title="API 参考" href="reference.html" />
+    <link rel="prev" title="概述/安装" href="intro.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,9 +42,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview / Install</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">GitPython Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#meet-the-repo-type">Meet the Repo type</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">概述/安装</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GitPython 教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#meet-the-repo-type">符合 Repo 类型</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#advanced-repo-usage">Advanced Repo Usage</a></li>
 </ul>
 </li>
@@ -69,8 +69,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#and-even-more">And even more …</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">路线图</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changes.html">Changelog</a></li>
 </ul>
 
@@ -88,7 +88,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>GitPython Tutorial</li>
+      <li>GitPython 教程</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/tutorial.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -99,12 +99,12 @@
            <div itemprop="articleBody">
              
   <section id="gitpython-tutorial">
-<span id="tutorial-label"></span><h1>GitPython Tutorial<a class="headerlink" href="#gitpython-tutorial" title="永久链接至标题"></a></h1>
-<p>GitPython provides object model access to your git repository. This tutorial is composed of multiple sections, most of which explain a real-life use case.</p>
-<p>All code presented here originated from <a class="reference external" href="https://github.com/gitpython-developers/GitPython/blob/main/test/test_docs.py">test_docs.py</a> to assure correctness. Knowing this should also allow you to more easily run the code for your own testing purposes. All you need is a developer installation of git-python.</p>
+<span id="tutorial-label"></span><h1>GitPython 教程<a class="headerlink" href="#gitpython-tutorial" title="永久链接至标题"></a></h1>
+<p>Gitpython 提供对 Git 存储库的对象模型访问。本教程由多个部分组成，其中大多数部分解释了真实的用例。</p>
+<p>这里介绍的所有代码都源自于 <a class="reference external" href="https://github.com/gitpython-developers/GitPython/blob/main/test/test_docs.py">test_docs.py</a>，以保证正确性。了解这一点也应该让你更容易为自己的测试目的运行代码。你所需要的只是一个 git-python 的开发者安装。</p>
 <section id="meet-the-repo-type">
-<h2>Meet the Repo type<a class="headerlink" href="#meet-the-repo-type" title="永久链接至标题"></a></h2>
-<p>The first step is to create a <a class="reference internal" href="reference.html#git.repo.base.Repo" title="git.repo.base.Repo"><code class="xref py py-class docutils literal notranslate"><span class="pre">git.Repo</span></code></a> object to represent your repository.</p>
+<h2>符合 Repo 类型<a class="headerlink" href="#meet-the-repo-type" title="永久链接至标题"></a></h2>
+<p>第一步是创建 <a class="reference internal" href="reference.html#git.repo.base.Repo" title="git.repo.base.Repo"><code class="xref py py-class docutils literal notranslate"><span class="pre">git.Repo</span></code></a> 对象来代表你的仓库。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>
 
 <span class="c1"># rorepo is a Repo instance pointing to the git-python repository.</span>
@@ -114,18 +114,18 @@
 <span class="k">assert</span> <span class="ow">not</span> <span class="n">repo</span><span class="o">.</span><span class="n">bare</span>
 </pre></div>
 </div>
-<p>In the above example, the directory <code class="docutils literal notranslate"><span class="pre">self.rorepo.working_tree_dir</span></code> equals <code class="docutils literal notranslate"><span class="pre">/Users/mtrier/Development/git-python</span></code> and is my working repository which contains the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory. You can also initialize GitPython with a <em>bare</em> repository.</p>
+<p>在上面的例子中，目录 <code class="docutils literal notranslate"><span class="pre">self.rorepo.working_tree_dir</span></code> 等于 <code class="docutils literal notranslate"><span class="pre">/Users/mtrier/Development/git-python</span></code>，是我的工作仓库，包含 <code class="docutils literal notranslate"><span class="pre">.git</span></code> 目录。你也可以用一个 <strong>裸</strong> 仓库来初始化 GitPython。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bare_repo</span> <span class="o">=</span> <span class="n">Repo</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rw_dir</span><span class="p">,</span> <span class="s1">&#39;bare-repo&#39;</span><span class="p">),</span> <span class="n">bare</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">bare_repo</span><span class="o">.</span><span class="n">bare</span>
 </pre></div>
 </div>
-<p>A repo object provides high-level access to your data, it allows you to create and delete heads, tags and remotes and access the configuration of the repository.</p>
+<p>Repo 对象提供了对你的数据的高级访问，它允许你创建和删除头、标签和远程，并访问存储库的配置。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">repo</span><span class="o">.</span><span class="n">config_reader</span><span class="p">()</span>             <span class="c1"># get a config reader for read-only access</span>
 <span class="k">with</span> <span class="n">repo</span><span class="o">.</span><span class="n">config_writer</span><span class="p">():</span>       <span class="c1"># get a config writer to change configuration</span>
     <span class="k">pass</span>                         <span class="c1"># call release() to be sure changes are written and locks are released</span>
 </pre></div>
 </div>
-<p>Query the active branch, query untracked files or whether the repository data has been modified.</p>
+<p>查询活动分支，查询未跟踪的文件或存储库数据是否被修改。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="ow">not</span> <span class="n">bare_repo</span><span class="o">.</span><span class="n">is_dirty</span><span class="p">()</span>  <span class="c1"># check the dirty state</span>
 <span class="n">repo</span><span class="o">.</span><span class="n">untracked_files</span>             <span class="c1"># retrieve a list of untracked files</span>
 <span class="c1"># [&#39;my_untracked_file&#39;]</span>
@@ -723,8 +723,8 @@ The special notion <code class="docutils literal notranslate"><span class="pre">
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="intro.html" class="btn btn-neutral float-left" title="Overview / Install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="reference.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="intro.html" class="btn btn-neutral float-left" title="概述/安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="reference.html" class="btn btn-neutral float-right" title="API 参考" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
