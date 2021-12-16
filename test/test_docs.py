@@ -216,7 +216,7 @@ class Tutorials(TestBase):
         master = head.reference     # retrieve the reference the head points to
         master.commit               # from here you use it as any other reference
         # ![3-test_references_and_objects]
-#
+        
         # [4-test_references_and_objects]
         log = master.log()
         log[0]                      # first (i.e. oldest) reflog entry

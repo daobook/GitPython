@@ -2,7 +2,7 @@
 # Copyright (C) Copyright (C) 2008, 2009 Michael Trier and contributors,
 # 2010-2015 Sebastian Thiel
 # This file is distributed under the same license as the GitPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# xinetzone <735613050@qq.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 13:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: xinetzone <735613050@qq.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,13 +20,15 @@ msgstr ""
 
 #: ../../source/intro.rst:5
 msgid "Overview / Install"
-msgstr ""
+msgstr "概述/安装"
 
 #: ../../source/intro.rst:7
 msgid ""
 "GitPython is a python library used to interact with git repositories, "
 "high-level like git-porcelain, or low-level like git-plumbing."
 msgstr ""
+"GitPython 是一个用于与 Git 存储库交互的 Python 库，"
+"高级别的类似于 Git porcelain，低级别的类似于 Git plumbing。"
 
 #: ../../source/intro.rst:9
 msgid ""
@@ -35,6 +37,8 @@ msgid ""
 "directly using either a pure python implementation, or the faster, but "
 "more resource intensive git command implementation."
 msgstr ""
+"它提供了 Git 对象的抽象，以便于访问存储库数据，并且还允许您使用纯 Python 实现，"
+"或更快但资源更密集的 Git 命令实现更直接地访问 Git 存储库。"
 
 #: ../../source/intro.rst:11
 msgid ""
@@ -42,10 +46,11 @@ msgid ""
 "quantities of objects and large datasets, which is achieved by using low-"
 "level structures and data streaming."
 msgstr ""
+"对象数据库实现针对处理大量对象和大型数据集进行了优化，这是通过使用低级结构和数据流实现的。"
 
 #: ../../source/intro.rst:14
 msgid "Requirements"
-msgstr ""
+msgstr "需求"
 
 #: ../../source/intro.rst:16
 msgid "`Python`_ >= 3.7"
@@ -53,31 +58,34 @@ msgstr ""
 
 #: ../../source/intro.rst:18
 msgid "`Git`_ 1.7.0 or newer"
-msgstr ""
+msgstr "`Git`_ 1.7.0 或更新版本"
 
 #: ../../source/intro.rst:18
 msgid ""
 "It should also work with older versions, but it may be that some "
 "operations involving remotes will not work as expected."
 msgstr ""
+"它也应该能与旧版本一起工作，但可能一些涉及 remote 的操作将不能像预期那样工作。"
 
 #: ../../source/intro.rst:20
 msgid "`GitDB`_ - a pure python git database implementation"
-msgstr ""
+msgstr "`GitDB`_ - 纯 python git 数据库实现"
 
 #: ../../source/intro.rst:21
 msgid "`typing_extensions`_ >= 3.7.3.4 (if python < 3.10)"
-msgstr ""
+msgstr "`typing_extensions`_ >= 3.7.3.4（如果 python < 3.10）"
 
 #: ../../source/intro.rst:29
 msgid "Installing GitPython"
-msgstr ""
+msgstr "安装 GitPython"
 
 #: ../../source/intro.rst:31
 msgid ""
 "Installing GitPython is easily done using `pip`_. Assuming it is "
 "installed, just run the following from the command-line:"
 msgstr ""
+"使用 `pip`_ 可以很容易地安装 GitPython。"
+"假设 pip 已经安装好了，只需在命令行中运行以下内容："
 
 #: ../../source/intro.rst:39
 msgid ""
@@ -86,10 +94,13 @@ msgid ""
 "install it to your system. More information about ``pip`` and pypi can be"
 " found here:"
 msgstr ""
+"该命令将从 `Python Package Index <http://pypi.python.org/pypi/GitPython>`_ "
+"下载最新版本的 GitPython，并将其安装到你的系统。"
+"关于 ``pip`` 和 pypi 的更多信息可以在这里找到："
 
 #: ../../source/intro.rst:44
 msgid "`install pip <https://pip.pypa.io/en/latest/installing.html>`_"
-msgstr ""
+msgstr "`安装 pip <https://pip.pypa.io/en/latest/installing.html>`_"
 
 #: ../../source/intro.rst:45
 msgid "`pypi <https://pypi.python.org/pypi/GitPython>`_"
@@ -100,6 +111,7 @@ msgid ""
 "Alternatively, you can install from the distribution using the "
 "``setup.py`` script:"
 msgstr ""
+"或者，您可以使用 ``setup.py`` 脚本："
 
 #: ../../source/intro.rst:56
 msgid ""
@@ -107,14 +119,16 @@ msgid ""
 "recommended to use the :ref:`git source repository <source-code-label>` "
 "in that case."
 msgstr ""
+"在这种情况下，你也必须手动安装 `GitDB`_。"
+"在这种情况下，建议使用 :ref:`git 源码库 <source-code-label>`。"
 
 #: ../../source/intro.rst:59
 msgid "Limitations"
-msgstr ""
+msgstr "局限性"
 
 #: ../../source/intro.rst:62
 msgid "Leakage of System Resources"
-msgstr ""
+msgstr "系统资源泄漏"
 
 #: ../../source/intro.rst:64
 msgid ""
@@ -123,6 +137,8 @@ msgid ""
 "destructors (as implemented in the `__del__` method) still ran "
 "deterministically."
 msgstr ""
+"GitPython 不适合长时间运行的进程（如守护进程），因为它容易泄漏系统资源。"
+"它是在一个解构器（如在 ``__del__`` 方法中实现的）仍然确定性地运行的时代写的。"
 
 #: ../../source/intro.rst:68
 msgid ""
@@ -130,16 +146,18 @@ msgid ""
 "search the codebase for `__del__` implementations and call these yourself"
 " when you see fit."
 msgstr ""
+"如果你仍然想在这样的情况下使用它，你要在代码库中搜索 ``__del__`` 的实现，并在你认为合适的时候自己调用这些。"
 
 #: ../../source/intro.rst:71
 msgid ""
 "Another way assure proper cleanup of resources is to factor out GitPython"
 " into a separate process which can be dropped periodically."
 msgstr ""
+"另一种确保正确清理资源的方法是将 GitPython 分解成一个单独的进程，该进程可以定期删除。"
 
 #: ../../source/intro.rst:75
 msgid "Getting Started"
-msgstr ""
+msgstr "入门"
 
 #: ../../source/intro.rst:77
 msgid ""
@@ -148,24 +166,27 @@ msgid ""
 "not exhaustive so you are encouraged to spend some time in the "
 ":ref:`api_reference_toplevel`."
 msgstr ""
+":ref:`tutorial-label` - 本教程对 GitPython 的一些基本功能和概念进行了介绍。"
+"然而，它并不详尽，所以我们鼓励你在 :ref:`api_reference_toplevel` 中花费一些时间。"
 
 #: ../../source/intro.rst:83
 msgid "API Reference"
-msgstr ""
+msgstr "API 参考"
 
 #: ../../source/intro.rst:85
 msgid ""
 "An organized section of the GitPython API is at "
 ":ref:`api_reference_toplevel`."
 msgstr ""
+"GitPython API 的一个有组织的部分位于 :ref:`api_reference_toplevel`。"
 
 #: ../../source/intro.rst:90
 msgid "Source Code"
-msgstr ""
+msgstr "源代码"
 
 #: ../../source/intro.rst:92
 msgid "GitPython's git repo is available on GitHub, which can be browsed at:"
-msgstr ""
+msgstr "Gitpython 的 Git 仓库可在 GitHub 上获得，可在以下网址浏览："
 
 #: ../../source/intro.rst:94
 msgid "https://github.com/gitpython-developers/GitPython"
@@ -173,19 +194,19 @@ msgstr ""
 
 #: ../../source/intro.rst:96
 msgid "and cloned using::"
-msgstr ""
+msgstr "并且克隆使用 ::"
 
 #: ../../source/intro.rst:100
 msgid "Initialize all submodules to obtain the required dependencies with::"
-msgstr ""
+msgstr "初始化所有子模块以获取所需的依赖项 ::"
 
 #: ../../source/intro.rst:105
 msgid "Finally verify the installation by running unit tests::"
-msgstr ""
+msgstr "最后通过运行单元测试来验证安装："
 
 #: ../../source/intro.rst:110
 msgid "Questions and Answers"
-msgstr ""
+msgstr "问题和答案"
 
 #: ../../source/intro.rst:111
 msgid ""
@@ -193,6 +214,7 @@ msgid ""
 "`gitpython` to assure the right people see the question in a timely "
 "manner."
 msgstr ""
+"请使用 stackoverflow 提问，不要忘记用 `gitpython` 确保合适的人及时看到问题。"
 
 #: ../../source/intro.rst:113
 msgid "http://stackoverflow.com/questions/tagged/gitpython"
@@ -200,11 +222,11 @@ msgstr ""
 
 #: ../../source/intro.rst:116
 msgid "Issue Tracker"
-msgstr ""
+msgstr "问题跟踪器"
 
 #: ../../source/intro.rst:117
 msgid "The issue tracker is hosted by GitHub:"
-msgstr ""
+msgstr "问题跟踪程序由 Github 托管："
 
 #: ../../source/intro.rst:119
 msgid "https://github.com/gitpython-developers/GitPython/issues"
@@ -212,11 +234,11 @@ msgstr ""
 
 #: ../../source/intro.rst:122
 msgid "License Information"
-msgstr ""
+msgstr "许可证信息"
 
 #: ../../source/intro.rst:123
 msgid ""
 "GitPython is licensed under the New BSD License.  See the LICENSE file "
 "for more information."
 msgstr ""
-
+"GitPython 是根据新的 BSD 许可证获得许可的。有关详细信息，请参阅许可证文件。"
