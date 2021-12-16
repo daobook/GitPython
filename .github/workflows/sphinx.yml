@@ -52,10 +52,10 @@ jobs:
 
       # remove the .doctrees folder when building for deployment as it takes two thirds of disk space
       - name: 🔥 Clean up files
-        run: rm -r doc/_build/doctrees/
+        run: rm -r doc/build/.doctrees/
 
       - name: 🚀 Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_build/html
+          publish_dir: docs/build/html
