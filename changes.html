@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog &mdash; GitPython 3.1.24 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Roadmap" href="roadmap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> GitPython
+          </a>
+              <div class="version">
+                3.1.24
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview / Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">GitPython Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.1.24</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#yanked">3.1.23 (YANKED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.1.20 (YANKED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.1.19 (YANKED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3.1.18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">3.1.17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">3.1.16 (YANKED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">3.1.15 (YANKED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">3.1.14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">3.1.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">3.1.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">3.1.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">3.1.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">3.1.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">3.1.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">3.1.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">3.1.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">3.1.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">3.1.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">3.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">3.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">3.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">3.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">3.0.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bugfixes">Bugfixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">3.0.8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id27">Bugfixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">3.0.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id31">3.0.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">Bugfixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id39">3.0.5 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id40">3.0.4 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id41">3.0.3 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id42">3.0.2 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bugfixes-and-performance-improvements">3.0.1 - Bugfixes and performance improvements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remove-python-2-support">3.0.0 - Remove Python 2 support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id43">2.1.15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id46">2.1.14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bring-back-python-2-7-support">2.1.13 - Bring back Python 2.7 support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bugfixes-and-features">2.1.12 - Bugfixes and Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id48">2.1.11 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id49">2.1.10 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dropping-support-for-python-2-6">2.1.9 - Dropping support for Python 2.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id50">2.1.8 - bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id51">2.1.6 - bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id52">2.1.3 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id53">2.1.1 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#much-better-windows-support">2.1.0 - Much better windows support!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notable-fixes">Notable fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id54">2.0.9 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features-and-bugfixes">2.0.8 - Features and Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-features">2.0.7 - New Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fixes-and-features">2.0.6 - Fixes and Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fixes">2.0.5 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id55">2.0.4 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id56">2.0.3 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id57">2.0.2 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id58">2.0.1 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">2.0.0 - Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id59">1.0.2 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id60">1.0.1 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">1.0.0 - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id61">0.3.7 - Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id62">0.3.6 - Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id63">0.3.5 - Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-3-support">0.3.4 - Python 3 Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id64">0.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id65">0.3.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id66">0.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rc1">0.3.2 RC1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta-2">0.3.1 Beta 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta-1">0.3.1 Beta 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id67">0.3.0 Beta 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id68">0.3.0 Beta 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renamed-modules">Renamed Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id69">0.2 Beta 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id70">0.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id71">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-iteration">Item Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objects-package">objects Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blob">Blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gitcommand">GitCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commit">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diff">Diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diffing">Diffing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index">Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repo">Repo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote">Remote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-framework">Test Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tree">Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id72">0.1.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id73">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id74">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id75">Diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#head">Head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id76">Repo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id77">0.1.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id78">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id79">Blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id80">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id81">Repo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id82">Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id83">0.1.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id84">0.1.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id85">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git">Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id86">Tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id87">Repo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id88">0.1.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id89">Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id90">0.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id91">0.1.0</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GitPython</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/changes.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="永久链接至标题"></a></h1>
+<section id="id1">
+<h2>3.1.24<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Newly added timeout flag is not be enabled by default, and was renamed to kill_after_timeout</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/54?closed=1">https://github.com/gitpython-developers/gitpython/milestone/54?closed=1</a>
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/53?closed=1">https://github.com/gitpython-developers/gitpython/milestone/53?closed=1</a></p>
+</section>
+<section id="yanked">
+<h2>3.1.23 (YANKED)<a class="headerlink" href="#yanked" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>This is the second typed release with a lot of improvements under the hood.</p></li>
+<li><p>General:</p>
+<ul>
+<li><p>Remove python 3.6 support</p></li>
+<li><p>Remove distutils ahead of deprecation in standard library.</p></li>
+<li><p>Update sphinx to 4.1.12 and use autodoc-typehints.</p></li>
+<li><p>Include README as long_description on PyPI</p></li>
+<li><p>Test against earliest and latest minor version available on Github Actions (e.g. 3.9.0 and 3.9.7)</p></li>
+</ul>
+</li>
+<li><p>Typing:</p>
+<ul>
+<li><p>Add types to ALL functions.</p></li>
+<li><p>Ensure py.typed is collected.</p></li>
+<li><p>Increase mypy strictness with disallow_untyped_defs, warn_redundant_casts, warn_unreachable.</p></li>
+<li><p>Use typing.NamedTuple and typing.OrderedDict now 3.6 dropped.</p></li>
+<li><p>Make Protocol classes ABCs at runtime due to new behaviour/bug in 3.9.7 &amp; 3.10.0-rc1</p></li>
+<li><p>Remove use of typing.TypeGuard until later release, to allow dependant libs time to update.</p></li>
+<li><p>Tracking issue: <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1095">https://github.com/gitpython-developers/GitPython/issues/1095</a></p></li>
+</ul>
+</li>
+<li><p>Runtime improvements:</p>
+<ul>
+<li><p>Add clone_multi_options support to submodule.add()</p></li>
+<li><p>Delay calling get_user_id() unless essential, to support sand-boxed environments.</p></li>
+<li><p>Add timeout to handle_process_output(), in case thread.join() hangs.</p></li>
+</ul>
+</li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/53?closed=1">https://github.com/gitpython-developers/gitpython/milestone/53?closed=1</a></p>
+</section>
+<section id="id2">
+<h2>3.1.20 (YANKED)<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>This is the second typed release with a lot of improvements under the hood.
+* Tracking issue: <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1095">https://github.com/gitpython-developers/GitPython/issues/1095</a></p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/52?closed=1">https://github.com/gitpython-developers/gitpython/milestone/52?closed=1</a></p>
+</section>
+<section id="id3">
+<h2>3.1.19 (YANKED)<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>This is the second typed release with a lot of improvements under the hood.
+* Tracking issue: <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1095">https://github.com/gitpython-developers/GitPython/issues/1095</a></p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/51?closed=1">https://github.com/gitpython-developers/gitpython/milestone/51?closed=1</a></p>
+</section>
+<section id="id4">
+<h2>3.1.18<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>drop support for python 3.5 to reduce maintenance burden on typing. Lower patch levels of python 3.5 would break, too.</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/50?closed=1">https://github.com/gitpython-developers/gitpython/milestone/50?closed=1</a></p>
+</section>
+<section id="id5">
+<h2>3.1.17<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix issues from 3.1.16 (see <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1238">https://github.com/gitpython-developers/GitPython/issues/1238</a>)</p></li>
+<li><p>Fix issues from 3.1.15 (see <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1223">https://github.com/gitpython-developers/GitPython/issues/1223</a>)</p></li>
+<li><p>Add more static typing information</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/49?closed=1">https://github.com/gitpython-developers/gitpython/milestone/49?closed=1</a></p>
+</section>
+<section id="id6">
+<h2>3.1.16 (YANKED)<a class="headerlink" href="#id6" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix issues from 3.1.15 (see <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1223">https://github.com/gitpython-developers/GitPython/issues/1223</a>)</p></li>
+<li><p>Add more static typing information</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/48?closed=1">https://github.com/gitpython-developers/gitpython/milestone/48?closed=1</a></p>
+</section>
+<section id="id7">
+<h2>3.1.15 (YANKED)<a class="headerlink" href="#id7" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>add deprectation warning for python 3.5</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/47?closed=1">https://github.com/gitpython-developers/gitpython/milestone/47?closed=1</a></p>
+</section>
+<section id="id8">
+<h2>3.1.14<a class="headerlink" href="#id8" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>git.Commit objects now have a <code class="docutils literal notranslate"><span class="pre">replace</span></code> method that will return a
+copy of the commit with modified attributes.</p></li>
+<li><p>Add python 3.9 support</p></li>
+<li><p>Drop python 3.4 support</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/46?closed=1">https://github.com/gitpython-developers/gitpython/milestone/46?closed=1</a></p>
+</section>
+<section id="id9">
+<h2>3.1.13<a class="headerlink" href="#id9" title="永久链接至标题"></a></h2>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/45?closed=1">https://github.com/gitpython-developers/gitpython/milestone/45?closed=1</a></p>
+</section>
+<section id="id10">
+<h2>3.1.12<a class="headerlink" href="#id10" title="永久链接至标题"></a></h2>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/44?closed=1">https://github.com/gitpython-developers/gitpython/milestone/44?closed=1</a></p>
+</section>
+<section id="id11">
+<h2>3.1.11<a class="headerlink" href="#id11" title="永久链接至标题"></a></h2>
+<p>Fixes regression of 3.1.10.</p>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/43?closed=1">https://github.com/gitpython-developers/gitpython/milestone/43?closed=1</a></p>
+</section>
+<section id="id12">
+<h2>3.1.10<a class="headerlink" href="#id12" title="永久链接至标题"></a></h2>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/42?closed=1">https://github.com/gitpython-developers/gitpython/milestone/42?closed=1</a></p>
+</section>
+<section id="id13">
+<h2>3.1.9<a class="headerlink" href="#id13" title="永久链接至标题"></a></h2>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/41?closed=1">https://github.com/gitpython-developers/gitpython/milestone/41?closed=1</a></p>
+</section>
+<section id="id14">
+<h2>3.1.8<a class="headerlink" href="#id14" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>support for ‘includeIf’ in git configuration files</p></li>
+<li><p>tests are now excluded from the package, making it conisderably smaller</p></li>
+</ul>
+<p>See the following for more details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/40?closed=1">https://github.com/gitpython-developers/gitpython/milestone/40?closed=1</a></p>
+</section>
+<section id="id15">
+<h2>3.1.7<a class="headerlink" href="#id15" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix tutorial examples, which disappeared in 3.1.6 due to a missed path change.</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>3.1.6<a class="headerlink" href="#id16" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Greatly reduced package size, see <a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/1031">https://github.com/gitpython-developers/GitPython/pull/1031</a></p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>3.1.5<a class="headerlink" href="#id17" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>rollback: package size was reduced significantly not placing tests into the package anymore.
+See <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/1030">https://github.com/gitpython-developers/GitPython/issues/1030</a></p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>3.1.4<a class="headerlink" href="#id18" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>all exceptions now keep track of their cause</p></li>
+<li><p>package size was reduced significantly not placing tests into the package anymore.</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/39?closed=1">https://github.com/gitpython-developers/gitpython/milestone/39?closed=1</a></p>
+</section>
+<section id="id19">
+<h2>3.1.3<a class="headerlink" href="#id19" title="永久链接至标题"></a></h2>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/38?closed=1">https://github.com/gitpython-developers/gitpython/milestone/38?closed=1</a></p>
+</section>
+<section id="id20">
+<h2>3.1.2<a class="headerlink" href="#id20" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Re-release of 3.1.1, with known signature</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/37?closed=1">https://github.com/gitpython-developers/gitpython/milestone/37?closed=1</a></p>
+</section>
+<section id="id21">
+<h2>3.1.1<a class="headerlink" href="#id21" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>support for PyOxidizer, which previously failed due to usage of <cite>__file__</cite>.</p></li>
+</ul>
+<p>See the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/36?closed=1">https://github.com/gitpython-developers/gitpython/milestone/36?closed=1</a></p>
+</section>
+<section id="id22">
+<h2>3.1.0<a class="headerlink" href="#id22" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Switched back to using gitdb package as requirement
+(<a class="reference external" href="https://github.com/gitpython-developers/gitdb/issues/59">gitdb#59</a>)</p></li>
+</ul>
+</section>
+<section id="id23">
+<h2>3.0.9<a class="headerlink" href="#id23" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Restricted GitDB (gitdb2) version requirement to &lt; 4</p></li>
+<li><p>Removed old nose library from test requirements</p></li>
+</ul>
+<section id="bugfixes">
+<h3>Bugfixes<a class="headerlink" href="#bugfixes" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Changed to use UTF-8 instead of default encoding when getting information about a symbolic reference
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/774">#774</a>)</p></li>
+<li><p>Fixed decoding of tag object message so as to replace invalid bytes
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/943">#943</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id26">
+<h2>3.0.8<a class="headerlink" href="#id26" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Added support for Python 3.8</p></li>
+<li><p>Bumped GitDB (gitdb2) version requirement to &gt; 3</p></li>
+</ul>
+<section id="id27">
+<h3>Bugfixes<a class="headerlink" href="#id27" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Fixed Repo.__repr__ when subclassed
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/968">#968</a>)</p></li>
+<li><p>Removed compatibility shims for Python &lt; 3.4 and old mock library</p></li>
+<li><p>Replaced usage of deprecated unittest aliases and Logger.warn</p></li>
+<li><p>Removed old, no longer used assert methods</p></li>
+<li><p>Replaced usage of nose assert methods with unittest</p></li>
+</ul>
+</section>
+</section>
+<section id="id29">
+<h2>3.0.7<a class="headerlink" href="#id29" title="永久链接至标题"></a></h2>
+<p>Properly signed re-release of v3.0.6 with new signature
+(See <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/980">#980</a>)</p>
+</section>
+<section id="id31">
+<h2>3.0.6<a class="headerlink" href="#id31" title="永久链接至标题"></a></h2>
+<div class="line-block">
+<div class="line">Note: There was an issue that caused this version to be released to PyPI without a signature</div>
+<div class="line">See the changelog for v3.0.7 and <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/980">#980</a></div>
+</div>
+<section id="id33">
+<h3>Bugfixes<a class="headerlink" href="#id33" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Fixed warning for usage of environment variables for paths containing <code class="docutils literal notranslate"><span class="pre">$</span></code> or <code class="docutils literal notranslate"><span class="pre">%</span></code>
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/832">#832</a>,
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/961">#961</a>)</p></li>
+<li><p>Added support for parsing Git internal date format (&#64;&lt;unix timestamp&gt; &lt;timezone offset&gt;)
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/965">#965</a>)</p></li>
+<li><p>Removed Python 2 and &lt; 3.3 compatibility shims
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/979">#979</a>)</p></li>
+<li><p>Fixed GitDB (gitdb2) requirement version specifier formatting in requirements.txt
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/979">#979</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id39">
+<h2>3.0.5 - Bugfixes<a class="headerlink" href="#id39" title="永久链接至标题"></a></h2>
+<p>see the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/32?closed=1">https://github.com/gitpython-developers/gitpython/milestone/32?closed=1</a></p>
+</section>
+<section id="id40">
+<h2>3.0.4 - Bugfixes<a class="headerlink" href="#id40" title="永久链接至标题"></a></h2>
+<p>see the following for details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/31?closed=1">https://github.com/gitpython-developers/gitpython/milestone/31?closed=1</a></p>
+</section>
+<section id="id41">
+<h2>3.0.3 - Bugfixes<a class="headerlink" href="#id41" title="永久链接至标题"></a></h2>
+<p>see the following for (most) details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/30?closed=1">https://github.com/gitpython-developers/gitpython/milestone/30?closed=1</a></p>
+</section>
+<section id="id42">
+<h2>3.0.2 - Bugfixes<a class="headerlink" href="#id42" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>fixes an issue with installation</p></li>
+</ul>
+</section>
+<section id="bugfixes-and-performance-improvements">
+<h2>3.0.1 - Bugfixes and performance improvements<a class="headerlink" href="#bugfixes-and-performance-improvements" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix a <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/906">performance regression</a> which could make certain workloads 50% slower</p></li>
+<li><p>Add <cite>currently_rebasing_on</cite> method on <cite>Repo</cite>, see <a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/903/files#diff-c276fc3c4df38382ec884e59657b869dR1065">the PR</a></p></li>
+<li><p>Fix incorrect <cite>requirements.txt</cite> which could lead to broken installations, see this <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/908">issue</a> for details.</p></li>
+</ul>
+</section>
+<section id="remove-python-2-support">
+<h2>3.0.0 - Remove Python 2 support<a class="headerlink" href="#remove-python-2-support" title="永久链接至标题"></a></h2>
+<p>Motivation for this is a patch which improves unicode handling when dealing with filesystem paths.
+Python 2 compatibility was introduced to deal with differences, and I thought it would be a good idea
+to ‘just’ drop support right now, mere 5 months away from the official maintenance stop of python 2.7.</p>
+<p>The underlying motivation clearly is my anger when thinking python and unicode, which was a hassle from the
+start, at least in a codebase as old as GitPython, which totally doesn’t handle encodings correctly in many cases.</p>
+<p>Having migrated to using <cite>Rust</cite> exclusively for tooling, I still see that correct handling of encodings isn’t entirely
+trivial, but at least <cite>Rust</cite> makes clear what has to be done at compile time, allowing to write software that is pretty
+much guaranteed to work once it compiles.</p>
+<p>Again, my apologies if removing Python 2 support caused inconveniences, please see release 2.1.13 which returns it.</p>
+<p>see the following for (most) details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/27?closed=1">https://github.com/gitpython-developers/gitpython/milestone/27?closed=1</a></p>
+<p>or run have a look at the difference between tags v2.1.12 and v3.0.0:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/compare/2.1.12...3.0.0">https://github.com/gitpython-developers/GitPython/compare/2.1.12…3.0.0</a>.</p>
+</section>
+<section id="id43">
+<h2>2.1.15<a class="headerlink" href="#id43" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fixed GitDB (gitdb2) requirement version specifier formatting in requirements.txt
+(Backported from <a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/979">#979</a>)</p></li>
+<li><p>Restricted GitDB (gitdb2) version requirement to &lt; 3
+(<a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/897">#897</a>)</p></li>
+</ul>
+</section>
+<section id="id46">
+<h2>2.1.14<a class="headerlink" href="#id46" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fixed handling of 0 when transforming kwargs into Git command arguments
+(Backported from <a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/899">#899</a>)</p></li>
+</ul>
+</section>
+<section id="bring-back-python-2-7-support">
+<h2>2.1.13 - Bring back Python 2.7 support<a class="headerlink" href="#bring-back-python-2-7-support" title="永久链接至标题"></a></h2>
+<p>My apologies for any inconvenience this may have caused. Following semver, backward incompatible changes
+will be introduced in a minor version.</p>
+</section>
+<section id="bugfixes-and-features">
+<h2>2.1.12 - Bugfixes and Features<a class="headerlink" href="#bugfixes-and-features" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Multi-value support and interface improvements for Git configuration. Thanks to A. Jesse Jiryu Davis.</p></li>
+</ul>
+<p>or run have a look at the difference between tags v2.1.11 and v2.1.12:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/compare/2.1.11...2.1.12">https://github.com/gitpython-developers/GitPython/compare/2.1.11…2.1.12</a></p>
+</section>
+<section id="id48">
+<h2>2.1.11 - Bugfixes<a class="headerlink" href="#id48" title="永久链接至标题"></a></h2>
+<p>see the following for (most) details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/26?closed=1">https://github.com/gitpython-developers/gitpython/milestone/26?closed=1</a></p>
+<p>or run have a look at the difference between tags v2.1.10 and v2.1.11:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/compare/2.1.10...2.1.11">https://github.com/gitpython-developers/GitPython/compare/2.1.10…2.1.11</a></p>
+</section>
+<section id="id49">
+<h2>2.1.10 - Bugfixes<a class="headerlink" href="#id49" title="永久链接至标题"></a></h2>
+<p>see the following for (most) details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/25?closed=1">https://github.com/gitpython-developers/gitpython/milestone/25?closed=1</a></p>
+<p>or run have a look at the difference between tags v2.1.9 and v2.1.10:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/compare/2.1.9...2.1.10">https://github.com/gitpython-developers/GitPython/compare/2.1.9…2.1.10</a></p>
+</section>
+<section id="dropping-support-for-python-2-6">
+<h2>2.1.9 - Dropping support for Python 2.6<a class="headerlink" href="#dropping-support-for-python-2-6" title="永久链接至标题"></a></h2>
+<p>see the following for (most) details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/24?closed=1">https://github.com/gitpython-developers/gitpython/milestone/24?closed=1</a></p>
+<p>or run have a look at the difference between tags v2.1.8 and v2.1.9:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/compare/2.1.8...2.1.9">https://github.com/gitpython-developers/GitPython/compare/2.1.8…2.1.9</a></p>
+</section>
+<section id="id50">
+<h2>2.1.8 - bugfixes<a class="headerlink" href="#id50" title="永久链接至标题"></a></h2>
+<p>see the following for (most) details:
+<a class="reference external" href="https://github.com/gitpython-developers/gitpython/milestone/23?closed=1">https://github.com/gitpython-developers/gitpython/milestone/23?closed=1</a></p>
+<p>or run have a look at the difference between tags v2.1.7 and v2.1.8:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/compare/2.1.7...2.1.8">https://github.com/gitpython-developers/GitPython/compare/2.1.7…2.1.8</a></p>
+</section>
+<section id="id51">
+<h2>2.1.6 - bugfixes<a class="headerlink" href="#id51" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>support for worktrees</p></li>
+</ul>
+</section>
+<section id="id52">
+<h2>2.1.3 - Bugfixes<a class="headerlink" href="#id52" title="永久链接至标题"></a></h2>
+<p>All issues and PRs can be viewed in all detail when following this URL:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/milestone/21?closed=1">https://github.com/gitpython-developers/GitPython/milestone/21?closed=1</a></p>
+</section>
+<section id="id53">
+<h2>2.1.1 - Bugfixes<a class="headerlink" href="#id53" title="永久链接至标题"></a></h2>
+<p>All issues and PRs can be viewed in all detail when following this URL:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=is%3Aclosed+milestone%3A%22v2.1.1+-+Bugfixes%22">https://github.com/gitpython-developers/GitPython/issues?q=is%3Aclosed+milestone%3A%22v2.1.1+-+Bugfixes%22</a></p>
+</section>
+<section id="much-better-windows-support">
+<h2>2.1.0 - Much better windows support!<a class="headerlink" href="#much-better-windows-support" title="永久链接至标题"></a></h2>
+<p>Special thanks to &#64;ankostis, who made this release possible (nearly) single-handedly.
+GitPython is run by its users, and their PRs make all the difference, they keep
+GitPython relevant. Thank you all so much for contributing !</p>
+<section id="notable-fixes">
+<h3>Notable fixes<a class="headerlink" href="#notable-fixes" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>The <cite>GIT_DIR</cite> environment variable does not override the <cite>path</cite> argument when
+initializing a <cite>Repo</cite> object anymore. However, if said <cite>path</cite> unset, <cite>GIT_DIR</cite>
+will be used to fill the void.</p></li>
+</ul>
+<p>All issues and PRs can be viewed in all detail when following this URL:
+<a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=is%3Aclosed+milestone%3A%22v2.1.0+-+proper+windows+support%22">https://github.com/gitpython-developers/GitPython/issues?q=is%3Aclosed+milestone%3A%22v2.1.0+-+proper+windows+support%22</a></p>
+</section>
+</section>
+<section id="id54">
+<h2>2.0.9 - Bugfixes<a class="headerlink" href="#id54" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><cite>tag.commit</cite> will now resolve commits deeply.</p></li>
+<li><p><cite>Repo</cite> objects can now be pickled, which helps with multi-processing.</p></li>
+<li><p><cite>Head.checkout()</cite> now deals with detached heads, which is when it will return
+the <cite>HEAD</cite> reference instead.</p></li>
+<li><p><cite>DiffIndex.iter_change_type(…)</cite> produces better results when diffing</p></li>
+</ul>
+</section>
+<section id="features-and-bugfixes">
+<h2>2.0.8 - Features and Bugfixes<a class="headerlink" href="#features-and-bugfixes" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><cite>DiffIndex.iter_change_type(…)</cite> produces better results when diffing
+an index against the working tree.</p></li>
+<li><p><cite>Repo().is_dirty(…)</cite> now supports the <cite>path</cite> parameter, to specify a single
+path by which to filter the output. Similar to <cite>git status &lt;path&gt;</cite></p></li>
+<li><p>Symbolic refs created by this library will now be written with a newline
+character, which was previously missing.</p></li>
+<li><p><cite>blame()</cite> now properly preserves multi-line commit messages.</p></li>
+<li><p>No longer corrupt ref-logs by writing multi-line comments into them.</p></li>
+</ul>
+</section>
+<section id="new-features">
+<h2>2.0.7 - New Features<a class="headerlink" href="#new-features" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><cite>IndexFile.commit(…,skip_hooks=False)</cite> added. This parameter emulates the</dt><dd><p>behaviour of <cite>–no-verify</cite> on the command-line.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="fixes-and-features">
+<h2>2.0.6 - Fixes and Features<a class="headerlink" href="#fixes-and-features" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix: remote output parser now correctly matches refs with non-ASCII
+chars in them</p></li>
+<li><p>API: Diffs now have <cite>a_rawpath</cite>, <cite>b_rawpath</cite>, <cite>raw_rename_from</cite>,
+<cite>raw_rename_to</cite> properties, which are the raw-bytes equivalents of their
+unicode path counterparts.</p></li>
+<li><p>Fix: TypeError about passing keyword argument to string decode() on
+Python 2.6.</p></li>
+<li><p>Feature: <a class="reference external" href="https://github.com/gitpython-developers/GitPython/pull/446#issuecomment-224670539">setUrl API on Remotes</a></p></li>
+</ul>
+</section>
+<section id="fixes">
+<h2>2.0.5 - Fixes<a class="headerlink" href="#fixes" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix: parser of fetch info lines choked on some legitimate lines</p></li>
+</ul>
+</section>
+<section id="id55">
+<h2>2.0.4 - Fixes<a class="headerlink" href="#id55" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix: parser of commit object data is now robust against cases where
+commit object contains invalid bytes.  The invalid characters are now
+replaced rather than choked on.</p></li>
+<li><p>Fix: non-ASCII paths are now properly decoded and returned in
+<code class="docutils literal notranslate"><span class="pre">.diff()</span></code> output</p></li>
+<li><p>Fix: <cite>RemoteProgress</cite> will now strip the ‘, ‘ prefix or suffix from messages.</p></li>
+<li><p>API: Remote.[fetch|push|pull](…) methods now allow the <code class="docutils literal notranslate"><span class="pre">progress</span></code> argument to
+be a callable. This saves you from creating a custom type with usually just one
+implemented method.</p></li>
+</ul>
+</section>
+<section id="id56">
+<h2>2.0.3 - Fixes<a class="headerlink" href="#id56" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix: bug in <code class="docutils literal notranslate"><span class="pre">git-blame</span> <span class="pre">--incremental</span></code> output parser that broken when
+commit messages contained <code class="docutils literal notranslate"><span class="pre">\r</span></code> characters</p></li>
+<li><p>Fix: progress handler exceptions are not caught anymore, which would usually just hide bugs
+previously.</p></li>
+<li><p>Fix: The <cite>Git.execute</cite> method will now redirect <cite>stdout</cite> to <cite>devnull</cite> if <cite>with_stdout</cite> is false,
+which is the intended behaviour based on the parameter’s documentation.</p></li>
+</ul>
+</section>
+<section id="id57">
+<h2>2.0.2 - Fixes<a class="headerlink" href="#id57" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix: source package does not include *.pyc files</p></li>
+<li><p>Fix: source package does include doc sources</p></li>
+</ul>
+</section>
+<section id="id58">
+<h2>2.0.1 - Fixes<a class="headerlink" href="#id58" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Fix: remote output parser now correctly matches refs with “&#64;” in them</p></li>
+</ul>
+</section>
+<section id="features">
+<h2>2.0.0 - Features<a class="headerlink" href="#features" title="永久链接至标题"></a></h2>
+<p>Please note that due to breaking changes, we have to increase the major version.</p>
+<ul class="simple">
+<li><p><strong>IMPORTANT</strong>: This release drops support for python 2.6, which is
+officially deprecated by the python maintainers.</p></li>
+<li><p><strong>CRITICAL</strong>: <cite>Diff</cite> objects created with patch output will now not carry
+the — and +++ header lines anymore.  All diffs now start with the
+&#64;&#64; header line directly.  Users that rely on the old behaviour can now
+(reliably) read this information from the a_path and b_path properties
+without having to parse these lines manually.</p></li>
+<li><p><cite>Commit</cite> now has extra properties <cite>authored_datetime</cite> and
+<cite>committer_datetime</cite> (to get Python datetime instances rather than
+timestamps)</p></li>
+<li><p><cite>Commit.diff()</cite> now supports diffing the root commit via
+<cite>Commit.diff(NULL_TREE)</cite>.</p></li>
+<li><p><cite>Repo.blame()</cite> now respects <cite>incremental=True</cite>, supporting incremental
+blames.  Incremental blames are slightly faster since they don’t include
+the file’s contents in them.</p></li>
+<li><p>Fix: <cite>Diff</cite> objects created with patch output will now have their
+<cite>a_path</cite> and <cite>b_path</cite> properties parsed out correctly.  Previously, some
+values may have been populated incorrectly when a file was added or
+deleted.</p></li>
+<li><p>Fix: diff parsing issues with paths that contain “unsafe” chars, like
+spaces, tabs, backslashes, etc.</p></li>
+</ul>
+</section>
+<section id="id59">
+<h2>1.0.2 - Fixes<a class="headerlink" href="#id59" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>IMPORTANT: Changed default object database of <cite>Repo</cite> objects to <cite>GitCmdObjectDB</cite>. The pure-python implementation
+used previously usually fails to release its resources (i.e. file handles), which can lead to problems when working
+with large repositories.</p></li>
+<li><p>CRITICAL: fixed incorrect <cite>Commit</cite> object serialization when authored or commit date had timezones which were not
+divisiblej by 3600 seconds. This would happen if the timezone was something like <cite>+0530</cite> for instance.</p></li>
+<li><p>A list of all additional fixes can be found <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=milestone%3A%22v1.0.2+-+Fixes%22+is%3Aclosed">on GitHub</a></p></li>
+<li><p>CRITICAL: <cite>Tree.cache</cite> was removed without replacement. It is technically impossible to change individual trees and expect their serialization results to be consistent with what <em>git</em> expects. Instead, use the <cite>IndexFile</cite> facilities to adjust the content of the staging area, and write it out to the respective tree objects using <cite>IndexFile.write_tree()</cite> instead.</p></li>
+</ul>
+</section>
+<section id="id60">
+<h2>1.0.1 - Fixes<a class="headerlink" href="#id60" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>A list of all issues can be found <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=milestone%3A%22v1.0.1+-+Fixes%22+is%3Aclosed">on GitHub</a></p></li>
+</ul>
+</section>
+<section id="notes">
+<h2>1.0.0 - Notes<a class="headerlink" href="#notes" title="永久链接至标题"></a></h2>
+<p>This version is equivalent to v0.3.7, but finally acknowledges that GitPython is stable and production ready.</p>
+<p>It follows the <a class="reference external" href="http://semver.org">semantic version scheme</a>, and thus will not break its existing API unless it goes 2.0.</p>
+</section>
+<section id="id61">
+<h2>0.3.7 - Fixes<a class="headerlink" href="#id61" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><cite>IndexFile.add()</cite> will now write the index without any extension data by default. However, you may override this behaviour with the new <cite>write_extension_data</cite> keyword argument.</p>
+<ul>
+<li><p>Renamed <cite>ignore_tree_extension_data</cite> keyword argument in <cite>IndexFile.write(…)</cite> to <cite>ignore_extension_data</cite></p></li>
+</ul>
+</li>
+<li><p>If the git command executed during <cite>Remote.push(…)|fetch(…)</cite> returns with an non-zero exit code and GitPython didn’t
+obtain any head-information, the corresponding <cite>GitCommandError</cite> will be raised. This may break previous code which expected
+these operations to never raise. However, that behavious is undesirable as it would effectively hide the fact that there
+was an error. See <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/271">this issue</a> for more information.</p></li>
+<li><p>If the git executable can’t be found in the PATH or at the path provided by <cite>GIT_PYTHON_GIT_EXECUTABLE</cite>, this is made
+obvious by throwing <cite>GitCommandNotFound</cite>, both on unix and on windows.</p>
+<ul>
+<li><p>Those who support <strong>GUI on windows</strong> will now have to set <cite>git.Git.USE_SHELL = True</cite> to get the previous behaviour.</p></li>
+</ul>
+</li>
+<li><p>A list of all issues can be found <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=milestone%3A%22v0.3.7+-+Fixes%22+is%3Aclosed">on GitHub</a></p></li>
+</ul>
+</section>
+<section id="id62">
+<h2>0.3.6 - Features<a class="headerlink" href="#id62" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><strong>DOCS</strong></p>
+<ul>
+<li><p>special members like <cite>__init__</cite> are now listed in the API documentation</p></li>
+<li><p>tutorial section was revised entirely, more advanced examples were added.</p></li>
+</ul>
+</li>
+<li><p><strong>POSSIBLY BREAKING CHANGES</strong></p>
+<ul>
+<li><p>As <cite>rev_parse</cite> will now throw <cite>BadName</cite> as well as <cite>BadObject</cite>, client code will have to catch both exception types.</p></li>
+<li><p>Repo.working_tree_dir now returns None if it is bare. Previously it raised AssertionError.</p></li>
+<li><p>IndexFile.add() previously raised AssertionError when paths where used with bare repository, now it raises InvalidGitRepositoryError</p></li>
+</ul>
+</li>
+<li><p>Added <cite>Repo.merge_base()</cite> implementation. See the <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/169">respective issue on GitHub</a></p></li>
+<li><p><cite>[include]</cite> sections in git configuration files are now respected</p></li>
+<li><p>Added <cite>GitConfigParser.rename_section()</cite></p></li>
+<li><p>Added <cite>Submodule.rename()</cite></p></li>
+<li><p>A list of all issues can be found <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=milestone%3A%22v0.3.6+-+Features%22+">on GitHub</a></p></li>
+</ul>
+</section>
+<section id="id63">
+<h2>0.3.5 - Bugfixes<a class="headerlink" href="#id63" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>push/pull/fetch operations will not block anymore</p></li>
+<li><p>diff() can now properly detect renames, both in patch and raw format. Previously it only worked when create_patch was True.</p></li>
+<li><p>repo.odb.update_cache() is now called automatically after fetch and pull operations. In case you did that in your own code, you might want to remove your line to prevent a double-update that causes unnecessary IO.</p></li>
+<li><p><cite>Repo(path)</cite> will not automatically search upstream anymore and find any git directory on its way up. If you need that behaviour, you can turn it back on using the new <cite>search_parent_directories=True</cite> flag when constructing a <cite>Repo</cite> object.</p></li>
+<li><p>IndexFile.commit() now runs the <cite>pre-commit</cite> and <cite>post-commit</cite> hooks. Verified to be working on posix systems only.</p></li>
+<li><p>A list of all fixed issues can be found here: <a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues?q=milestone%3A%22v0.3.5+-+bugfixes%22+">https://github.com/gitpython-developers/GitPython/issues?q=milestone%3A%22v0.3.5+-+bugfixes%22+</a></p></li>
+</ul>
+</section>
+<section id="python-3-support">
+<h2>0.3.4 - Python 3 Support<a class="headerlink" href="#python-3-support" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Internally, hexadecimal SHA1 are treated as ascii encoded strings. Binary SHA1 are treated as bytes.</p></li>
+<li><p>Id attribute of Commit objects is now <cite>hexsha</cite>, instead of <cite>binsha</cite>. The latter makes no sense in python 3 and I see no application of it anyway besides its artificial usage in test cases.</p></li>
+<li><p><strong>IMPORTANT</strong>: If you were using the config_writer(), you implicitly relied on __del__ to work as expected to flush changes. To be sure changes are flushed under PY3, you will have to call the new <cite>release()</cite> method to trigger a flush. For some reason, __del__ is not called necessarily anymore when a symbol goes out of scope.</p></li>
+<li><p>The <cite>Tree</cite> now has a <cite>.join(‘name’)</cite> method which is equivalent to <cite>tree / ‘name’</cite></p></li>
+</ul>
+</section>
+<section id="id64">
+<h2>0.3.3<a class="headerlink" href="#id64" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>When fetching, pulling or pushing, and an error occurs, it will not be reported on stdout anymore. However, if there is a fatal error, it will still result in a GitCommandError to be thrown. This goes hand in hand with improved fetch result parsing.</p></li>
+<li><p>Code Cleanup (in preparation for python 3 support)</p>
+<ul>
+<li><p>Applied autopep8 and cleaned up code</p></li>
+<li><p>Using python logging module instead of print statements to signal certain kinds of errors</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id65">
+<h2>0.3.2.1<a class="headerlink" href="#id65" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues/207">Fix for #207</a></p></li>
+</ul>
+</section>
+<section id="id66">
+<h2>0.3.2<a class="headerlink" href="#id66" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Release of most recent version as non-RC build, just to allow pip to install the latest version right away.</p></li>
+<li><p>Have a look at the milestones (<a class="reference external" href="https://github.com/gitpython-developers/GitPython/milestones">https://github.com/gitpython-developers/GitPython/milestones</a>) to see what’s next.</p></li>
+</ul>
+</section>
+<section id="rc1">
+<h2>0.3.2 RC1<a class="headerlink" href="#rc1" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><strong>git</strong> command wrapper</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">version_info</span></code> property which returns a tuple of integers representing the installed git version.</p></li>
+<li><p>Added GIT_PYTHON_GIT_EXECUTABLE environment variable, which can be used to set the desired git executable to be used. despite of what would be found in the path.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Blob</strong> Type</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Added mode constants to ease the manual creation of blobs</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>IterableList</strong></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Added __contains__ and __delitem__ methods</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>More Changes</strong></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Configuration file parsing is more robust. It should now be able to handle everything that the git command can parse as well.</p></li>
+<li><p>The progress parsing was updated to support git 1.7.0.3 and newer. Previously progress was not enabled for the git command or only worked with ssh in case of older git versions.</p></li>
+<li><p>Parsing of tags was improved. Previously some parts of the name could not be parsed properly.</p></li>
+<li><p>The rev-parse pure python implementation now handles branches correctly if they look like hexadecimal sha’s.</p></li>
+<li><p>GIT_PYTHON_TRACE is now set on class level of the Git type, previously it was a module level global variable.</p></li>
+<li><p>GIT_PYTHON_GIT_EXECUTABLE is a class level variable as well.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="beta-2">
+<h2>0.3.1 Beta 2<a class="headerlink" href="#beta-2" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Added <strong>reflog support</strong> ( reading and writing )</p></li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p>New types: <code class="docutils literal notranslate"><span class="pre">RefLog</span></code> and <code class="docutils literal notranslate"><span class="pre">RefLogEntry</span></code></p></li>
+<li><p>Reflog is maintained automatically when creating references and deleting them</p></li>
+<li><p>Non-intrusive changes to <code class="docutils literal notranslate"><span class="pre">SymbolicReference</span></code>, these don’t require your code to change. They allow to append messages to the reflog.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abspath</span></code> property added, similar to <code class="docutils literal notranslate"><span class="pre">abspath</span></code> of Object instances</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log()</span></code> method added</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_append(...)</span></code> method added</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_reference(...)</span></code> method added (reflog support)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_commit(...)</span></code> method added (reflog support)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_object(...)</span></code> method added (reflog support)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Intrusive Changes</strong> to <code class="docutils literal notranslate"><span class="pre">Head</span></code> type</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">create(...)</span></code> method now supports the reflog, but will not raise <code class="docutils literal notranslate"><span class="pre">GitCommandError</span></code> anymore as it is a pure python implementation now. Instead, it raises <code class="docutils literal notranslate"><span class="pre">OSError</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Intrusive Changes</strong> to <code class="docutils literal notranslate"><span class="pre">Repo</span></code> type</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">create_head(...)</span></code> method does not support kwargs anymore, instead it supports a logmsg parameter</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<ul>
+<li><p>Repo.rev_parse now supports the [ref]&#64;{n} syntax, where <em>n</em> is the number of steps to look into the reference’s past</p></li>
+<li><p><strong>BugFixes</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Removed incorrect ORIG_HEAD handling</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Flattened directory</strong> structure to make development more convenient.</p></li>
+</ul>
+<blockquote>
+<div><ul>
+<li><div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>This alters the way projects using git-python as a submodule have to adjust their sys.path to be able to import git-python successfully.</p>
+</div>
+</li>
+<li><p>Misc smaller changes and bugfixes</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="beta-1">
+<h2>0.3.1 Beta 1<a class="headerlink" href="#beta-1" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Full Submodule-Support</p></li>
+<li><p>Added unicode support for author names. Commit.author.name is now unicode instead of string.</p></li>
+<li><p>Head Type changes</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>config_reader() &amp; config_writer() methods added for access to head specific options.</p></li>
+<li><p>tracking_branch() &amp; set_tracking_branch() methods added for easy configuration of tracking branches.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id67">
+<h2>0.3.0 Beta 2<a class="headerlink" href="#id67" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Added python 2.4 support</p></li>
+</ul>
+</section>
+<section id="id68">
+<h2>0.3.0 Beta 1<a class="headerlink" href="#id68" title="永久链接至标题"></a></h2>
+<section id="renamed-modules">
+<h3>Renamed Modules<a class="headerlink" href="#renamed-modules" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>For consistency with naming conventions used in sub-modules like gitdb, the following modules have been renamed</p>
+<ul>
+<li><p>git.utils -&gt; git.util</p></li>
+<li><p>git.errors -&gt; git.exc</p></li>
+<li><p>git.objects.utils -&gt; git.objects.util</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Object instances, and everything derived from it, now use binary sha’s internally. The ‘sha’ member was removed, in favor of the ‘binsha’ member. An ‘hexsha’ property is available for convenient conversions. They may only be initialized using their binary shas, reference names or revision specs are not allowed anymore.</p></li>
+<li><p>IndexEntry instances contained in IndexFile.entries now use binary sha’s. Use the .hexsha property to obtain the hexadecimal version. The .sha property was removed to make the use of the respective sha more explicit.</p></li>
+<li><p>If objects are instantiated explicitly, a binary sha is required to identify the object, where previously any rev-spec could be used. The ref-spec compatible version still exists as Object.new or Repo.commit|Repo.tree respectively.</p></li>
+<li><p>The .data attribute was removed from the Object type, to obtain plain data, use the data_stream property instead.</p></li>
+<li><p>ConcurrentWriteOperation was removed, and replaced by LockedFD</p></li>
+<li><p>IndexFile.get_entries_key was renamed to entry_key</p></li>
+<li><p>IndexFile.write_tree: removed missing_ok keyword, its always True now. Instead of raising GitCommandError it raises UnmergedEntriesError. This is required as the pure-python implementation doesn’t support the missing_ok keyword yet.</p></li>
+<li><p>diff.Diff.null_hex_sha renamed to NULL_HEX_SHA, to be conforming with the naming in the Object base class</p></li>
+</ul>
+</section>
+</section>
+<section id="id69">
+<h2>0.2 Beta 2<a class="headerlink" href="#id69" title="永久链接至标题"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Commit objects now carry the ‘encoding’ information of their message. It wasn’t parsed previously, and defaults to UTF-8</p></li>
+<li><p>Commit.create_from_tree now uses a pure-python implementation, mimicking git-commit-tree</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id70">
+<h2>0.2<a class="headerlink" href="#id70" title="永久链接至标题"></a></h2>
+<section id="id71">
+<h3>General<a class="headerlink" href="#id71" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>file mode in Tree, Blob and Diff objects now is an int compatible to definitions
+in the stat module, allowing you to query whether individual user, group and other
+read, write and execute bits are set.</p></li>
+<li><p>Adjusted class hierarchy to generally allow comparison and hash for Objects and Refs</p></li>
+<li><p>Improved Tag object which now is a Ref that may contain a tag object with additional
+Information</p></li>
+<li><p>id_abbrev method has been removed as it could not assure the returned short SHA’s
+where unique</p></li>
+<li><p>removed basename method from Objects with path’s as it replicated features of os.path</p></li>
+<li><p>from_string and list_from_string methods are now private and were renamed to
+_from_string  and _list_from_string respectively. As part of the private API, they
+may change without prior notice.</p></li>
+<li><p>Renamed all find_all methods to list_items - this method is part of the Iterable interface
+that also provides a more efficients and more responsive iter_items method</p></li>
+<li><p>All dates, like authored_date and committer_date, are stored as seconds since epoch
+to consume less memory - they can be converted using time.gmtime in a more suitable
+presentation format if needed.</p></li>
+<li><p>Named method parameters changed on a wide scale to unify their use. Now git specific
+terms are used everywhere, such as “Reference” ( ref ) and “Revision” ( rev ).
+Previously multiple terms where used making it harder to know which type was allowed
+or not.</p></li>
+<li><p>Unified diff interface to allow easy diffing between trees, trees and index, trees
+and working tree, index and working tree, trees and index. This closely follows
+the git-diff capabilities.</p></li>
+<li><p>Git.execute does not take the with_raw_output option anymore. It was not used
+by anyone within the project and False by default.</p></li>
+</ul>
+</section>
+<section id="item-iteration">
+<h3>Item Iteration<a class="headerlink" href="#item-iteration" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Previously one would return and process multiple items as list only which can
+hurt performance and memory consumption and reduce response times.
+iter_items method provide an iterator that will return items on demand as parsed
+from a stream. This way any amount of objects can be handled.</p></li>
+<li><p>list_items method returns IterableList allowing to access list members by name</p></li>
+</ul>
+</section>
+<section id="objects-package">
+<h3>objects Package<a class="headerlink" href="#objects-package" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>blob, tree, tag and commit module have been moved to new objects package. This should
+not affect you though unless you explicitly imported individual objects. If you just
+used the git package, names did not change.</p></li>
+</ul>
+</section>
+<section id="blob">
+<h3>Blob<a class="headerlink" href="#blob" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>former ‘name’ member renamed to path as it suits the actual data better</p></li>
+</ul>
+</section>
+<section id="gitcommand">
+<h3>GitCommand<a class="headerlink" href="#gitcommand" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>git.subcommand call scheme now prunes out None from the argument list, allowing
+to be called more comfortably as None can never be a valid to the git command
+if converted to a string.</p></li>
+<li><p>Renamed ‘git_dir’ attribute to ‘working_dir’ which is exactly how it is used</p></li>
+</ul>
+</section>
+<section id="commit">
+<h3>Commit<a class="headerlink" href="#commit" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>‘count’ method is not an instance method to increase its ease of use</p></li>
+<li><p>‘name_rev’ property returns a nice name for the commit’s sha</p></li>
+</ul>
+</section>
+<section id="config">
+<h3>Config<a class="headerlink" href="#config" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>The git configuration can now be read and manipulated directly from within python
+using the GitConfigParser</p></li>
+<li><p>Repo.config_reader() returns a read-only parser</p></li>
+<li><p>Repo.config_writer() returns a read-write parser</p></li>
+</ul>
+</section>
+<section id="diff">
+<h3>Diff<a class="headerlink" href="#diff" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Members a a_commit and b_commit renamed to a_blob and b_blob - they are populated
+with Blob objects if possible</p></li>
+<li><p>Members a_path and b_path removed as this information is kept in the blobs</p></li>
+<li><p>Diffs are now returned as DiffIndex allowing to more quickly find the kind of
+diffs you are interested in</p></li>
+</ul>
+</section>
+<section id="diffing">
+<h3>Diffing<a class="headerlink" href="#diffing" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Commit and Tree objects now support diffing natively with a common interface to
+compare against other Commits or Trees, against the working tree or against the index.</p></li>
+</ul>
+</section>
+<section id="index">
+<h3>Index<a class="headerlink" href="#index" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>A new Index class allows to read and write index files directly, and to perform
+simple two and three way merges based on an arbitrary index.</p></li>
+</ul>
+</section>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>References are object that point to a Commit</p></li>
+<li><p>SymbolicReference are a pointer to a Reference Object, which itself points to a specific
+Commit</p></li>
+<li><p>They will dynamically retrieve their object at the time of query to assure the information
+is actual. Recently objects would be cached, hence ref object not be safely kept
+persistent.</p></li>
+</ul>
+</section>
+<section id="repo">
+<h3>Repo<a class="headerlink" href="#repo" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Moved blame method from Blob to repo as it appeared to belong there much more.</p></li>
+<li><p>active_branch method now returns a Head object instead of a string with the name
+of the active branch.</p></li>
+<li><p>tree method now requires a Ref instance as input and defaults to the active_branch
+instead of master</p></li>
+<li><p>is_dirty now takes additional arguments allowing fine-grained control about what is
+considered dirty</p></li>
+<li><p>Removed the following methods:</p>
+<ul>
+<li><p>‘log’ method as it as effectively the same as the ‘commits’ method</p></li>
+<li><p>‘commits_since’ as it is just a flag given to rev-list in Commit.iter_items</p></li>
+<li><p>‘commit_count’ as it was just a redirection to the respective commit method</p></li>
+<li><p>‘commits_between’, replaced by a note on the iter_commits method as it can achieve the same thing</p></li>
+<li><p>‘commit_delta_from’ as it was a very special case by comparing two different repjrelated repositories, i.e. clones, git-rev-list would be sufficient to find commits that would need to be transferred for example.</p></li>
+<li><p>‘create’ method which equals the ‘init’ method’s functionality</p></li>
+<li><p>‘diff’ - it returned a mere string which still had to be parsed</p></li>
+<li><p>‘commit_diff’ - moved to Commit, Tree and Diff types respectively</p></li>
+</ul>
+</li>
+<li><p>Renamed the following methods:</p>
+<ul>
+<li><p>commits to iter_commits to improve the performance, adjusted signature</p></li>
+<li><p>init_bare to init, implying less about the options to be used</p></li>
+<li><p>fork_bare to clone, as it was to represent general clone functionality, but implied
+a bare clone to be more versatile</p></li>
+<li><p>archive_tar_gz and archive_tar and replaced by archive method with different signature</p></li>
+</ul>
+</li>
+<li><p>‘commits’ method has no max-count of returned commits anymore, it now behaves  like git-rev-list</p></li>
+<li><p>The following methods and properties were added</p>
+<ul>
+<li><p>‘untracked_files’ property, returning all currently untracked files</p></li>
+<li><p>‘head’, creates a head object</p></li>
+<li><p>‘tag’, creates a tag object</p></li>
+<li><p>‘iter_trees’ method</p></li>
+<li><p>‘config_reader’ method</p></li>
+<li><p>‘config_writer’ method</p></li>
+<li><p>‘bare’ property, previously it was a simple attribute that could be written</p></li>
+</ul>
+</li>
+<li><p>Renamed the following attributes</p>
+<ul>
+<li><p>‘path’ is now ‘git_dir’</p></li>
+<li><p>‘wd’ is now ‘working_dir’</p></li>
+</ul>
+</li>
+<li><p>Added attribute</p>
+<ul>
+<li><p>‘working_tree_dir’ which may be None in case of bare repositories</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="remote">
+<h3>Remote<a class="headerlink" href="#remote" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Added Remote object allowing easy access to remotes</p></li>
+<li><p>Repo.remotes lists all remotes</p></li>
+<li><p>Repo.remote returns a remote of the specified name if it exists</p></li>
+</ul>
+</section>
+<section id="test-framework">
+<h3>Test Framework<a class="headerlink" href="#test-framework" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Added support for common TestCase base class that provides additional functionality
+to receive repositories tests can also write to. This way, more aspects can be
+tested under real-world ( un-mocked ) conditions.</p></li>
+</ul>
+</section>
+<section id="tree">
+<h3>Tree<a class="headerlink" href="#tree" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>former ‘name’ member renamed to path as it suits the actual data better</p></li>
+<li><p>added traverse method allowing to recursively traverse tree items</p></li>
+<li><p>deleted blob method</p></li>
+<li><p>added blobs and trees properties allowing to query the respective items in the
+tree</p></li>
+<li><p>now mimics behaviour of a read-only list instead of a dict to maintain order.</p></li>
+<li><p>content_from_string method is now private and not part of the public API anymore</p></li>
+</ul>
+</section>
+</section>
+<section id="id72">
+<h2>0.1.6<a class="headerlink" href="#id72" title="永久链接至标题"></a></h2>
+<section id="id73">
+<h3>General<a class="headerlink" href="#id73" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Added in Sphinx documentation.</p></li>
+<li><p>Removed ambiguity between paths and treeishs. When calling commands that
+accept treeish and path arguments and there is a path with the same name as
+a treeish git cowardly refuses to pick one and asks for the command to use
+the unambiguous syntax where ‘–’ separates the treeish from the paths.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Repo.commits</span></code>, <code class="docutils literal notranslate"><span class="pre">Repo.commits_between</span></code>, <code class="docutils literal notranslate"><span class="pre">Repo.commits_since</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Repo.commit_count</span></code>, <code class="docutils literal notranslate"><span class="pre">Repo.commit</span></code>, <code class="docutils literal notranslate"><span class="pre">Commit.count</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Commit.find_all</span></code> all now optionally take a path argument which
+constrains the lookup by path.  This changes the order of the positional
+arguments in <code class="docutils literal notranslate"><span class="pre">Repo.commits</span></code> and <code class="docutils literal notranslate"><span class="pre">Repo.commits_since</span></code>.</p></li>
+</ul>
+</section>
+<section id="id74">
+<h3>Commit<a class="headerlink" href="#id74" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Commit.message</span></code> now contains the full commit message (rather than just
+the first line) and a new property <code class="docutils literal notranslate"><span class="pre">Commit.summary</span></code> contains the first
+line of the commit message.</p></li>
+<li><p>Fixed a failure when trying to lookup the stats of a parentless commit from
+a bare repo.</p></li>
+</ul>
+</section>
+<section id="id75">
+<h3>Diff<a class="headerlink" href="#id75" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>The diff parser is now far faster and also addresses a bug where
+sometimes b_mode was not set.</p></li>
+<li><p>Added support for parsing rename info to the diff parser. Addition of new
+properties <code class="docutils literal notranslate"><span class="pre">Diff.renamed</span></code>, <code class="docutils literal notranslate"><span class="pre">Diff.rename_from</span></code>, and <code class="docutils literal notranslate"><span class="pre">Diff.rename_to</span></code>.</p></li>
+</ul>
+</section>
+<section id="head">
+<h3>Head<a class="headerlink" href="#head" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Corrected problem where branches was only returning the last path component
+instead of the entire path component following refs/heads/.</p></li>
+</ul>
+</section>
+<section id="id76">
+<h3>Repo<a class="headerlink" href="#id76" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Modified the gzip archive creation to use the python gzip module.</p></li>
+<li><p>Corrected <code class="docutils literal notranslate"><span class="pre">commits_between</span></code> always returning None instead of the reversed
+list.</p></li>
+</ul>
+</section>
+</section>
+<section id="id77">
+<h2>0.1.5<a class="headerlink" href="#id77" title="永久链接至标题"></a></h2>
+<section id="id78">
+<h3>General<a class="headerlink" href="#id78" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>upgraded to Mock 0.4 dependency.</p></li>
+<li><p>Replace GitPython with git in repr() outputs.</p></li>
+<li><p>Fixed packaging issue caused by ez_setup.py.</p></li>
+</ul>
+</section>
+<section id="id79">
+<h3>Blob<a class="headerlink" href="#id79" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>No longer strip newlines from Blob data.</p></li>
+</ul>
+</section>
+<section id="id80">
+<h3>Commit<a class="headerlink" href="#id80" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Corrected problem with git-rev-list –bisect-all. See
+<a class="reference external" href="http://groups.google.com/group/git-python/browse_thread/thread/aed1d5c4b31d5027">http://groups.google.com/group/git-python/browse_thread/thread/aed1d5c4b31d5027</a></p></li>
+</ul>
+</section>
+<section id="id81">
+<h3>Repo<a class="headerlink" href="#id81" title="永久链接至标题"></a></h3>
+<ul>
+<li><p>Corrected problems with creating bare repositories.</p></li>
+<li><p>Repo.tree no longer accepts a path argument. Use:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">o</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Made daemon export a property of Repo. Now you can do this:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exported</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">daemon_export</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">repo</span><span class="o">.</span><span class="n">daemon_export</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</li>
+<li><p>Allows modifying the project description. Do this:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">repo</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Foo Bar&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">repo</span><span class="o">.</span><span class="n">description</span>
+<span class="go">&#39;Foo Bar&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Added a read-only property Repo.is_dirty which reflects the status of the
+working directory.</p></li>
+<li><p>Added a read-only Repo.active_branch property which returns the name of the
+currently active branch.</p></li>
+</ul>
+</section>
+<section id="id82">
+<h3>Tree<a class="headerlink" href="#id82" title="永久链接至标题"></a></h3>
+<ul>
+<li><p>Switched to using a dictionary for Tree contents since you will usually want
+to access them by name and order is unimportant.</p></li>
+<li><p>Implemented a dictionary protocol for Tree objects. The following:</p>
+<blockquote>
+<div><p>child = tree.contents[‘grit’]</p>
+</div></blockquote>
+<p>becomes:</p>
+<blockquote>
+<div><p>child = tree[‘grit’]</p>
+</div></blockquote>
+</li>
+<li><p>Made Tree.content_from_string a static method.</p></li>
+</ul>
+</section>
+</section>
+<section id="id83">
+<h2>0.1.4.1<a class="headerlink" href="#id83" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>removed <code class="docutils literal notranslate"><span class="pre">method_missing</span></code> stuff and replaced with a <code class="docutils literal notranslate"><span class="pre">__getattr__</span></code>
+override in <code class="docutils literal notranslate"><span class="pre">Git</span></code>.</p></li>
+</ul>
+</section>
+<section id="id84">
+<h2>0.1.4<a class="headerlink" href="#id84" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>renamed <code class="docutils literal notranslate"><span class="pre">git_python</span></code> to <code class="docutils literal notranslate"><span class="pre">git</span></code>. Be sure to delete all pyc files before
+testing.</p></li>
+</ul>
+<section id="id85">
+<h3>Commit<a class="headerlink" href="#id85" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Fixed problem with commit stats not working under all conditions.</p></li>
+</ul>
+</section>
+<section id="git">
+<h3>Git<a class="headerlink" href="#git" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Renamed module to cmd.</p></li>
+<li><p>Removed shell escaping completely.</p></li>
+<li><p>Added support for <code class="docutils literal notranslate"><span class="pre">stderr</span></code>, <code class="docutils literal notranslate"><span class="pre">stdin</span></code>, and <code class="docutils literal notranslate"><span class="pre">with_status</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git_dir</span></code> is now optional in the constructor for <code class="docutils literal notranslate"><span class="pre">git.Git</span></code>.  Git now
+falls back to <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> when git_dir is not specified.</p></li>
+<li><p>add a <code class="docutils literal notranslate"><span class="pre">with_exceptions</span></code> keyword argument to git commands.
+<code class="docutils literal notranslate"><span class="pre">GitCommandError</span></code> is raised when the exit status is non-zero.</p></li>
+<li><p>add support for a <code class="docutils literal notranslate"><span class="pre">GIT_PYTHON_TRACE</span></code> environment variable.
+<code class="docutils literal notranslate"><span class="pre">GIT_PYTHON_TRACE</span></code> allows us to debug GitPython’s usage of git through
+the use of an environment variable.</p></li>
+</ul>
+</section>
+<section id="id86">
+<h3>Tree<a class="headerlink" href="#id86" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Fixed up problem where <code class="docutils literal notranslate"><span class="pre">name</span></code> doesn’t exist on root of tree.</p></li>
+</ul>
+</section>
+<section id="id87">
+<h3>Repo<a class="headerlink" href="#id87" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Corrected problem with creating bare repo.  Added <code class="docutils literal notranslate"><span class="pre">Repo.create</span></code> alias.</p></li>
+</ul>
+</section>
+</section>
+<section id="id88">
+<h2>0.1.2<a class="headerlink" href="#id88" title="永久链接至标题"></a></h2>
+<section id="id89">
+<h3>Tree<a class="headerlink" href="#id89" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>Corrected problem with <code class="docutils literal notranslate"><span class="pre">Tree.__div__</span></code> not working with zero length files.
+Removed <code class="docutils literal notranslate"><span class="pre">__len__</span></code> override and replaced with size instead. Also made size
+cache properly. This is a breaking change.</p></li>
+</ul>
+</section>
+</section>
+<section id="id90">
+<h2>0.1.1<a class="headerlink" href="#id90" title="永久链接至标题"></a></h2>
+<p>Fixed up some urls because I’m a moron</p>
+</section>
+<section id="id91">
+<h2>0.1.0<a class="headerlink" href="#id91" title="永久链接至标题"></a></h2>
+<p>initial release</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="roadmap.html" class="btn btn-neutral float-left" title="Roadmap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2008, 2009 Michael Trier and contributors, 2010-2015 Sebastian Thiel.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

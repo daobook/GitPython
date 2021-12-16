@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview / Install &mdash; GitPython 3.1.24 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="GitPython Tutorial" href="tutorial.html" />
+    <link rel="prev" title="GitPython 文档" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> GitPython
+          </a>
+              <div class="version">
+                3.1.24
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview / Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-gitpython">Installing GitPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#leakage-of-system-resources">Leakage of System Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#questions-and-answers">Questions and Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-tracker">Issue Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license-information">License Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">GitPython Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GitPython</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Overview / Install</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/intro.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview-install">
+<span id="intro-toplevel"></span><h1>Overview / Install<a class="headerlink" href="#overview-install" title="永久链接至标题"></a></h1>
+<p>GitPython is a python library used to interact with git repositories, high-level like git-porcelain, or low-level like git-plumbing.</p>
+<p>It provides abstractions of git objects for easy access of repository data, and additionally allows you to access the git repository more directly using either a pure python implementation, or the faster, but more resource intensive git command implementation.</p>
+<p>The object database implementation is optimized for handling large quantities of objects and large datasets, which is achieved by using low-level structures and data streaming.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org">Python</a> &gt;= 3.7</p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://git-scm.com/">Git</a> 1.7.0 or newer</dt><dd><p>It should also work with older versions, but it may be that some operations
+involving remotes will not work as expected.</p>
+</dd>
+</dl>
+</li>
+<li><p><a class="reference external" href="https://pypi.python.org/pypi/gitdb">GitDB</a> - a pure python git database implementation</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/typing-extensions/">typing_extensions</a> &gt;= 3.7.3.4 (if python &lt; 3.10)</p></li>
+</ul>
+</section>
+<section id="installing-gitpython">
+<h2>Installing GitPython<a class="headerlink" href="#installing-gitpython" title="永久链接至标题"></a></h2>
+<p>Installing GitPython is easily done using
+<a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">pip</a>. Assuming it is
+installed, just run the following from the command-line:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># pip install GitPython
+</pre></div>
+</div>
+<p>This command will download the latest version of GitPython from the
+<a class="reference external" href="http://pypi.python.org/pypi/GitPython">Python Package Index</a> and install it
+to your system. More information about <code class="docutils literal notranslate"><span class="pre">pip</span></code> and pypi can be found
+here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">install pip</a></p></li>
+<li><p><a class="reference external" href="https://pypi.python.org/pypi/GitPython">pypi</a></p></li>
+</ul>
+<p>Alternatively, you can install from the distribution using the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>
+script:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># python setup.py install
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>In this case, you have to manually install <a class="reference external" href="https://pypi.python.org/pypi/gitdb">GitDB</a> as well. It would be recommended to use the <a class="reference internal" href="#source-code-label"><span class="std std-ref">git source repository</span></a> in that case.</p>
+</div>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="永久链接至标题"></a></h2>
+<section id="leakage-of-system-resources">
+<h3>Leakage of System Resources<a class="headerlink" href="#leakage-of-system-resources" title="永久链接至标题"></a></h3>
+<p>GitPython is not suited for long-running processes (like daemons) as it tends to
+leak system resources. It was written in a time where destructors (as implemented
+in the <cite>__del__</cite> method) still ran deterministically.</p>
+<p>In case you still want to use it in such a context, you will want to search the
+codebase for <cite>__del__</cite> implementations and call these yourself when you see fit.</p>
+<p>Another way assure proper cleanup of resources is to factor out GitPython into a
+separate process which can be dropped periodically.</p>
+</section>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="tutorial.html#tutorial-label"><span class="std std-ref">GitPython Tutorial</span></a> - This tutorial provides a walk-through of some of
+the basic functionality and concepts used in GitPython. It, however, is not
+exhaustive so you are encouraged to spend some time in the
+<a class="reference internal" href="reference.html#api-reference-toplevel"><span class="std std-ref">API Reference</span></a>.</p></li>
+</ul>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="永久链接至标题"></a></h2>
+<p>An organized section of the GitPython API is at <a class="reference internal" href="reference.html#api-reference-toplevel"><span class="std std-ref">API Reference</span></a>.</p>
+</section>
+<section id="source-code">
+<span id="source-code-label"></span><h2>Source Code<a class="headerlink" href="#source-code" title="永久链接至标题"></a></h2>
+<p>GitPython’s git repo is available on GitHub, which can be browsed at:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gitpython-developers/GitPython">https://github.com/gitpython-developers/GitPython</a></p></li>
+</ul>
+</div></blockquote>
+<p>and cloned using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/gitpython-developers/GitPython git-python
+</pre></div>
+</div>
+<p>Initialize all submodules to obtain the required dependencies with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd git-python
+$ git submodule update --init --recursive
+</pre></div>
+</div>
+<p>Finally verify the installation by running unit tests:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest
+</pre></div>
+</div>
+</section>
+<section id="questions-and-answers">
+<h2>Questions and Answers<a class="headerlink" href="#questions-and-answers" title="永久链接至标题"></a></h2>
+<p>Please use stackoverflow for questions, and don’t forget to tag it with <cite>gitpython</cite> to assure the right people see the question in a timely manner.</p>
+<p><a class="reference external" href="http://stackoverflow.com/questions/tagged/gitpython">http://stackoverflow.com/questions/tagged/gitpython</a></p>
+</section>
+<section id="issue-tracker">
+<h2>Issue Tracker<a class="headerlink" href="#issue-tracker" title="永久链接至标题"></a></h2>
+<p>The issue tracker is hosted by GitHub:</p>
+<p><a class="reference external" href="https://github.com/gitpython-developers/GitPython/issues">https://github.com/gitpython-developers/GitPython/issues</a></p>
+</section>
+<section id="license-information">
+<h2>License Information<a class="headerlink" href="#license-information" title="永久链接至标题"></a></h2>
+<p>GitPython is licensed under the New BSD License.  See the LICENSE file for
+more information.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="GitPython 文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="GitPython Tutorial" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2008, 2009 Michael Trier and contributors, 2010-2015 Sebastian Thiel.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
