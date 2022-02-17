@@ -446,7 +446,7 @@ class SymbolicReference(object):
         full_ref_path = path
         if not cls._common_path_default:
             return full_ref_path
-        if not str(path).startswith(cls._common_path_default + "/"):
+        if not str(path).startswith(f'{cls._common_path_default}/'):
             full_ref_path = '%s/%s' % (cls._common_path_default, path)
         return full_ref_path
 
@@ -521,17 +521,13 @@ class SymbolicReference(object):
         full_ref_path = cls.to_full_path(path)
         abs_ref_path = os.path.join(git_dir, full_ref_path)
 
-        # figure out target data
-        target = reference
-        if resolve:
-            target = repo.rev_parse(str(reference))
-
+        target = repo.rev_parse(str(reference)) if resolve else reference
         if not force and os.path.isfile(abs_ref_path):
             target_data = str(target)
             if isinstance(target, SymbolicReference):
                 target_data = str(target.path)
             if not resolve:
-                target_data = "ref: " + target_data
+                target_data = f'ref: {target_data}'
             with open(abs_ref_path, 'rb') as fd:
                 existing_data = fd.read().decode(defenc).strip()
             if existing_data != target_data:
@@ -633,8 +629,7 @@ class SymbolicReference(object):
         # Currently we do not follow links
         for root, dirs, files in os.walk(join_path_native(repo.common_dir, common_path)):
             if 'refs' not in root.split(os.sep):  # skip non-refs subfolders
-                refs_id = [d for d in dirs if d == 'refs']
-                if refs_id:
+                if refs_id := [d for d in dirs if d == 'refs']:
                     dirs[0:] = ['refs']
             # END prune non-refs folders
 
@@ -643,7 +638,7 @@ class SymbolicReference(object):
                     continue
                 abs_path = to_native_path_linux(join_path(root, f))
                 rela_paths.add(abs_path.replace(to_native_path_linux(repo.common_dir) + '/', ""))
-            # END for each file in root directory
+                # END for each file in root directory
         # END for each directory to walk
 
         # read packed refs
@@ -713,4 +708,4 @@ class SymbolicReference(object):
 
     def is_remote(self) -> bool:
         """:return: True if this symbolic reference points to a remote branch"""
-        return str(self.path).startswith(self._remote_common_path_default + "/")
+        return str(self.path).startswith(f'{self._remote_common_path_default}/')

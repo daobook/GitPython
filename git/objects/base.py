@@ -98,15 +98,11 @@ class Object(LazyMixin):
 
     def __eq__(self, other: Any) -> bool:
         """:return: True if the objects have the same SHA1"""
-        if not hasattr(other, 'binsha'):
-            return False
-        return self.binsha == other.binsha
+        return False if not hasattr(other, 'binsha') else self.binsha == other.binsha
 
     def __ne__(self, other: Any) -> bool:
         """:return: True if the objects do not have the same SHA1 """
-        if not hasattr(other, 'binsha'):
-            return True
-        return self.binsha != other.binsha
+        return True if not hasattr(other, 'binsha') else self.binsha != other.binsha
 
     def __hash__(self) -> int:
         """:return: Hash of our id allowing objects to be used in dicts and sets"""

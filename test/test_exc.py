@@ -110,12 +110,12 @@ class TExc(TestBase):
             self.assertIn("  stdout:", s)
             self.assertIn(stream, s)
 
-            c = cls(argv, cause, stream, stream + 'no2')
+            c = cls(argv, cause, stream, f'{stream}no2')
             s = str(c)
             self.assertIn("  stderr:", s)
             self.assertIn(stream, s)
             self.assertIn("  stdout:", s)
-            self.assertIn(stream + 'no2', s)
+            self.assertIn(f'{stream}no2', s)
 
     @ddt.data(
         (['cmd1'], None),

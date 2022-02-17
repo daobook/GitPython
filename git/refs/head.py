@@ -136,9 +136,7 @@ class Head(Reference):
             If True, the heads will be deleted even if they are not yet merged into
             the main development stream.
             Default False"""
-        flag = "-d"
-        if force:
-            flag = "-D"
+        flag = "-D" if force else "-d"
         repo.git.branch(flag, *heads)
 
     def set_tracking_branch(self, remote_reference: Union['RemoteReference', None]) -> 'Head':
@@ -194,10 +192,7 @@ class Head(Reference):
 
         :return: self
         :note: respects the ref log as git commands are used"""
-        flag = "-m"
-        if force:
-            flag = "-M"
-
+        flag = "-M" if force else "-m"
         self.repo.git.branch(flag, self, new_path)
         self.path = "%s/%s" % (self._common_path_default, new_path)
         return self
@@ -239,10 +234,7 @@ class Head(Reference):
 
     #{ Configuration
     def _config_parser(self, read_only: bool) -> SectionConstraint[GitConfigParser]:
-        if read_only:
-            parser = self.repo.config_reader()
-        else:
-            parser = self.repo.config_writer()
+        parser = self.repo.config_reader() if read_only else self.repo.config_writer()
         # END handle parser instance
 
         return SectionConstraint(parser, 'branch "%s"' % self.name)

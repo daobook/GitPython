@@ -92,10 +92,7 @@ class MetaParserBuilder(abc.ABCMeta):
                     clsdict[name] = method_with_values
                 # END for each name/method pair
             # END for each base
-        # END if mutating methods configuration is set
-
-        new_type = super(MetaParserBuilder, cls).__new__(cls, name, bases, clsdict)
-        return new_type
+        return super(MetaParserBuilder, cls).__new__(cls, name, bases, clsdict)
 
 
 def needs_values(func: Callable[..., _T]) -> Callable[..., _T]:
@@ -311,16 +308,15 @@ class GitConfigParser(cp.RawConfigParser, metaclass=MetaParserBuilder):
 
         if file_or_files is not None:
             self._file_or_files: Union[PathLike, 'BytesIO', Sequence[Union[PathLike, 'BytesIO']]] = file_or_files
-        else:
-            if config_level is None:
-                if read_only:
-                    self._file_or_files = [get_config_path(cast(Lit_config_levels, f))
-                                           for f in CONFIG_LEVELS
-                                           if f != 'repository']
-                else:
-                    raise ValueError("No configuration level or configuration files specified")
+        elif config_level is None:
+            if read_only:
+                self._file_or_files = [get_config_path(cast(Lit_config_levels, f))
+                                       for f in CONFIG_LEVELS
+                                       if f != 'repository']
             else:
-                self._file_or_files = [get_config_path(config_level)]
+                raise ValueError("No configuration level or configuration files specified")
+        else:
+            self._file_or_files = [get_config_path(config_level)]
 
         self._read_only = read_only
         self._dirty = False
@@ -371,15 +367,14 @@ class GitConfigParser(cp.RawConfigParser, metaclass=MetaParserBuilder):
             return
 
         try:
-            try:
-                self.write()
-            except IOError:
-                log.error("Exception during destruction of GitConfigParser", exc_info=True)
-            except ReferenceError:
-                # This happens in PY3 ... and usually means that some state cannot be written
-                # as the sections dict cannot be iterated
-                # Usually when shutting down the interpreter, don'y know how to fix this
-                pass
+            self.write()
+        except IOError:
+            log.error("Exception during destruction of GitConfigParser", exc_info=True)
+        except ReferenceError:
+            # This happens in PY3 ... and usually means that some state cannot be written
+            # as the sections dict cannot be iterated
+            # Usually when shutting down the interpreter, don'y know how to fix this
+            pass
         finally:
             if self._lock is not None:
                 self._lock._release_lock()
@@ -510,7 +505,7 @@ class GitConfigParser(cp.RawConfigParser, metaclass=MetaParserBuilder):
                 value = osp.expanduser(value)
 
                 if not any(value.startswith(s) for s in ["./", "/"]):
-                    value = "**/" + value
+                    value = f'**/{value}'
                 if value.endswith("/"):
                     value += "**"
 
@@ -524,9 +519,10 @@ class GitConfigParser(cp.RawConfigParser, metaclass=MetaParserBuilder):
                         ),
                         value
                     )
-                if self._repo.git_dir:
-                    if fnmatch.fnmatchcase(str(self._repo.git_dir), value):
-                        paths += self.items(section)
+                if self._repo.git_dir and fnmatch.fnmatchcase(
+                    str(self._repo.git_dir), value
+                ):
+                    paths += self.items(section)
 
             elif keyword == "onbranch":
                 try:

@@ -86,7 +86,7 @@ class TestRefs(TestBase):
             assert str(ref) == ref.name
             assert repr(ref)
             assert ref == ref
-            assert not ref != ref
+            assert ref == ref
             s.add(ref)
         # END for each ref
         assert len(s) == ref_count
@@ -177,9 +177,7 @@ class TestRefs(TestBase):
         assert log[0].newhexsha == pcommit.hexsha
 
     def test_refs(self):
-        types_found = set()
-        for ref in self.rorepo.refs:
-            types_found.add(type(ref))
+        types_found = {type(ref) for ref in self.rorepo.refs}
         assert len(types_found) >= 3
 
     def test_is_valid(self):

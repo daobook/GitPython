@@ -51,8 +51,7 @@ class TestRemoteProgress(RemoteProgress):
         # we may remove the line later if it is dropped
         # Keep it for debugging
         self._seen_lines.append(line)
-        rval = super(TestRemoteProgress, self)._parse_progress_line(line)
-        return rval
+        return super(TestRemoteProgress, self)._parse_progress_line(line)
 
     def line_dropped(self, line):
         try:
@@ -88,7 +87,7 @@ class TestRemoteProgress(RemoteProgress):
             return
 
         # sometimes objects are not compressed which is okay
-        assert len(self._seen_ops) in (2, 3), len(self._seen_ops)
+        assert len(self._seen_ops) in {2, 3}, len(self._seen_ops)
         assert self._stages_per_op
 
         # must have seen all stages
@@ -154,7 +153,7 @@ class TestRemote(TestBase):
             # END error checking
         # END for each info
 
-        if any([info.flags & info.ERROR for info in results]):
+        if any(info.flags & info.ERROR for info in results):
             self.assertRaises(GitCommandError, results.raise_if_error)
         else:
             # No errors, so this should do nothing
@@ -537,9 +536,11 @@ class TestRemote(TestBase):
         bare_rw_repo.create_remote('bogus', '/bogus/path', mirror='push')
 
     def test_fetch_info(self):
-        # assure we can handle remote-tracking branches
-        fetch_info_line_fmt = "c437ee5deb8d00cf02f03720693e4c802e99f390	not-for-merge	%s '0.3' of "
-        fetch_info_line_fmt += "git://github.com/gitpython-developers/GitPython"
+        fetch_info_line_fmt = (
+            "c437ee5deb8d00cf02f03720693e4c802e99f390	not-for-merge	%s '0.3' of "
+            + "git://github.com/gitpython-developers/GitPython"
+        )
+
         remote_info_line_fmt = "* [new branch]      nomatter     -> %s"
 
         self.assertRaises(ValueError, FetchInfo._from_line, self.rorepo,

@@ -127,8 +127,11 @@ class TestBase(TestCase):
     def test_multi_line_config(self):
         file_obj = self._to_memcache(fixture_path("git_config_with_comments"))
         with GitConfigParser(file_obj, read_only=False) as config:
-            ev = "ruby -e '\n"
-            ev += "		system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n"
+            ev = (
+                "ruby -e '\n"
+                + "		system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n"
+            )
+
             ev += "		b = File.read(%(%A))\n"
             ev += "		b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\."  # noqa E501
             ev += "define.:version => (\\d+). do\\n>+ .*/) do\n"

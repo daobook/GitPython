@@ -194,11 +194,10 @@ class PushInfo(IterableObj, object):
         from_ref_string, to_ref_string = from_to.split(':')
         if flags & cls.DELETED:
             from_ref: Union[SymbolicReference, None] = None
+        elif from_ref_string == "(delete)":
+            from_ref = None
         else:
-            if from_ref_string == "(delete)":
-                from_ref = None
-            else:
-                from_ref = Reference.from_path(remote.repo, from_ref_string)
+            from_ref = Reference.from_path(remote.repo, from_ref_string)
 
         # commit handling, could be message or commit info
         old_commit: Optional[str] = None
@@ -217,11 +216,7 @@ class PushInfo(IterableObj, object):
                 flags |= cls.NEW_HEAD
             # uptodate encoded in control character
         else:
-            # fast-forward or forced update - was encoded in control character,
-            # but we parse the old and new commit
-            split_token = "..."
-            if control_character == " ":
-                split_token = ".."
+            split_token = ".." if control_character == " " else "..."
             old_sha, _new_sha = summary.split(' ')[0].split(split_token)
             # have to use constructor here as the sha usually is abbreviated
             old_commit = old_sha
@@ -594,32 +589,24 @@ class Remote(LazyMixin, IterableObj):
         try:
             remote_details = self.repo.git.remote("get-url", "--all", self.name)
             assert isinstance(remote_details, str)
-            for line in remote_details.split('\n'):
-                yield line
+            yield from remote_details.split('\n')
         except GitCommandError as ex:
-            ## We are on git < 2.7 (i.e TravisCI as of Oct-2016),
-            #  so `get-utl` command does not exist yet!
-            #    see: https://github.com/gitpython-developers/GitPython/pull/528#issuecomment-252976319
-            #    and: http://stackoverflow.com/a/32991784/548792
-            #
-            if 'Unknown subcommand: get-url' in str(ex):
-                try:
-                    remote_details = self.repo.git.remote("show", self.name)
-                    assert isinstance(remote_details, str)
-                    for line in remote_details.split('\n'):
-                        if '  Push  URL:' in line:
-                            yield line.split(': ')[-1]
-                except GitCommandError as _ex:
-                    if any(msg in str(_ex) for msg in ['correct access rights', 'cannot run ssh']):
-                        # If ssh is not setup to access this repository, see issue 694
-                        remote_details = self.repo.git.config('--get-all', 'remote.%s.url' % self.name)
-                        assert isinstance(remote_details, str)
-                        for line in remote_details.split('\n'):
-                            yield line
-                    else:
-                        raise _ex
-            else:
+            if 'Unknown subcommand: get-url' not in str(ex):
                 raise ex
+            try:
+                remote_details = self.repo.git.remote("show", self.name)
+                assert isinstance(remote_details, str)
+                for line in remote_details.split('\n'):
+                    if '  Push  URL:' in line:
+                        yield line.split(': ')[-1]
+            except GitCommandError as _ex:
+                if any(msg in str(_ex) for msg in ['correct access rights', 'cannot run ssh']):
+                    # If ssh is not setup to access this repository, see issue 694
+                    remote_details = self.repo.git.config('--get-all', 'remote.%s.url' % self.name)
+                    assert isinstance(remote_details, str)
+                    yield from remote_details.split('\n')
+                else:
+                    raise _ex
 
     @ property
     def refs(self) -> IterableList[RemoteReference]:
@@ -649,20 +636,20 @@ class Remote(LazyMixin, IterableObj):
             https://github.com/gitpython-developers/GitPython/issues/260
             """
         out_refs: IterableList[Reference] = IterableList(RemoteReference._id_attribute_, "%s/" % self.name)
+        # expecting
+        # * [would prune] origin/new_branch
+        token = " * [would prune] "
         for line in self.repo.git.remote("prune", "--dry-run", self).splitlines()[2:]:
-            # expecting
-            # * [would prune] origin/new_branch
-            token = " * [would prune] "
             if not line.startswith(token):
                 continue
             ref_name = line.replace(token, "")
             # sometimes, paths start with a full ref name, like refs/tags/foo, see #260
-            if ref_name.startswith(Reference._common_path_default + '/'):
+            if ref_name.startswith(f'{Reference._common_path_default}/'):
                 out_refs.append(Reference.from_path(self.repo, ref_name))
             else:
                 fqhn = "%s/%s" % (RemoteReference._common_path_default, ref_name)
                 out_refs.append(RemoteReference(self.repo, fqhn))
-            # end special case handling
+                # end special case handling
         # END for each line
         return out_refs
 
@@ -753,10 +740,11 @@ class Remote(LazyMixin, IterableObj):
 
         for line in progress.other_lines:
             line = force_text(line)
-            for cmd in cmds:
-                if len(line) > 1 and line[0] == ' ' and line[1] == cmd:
-                    fetch_info_lines.append(line)
-                    continue
+            fetch_info_lines.extend(
+                line
+                for cmd in cmds
+                if len(line) > 1 and line[0] == ' ' and line[1] == cmd
+            )
 
         # read head information
         fetch_head = SymbolicReference(self.repo, "FETCH_HEAD")
@@ -766,8 +754,11 @@ class Remote(LazyMixin, IterableObj):
         l_fil = len(fetch_info_lines)
         l_fhi = len(fetch_head_info)
         if l_fil != l_fhi:
-            msg = "Fetch head lines do not match lines provided via progress information\n"
-            msg += "length of progress lines %i should be equal to lines in FETCH_HEAD file %i\n"
+            msg = (
+                "Fetch head lines do not match lines provided via progress information\n"
+                + "length of progress lines %i should be equal to lines in FETCH_HEAD file %i\n"
+            )
+
             msg += "Will ignore extra progress lines or fetch head lines."
             msg %= (l_fil, l_fhi)
             log.debug(msg)
@@ -777,7 +768,7 @@ class Remote(LazyMixin, IterableObj):
                 fetch_head_info = fetch_head_info[:l_fil]
             else:
                 fetch_info_lines = fetch_info_lines[:l_fhi]
-            # end truncate correct list
+                # end truncate correct list
         # end sanity check + sanitization
 
         for err_line, fetch_line in zip(fetch_info_lines, fetch_head_info):
@@ -829,8 +820,7 @@ class Remote(LazyMixin, IterableObj):
         unset = 'placeholder'
         try:
             if config.get_value('fetch', default=unset) is unset:
-                msg = "Remote '%s' has no refspec set.\n"
-                msg += "You can set it as follows:"
+                msg = "Remote '%s' has no refspec set.\n" + "You can set it as follows:"
                 msg += " 'git config --add \"remote.%s.fetch +refs/heads/*:refs/heads/*\"'."
                 raise AssertionError(msg % (self.name, self.name))
         finally:
@@ -876,11 +866,7 @@ class Remote(LazyMixin, IterableObj):
             self._assert_refspec()
 
         kwargs = add_progress(kwargs, self.repo.git, progress)
-        if isinstance(refspec, list):
-            args: Sequence[Optional[str]] = refspec
-        else:
-            args = [refspec]
-
+        args = refspec if isinstance(refspec, list) else [refspec]
         proc = self.repo.git.fetch(self, *args, as_process=True, with_stdout=False,
                                    universal_newlines=True, v=verbose, **kwargs)
         res = self._get_fetch_info_from_stderr(proc, progress,

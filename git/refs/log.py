@@ -145,8 +145,7 @@ class RefLog(List[RefLogEntry], Serializable):
     __slots__ = ('_path', )
 
     def __new__(cls, filepath: Union[PathLike, None] = None) -> 'RefLog':
-        inst = super(RefLog, cls).__new__(cls)
-        return inst
+        return super(RefLog, cls).__new__(cls)
 
     def __init__(self, filepath: Union[PathLike, None] = None):
         """Initialize this instance with an optional filepath, from which we will

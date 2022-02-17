@@ -48,10 +48,7 @@ def tree_to_stream(entries: Sequence[EntryTup], write: Callable[['ReadableBuffer
         # hence we must convert to an utf8 string for it to work properly.
         # According to my tests, this is exactly what git does, that is it just
         # takes the input literally, which appears to be utf8 on linux.
-        if isinstance(name, str):
-            name_bytes = name.encode(defenc)
-        else:
-            name_bytes = name  # type: ignore[unreachable]  # check runtime types - is always str?
+        name_bytes = name.encode(defenc) if isinstance(name, str) else name
         write(b''.join((mode_str, b' ', name_bytes, b'\0', binsha)))
     # END for each item
 
@@ -96,7 +93,7 @@ def tree_entries_from_data(data: bytes) -> List[EntryTup]:
         # byte is NULL, get next 20
         i += 1
         sha = data[i:i + 20]
-        i = i + 20
+        i += 20
         out.append((sha, mode, name))
     # END for each byte in data stream
     return out
@@ -138,9 +135,7 @@ def _to_full_path(item: EntryTup, path_prefix: str) -> EntryTup:
 
 def _to_full_path(item: EntryTupOrNone, path_prefix: str) -> EntryTupOrNone:
     """Rebuild entry with given path prefix"""
-    if not item:
-        return item
-    return (item[0], item[1], path_prefix + item[2])
+    return item if not item else (item[0], item[1], path_prefix + item[2])
 
 
 def traverse_trees_recursive(odb: 'GitCmdObjectDB', tree_shas: Sequence[Union[bytes, None]],

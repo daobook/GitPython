@@ -85,13 +85,12 @@ def with_rw_directory(func):
         os.mkdir(path)
         keep = False
         try:
-            try:
-                return func(self, path)
-            except Exception:
-                log.info("Test %s.%s failed, output is at %r\n",
-                         type(self).__name__, func.__name__, path)
-                keep = True
-                raise
+            return func(self, path)
+        except Exception:
+            log.info("Test %s.%s failed, output is at %r\n",
+                     type(self).__name__, func.__name__, path)
+            keep = True
+            raise
         finally:
             # Need to collect here to be sure all handles have been closed. It appears
             # a windows-only issue. In fact things should be deleted, as well as
@@ -119,9 +118,7 @@ def with_rw_repo(working_tree_ref, bare=False):
     def argument_passer(func):
         @wraps(func)
         def repo_creator(self):
-            prefix = 'non_'
-            if bare:
-                prefix = ''
+            prefix = '' if bare else 'non_'
             # END handle prefix
             repo_dir = tempfile.mktemp(prefix="%sbare_%s" % (prefix, func.__name__))
             rw_repo = self.rorepo.clone(repo_dir, shared=True, bare=bare, n=True)
@@ -134,12 +131,11 @@ def with_rw_repo(working_tree_ref, bare=False):
             prev_cwd = os.getcwd()
             os.chdir(rw_repo.working_dir)
             try:
-                try:
-                    return func(self, rw_repo)
-                except:  # noqa E722
-                    log.info("Keeping repo after failure: %s", repo_dir)
-                    repo_dir = None
-                    raise
+                return func(self, rw_repo)
+            except:  # noqa E722
+                log.info("Keeping repo after failure: %s", repo_dir)
+                repo_dir = None
+                raise
             finally:
                 os.chdir(prev_cwd)
                 rw_repo.git.clear_cache()

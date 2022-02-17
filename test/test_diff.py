@@ -294,23 +294,23 @@ class TestDiff(TestBase):
         """Test that diff is able to correctly diff commits that cover submodule changes"""
         # Init a temp git repo that will be referenced as a submodule
         sub = Repo.init(self.submodule_dir)
-        with open(self.submodule_dir + "/subfile", "w") as sub_subfile:
+        with open(f'{self.submodule_dir}/subfile', "w") as sub_subfile:
             sub_subfile.write("")
         sub.index.add(["subfile"])
         sub.index.commit("first commit")
 
         # Init a temp git repo that will incorporate the submodule
         repo = Repo.init(self.repo_dir)
-        with open(self.repo_dir + "/test", "w") as foo_test:
+        with open(f'{self.repo_dir}/test', "w") as foo_test:
             foo_test.write("")
         repo.index.add(['test'])
-        Submodule.add(repo, "subtest", "sub", url="file://" + self.submodule_dir)
+        Submodule.add(repo, "subtest", "sub", url=f'file://{self.submodule_dir}')
         repo.index.commit("first commit")
         repo.create_tag('1')
 
         # Add a commit to the submodule
         submodule = repo.submodule('subtest')
-        with open(self.repo_dir + "/sub/subfile", "w") as foo_sub_subfile:
+        with open(f'{self.repo_dir}/sub/subfile', "w") as foo_sub_subfile:
             foo_sub_subfile.write("blub")
         submodule.module().index.add(["subfile"])
         submodule.module().index.commit("changed subfile")
@@ -331,9 +331,7 @@ class TestDiff(TestBase):
         # test a few variations of the main diff routine
         assertion_map = {}
         for i, commit in enumerate(self.rorepo.iter_commits('0.1.6', max_count=2)):
-            diff_item = commit
-            if i % 2 == 0:
-                diff_item = commit.tree
+            diff_item = commit.tree if i % 2 == 0 else commit
             # END use tree every second item
 
             for other in (None, NULL_TREE, commit.Index, commit.parents[0]):
@@ -351,19 +349,17 @@ class TestDiff(TestBase):
                             # END for each changetype
 
                             # check entries
-                            diff_set = set()
-                            diff_set.add(diff_index[0])
-                            diff_set.add(diff_index[0])
+                            diff_set = {diff_index[0]}
                             self.assertEqual(len(diff_set), 1)
                             self.assertEqual(diff_index[0], diff_index[0])
                             self.assertFalse(diff_index[0] != diff_index[0])
 
                             for dr in diff_index:
                                 self.assertIsNotNone(str(dr), "Diff to string conversion should be possible")
-                        # END diff index checking
-                    # END for each patch option
-                # END for each path option
-            # END for each other side
+                                        # END diff index checking
+                                # END for each patch option
+                        # END for each path option
+                # END for each other side
         # END for each commit
 
         # assert we could always find at least one instance of the members we
