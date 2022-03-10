@@ -131,7 +131,6 @@ class Commit(base.Object, TraversableIterableObj, Diffable, Serializable):
         self.binsha = binsha
         if tree is not None:
             assert isinstance(tree, Tree), "Tree needs to be a Tree instance, was %s" % type(tree)
-        if tree is not None:
             self.tree = tree
         if author is not None:
             self.author = author
@@ -508,7 +507,7 @@ class Commit(base.Object, TraversableIterableObj, Diffable, Serializable):
             if self.__getattribute__('gpgsig'):
                 write(b"gpgsig")
                 for sigline in self.gpgsig.rstrip("\n").split("\n"):
-                    write((" " + sigline + "\n").encode('ascii'))
+                    write((f' {sigline}' + "\n").encode('ascii'))
         except AttributeError:
             pass
 
@@ -563,17 +562,17 @@ class Commit(base.Object, TraversableIterableObj, Diffable, Serializable):
         enc = next_line
         buf = enc.strip()
         while buf:
-            if buf[0:10] == b"encoding ":
+            if buf[:10] == b"encoding ":
                 self.encoding = buf[buf.find(b' ') + 1:].decode(
                     self.encoding, 'ignore')
-            elif buf[0:7] == b"gpgsig ":
+            elif buf[:7] == b"gpgsig ":
                 sig = buf[buf.find(b' ') + 1:] + b"\n"
                 is_next_header = False
                 while True:
                     sigbuf = readline()
                     if not sigbuf:
                         break
-                    if sigbuf[0:1] != b" ":
+                    if sigbuf[:1] != b" ":
                         buf = sigbuf.strip()
                         is_next_header = True
                         break

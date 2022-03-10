@@ -50,8 +50,7 @@ import os.path as osp
 
 def iter_flatten(lol):
     for items in lol:
-        for item in items:
-            yield item
+        yield from items
 
 
 def flatten(lol):
@@ -183,11 +182,6 @@ class TestRepo(TestBase):
         # is_dirty can handle all kwargs
         for args in ((1, 0, 0), (0, 1, 0), (0, 0, 1)):
             assert not repo.is_dirty(*args)
-        # END for each arg
-
-        # we can add a file to the index ( if we are not bare )
-        if not repo.bare:
-            pass
         # END test repos with working tree
 
     @with_rw_directory
@@ -289,7 +283,7 @@ class TestRepo(TestBase):
                 self._assert_empty_repo(r)
 
                 # test clone
-                clone_path = path + "_clone"
+                clone_path = f'{path}_clone'
                 rc = r.clone(clone_path)
                 self._assert_empty_repo(rc)
 
@@ -312,7 +306,7 @@ class TestRepo(TestBase):
                     # when relative paths are used, the clone may actually be inside
                     # of the parent directory
                     pass
-                # END exception handling
+                        # END exception handling
 
             # END for each path
 
@@ -532,9 +526,11 @@ class TestRepo(TestBase):
             num_recently_untracked = len(untracked_files)
 
             # assure we have all names - they are relative to the git-dir
-            num_test_untracked = 0
-            for utfile in untracked_files:
-                num_test_untracked += join_path_native(base, utfile) in files
+            num_test_untracked = sum(
+                join_path_native(base, utfile) in files
+                for utfile in untracked_files
+            )
+
             self.assertEqual(len(files), num_test_untracked)
 
             repo_add(untracked_files)
@@ -686,7 +682,7 @@ class TestRepo(TestBase):
         obj = rev_parse(name + '^{tree}')
         self.assertEqual(obj, rev_obj.tree)
 
-        obj = rev_parse(name + ':CHANGES')
+        obj = rev_parse(f'{name}:CHANGES')
         self.assertEqual(obj.type, 'blob')
         self.assertEqual(obj.path, 'CHANGES')
         self.assertEqual(rev_obj.tree['CHANGES'], obj)
@@ -696,14 +692,11 @@ class TestRepo(TestBase):
         :return: parsed object"""
         rev_parse = self.rorepo.rev_parse
         orig_obj = rev_parse(name)
-        if orig_obj.type == 'tag':
-            obj = orig_obj.object
-        else:
-            obj = orig_obj
+        obj = orig_obj.object if orig_obj.type == 'tag' else orig_obj
         # END deref tags by default
 
         # try history
-        rev = name + "~"
+        rev = f'{name}~'
         obj2 = rev_parse(rev)
         self.assertEqual(obj2, obj.parents[0])
         self._assert_rev_parse_types(rev, obj2)
@@ -711,8 +704,7 @@ class TestRepo(TestBase):
         # history with number
         ni = 11
         history = [obj.parents[0]]
-        for pn in range(ni):
-            history.append(history[-1].parents[0])
+        history.extend(history[-1].parents[0] for _ in range(ni))
         # END get given amount of commits
 
         for pn in range(11):
@@ -723,7 +715,7 @@ class TestRepo(TestBase):
         # END history check
 
         # parent ( default )
-        rev = name + "^"
+        rev = f'{name}^'
         obj2 = rev_parse(rev)
         self.assertEqual(obj2, obj.parents[0])
         self._assert_rev_parse_types(rev, obj2)
@@ -781,7 +773,7 @@ class TestRepo(TestBase):
         # multiple tree types result in the same tree: HEAD^{tree}^{tree}:CHANGES
         rev = '0.1.4^{tree}^{tree}'
         self.assertEqual(rev_parse(rev), tag.object.tree)
-        self.assertEqual(rev_parse(rev + ':CHANGES'), tag.object.tree['CHANGES'])
+        self.assertEqual(rev_parse(f'{rev}:CHANGES'), tag.object.tree['CHANGES'])
 
         # try to get parents from first revision - it should fail as no such revision
         # exists
@@ -789,8 +781,8 @@ class TestRepo(TestBase):
         commit = rev_parse(first_rev)
         self.assertEqual(len(commit.parents), 0)
         self.assertEqual(commit.hexsha, first_rev)
-        self.assertRaises(BadName, rev_parse, first_rev + "~")
-        self.assertRaises(BadName, rev_parse, first_rev + "^")
+        self.assertRaises(BadName, rev_parse, f'{first_rev}~')
+        self.assertRaises(BadName, rev_parse, f'{first_rev}^')
 
         # short SHA1
         commit2 = rev_parse(first_rev[:20])
@@ -837,7 +829,7 @@ class TestRepo(TestBase):
             self.assertEqual(rev_parse(refspec), head.ref.commit)
             # all additional specs work as well
             self.assertEqual(rev_parse(refspec + "^{tree}"), head.commit.tree)
-            self.assertEqual(rev_parse(refspec + ":CHANGES").type, 'blob')
+            self.assertEqual(rev_parse(f'{refspec}:CHANGES').type, 'blob')
         # END operate on non-detached head
 
         # position doesn't exist

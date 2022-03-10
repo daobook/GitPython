@@ -13,18 +13,7 @@ else:
     from typing_extensions import (Final, Literal, SupportsIndex,                           # noqa: F401
                                    TypedDict, Protocol, runtime_checkable)  # noqa: F401
 
-# if sys.version_info[:2] >= (3, 10):
-#     from typing import TypeGuard  # noqa: F401
-# else:
-#     from typing_extensions import TypeGuard  # noqa: F401
-
-
-if sys.version_info[:2] < (3, 9):
-    PathLike = Union[str, os.PathLike]
-elif sys.version_info[:2] >= (3, 9):
-    # os.PathLike only becomes subscriptable from Python 3.9 onwards
-    PathLike = Union[str, os.PathLike]
-
+PathLike = Union[str, os.PathLike]
 if TYPE_CHECKING:
     from git.repo import Repo
     from git.objects import Commit, Tree, TagObject, Blob
@@ -66,8 +55,6 @@ def assert_never(inp: NoReturn, raise_error: bool = True, exc: Union[Exception, 
             raise ValueError(f"An unhandled Literal ({inp}) in an if/else chain was found")
         else:
             raise exc
-    else:
-        pass
 
 
 class Files_TD(TypedDict):

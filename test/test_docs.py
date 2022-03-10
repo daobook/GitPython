@@ -216,7 +216,7 @@ class Tutorials(TestBase):
         master = head.reference     # retrieve the reference the head points to
         master.commit               # from here you use it as any other reference
         # ![3-test_references_and_objects]
-        
+
         # [4-test_references_and_objects]
         log = master.log()
         log[0]                      # first (i.e. oldest) reflog entry
@@ -323,7 +323,7 @@ class Tutorials(TestBase):
         blob = tree.trees[1].blobs[0]                              # let's get a blob in a sub-tree
         assert blob.name
         assert len(blob.path) < len(blob.abspath)
-        self.assertEqual(tree.trees[1].name + '/' + blob.name, blob.path)   # this is how relative blob path generated
+        self.assertEqual(f'{tree.trees[1].name}/{blob.name}', blob.path)
         self.assertEqual(tree[blob.path], blob)                             # you can use paths like 'dir/file' in tree
         # ![19-test_references_and_objects]
 

@@ -85,7 +85,7 @@ class TestIndex(TestBase):
         curval = self._fprogress_map[path]
         if curval == 0:
             assert not done
-        if curval == 1:
+        elif curval == 1:
             assert done
         self._fprogress_map[path] = curval + 1
 
@@ -411,12 +411,9 @@ class TestIndex(TestBase):
         """
         Returns count of files that actually exist in the repository directory.
         """
-        existing = 0
         basedir = repo.working_tree_dir
-        for f in files:
-            existing += osp.isfile(osp.join(basedir, f))
         # END for each deleted file
-        return existing
+        return sum(osp.isfile(osp.join(basedir, f)) for f in files)
     # END num existing helper
 
     @skipIf(HIDE_WINDOWS_KNOWN_ERRORS and Git.is_cygwin(),
@@ -441,8 +438,7 @@ class TestIndex(TestBase):
         # remove all of the files, provide a wild mix of paths, BaseIndexEntries,
         # IndexEntries
         def mixed_iterator():
-            count = 0
-            for entry in index.entries.values():
+            for count, entry in enumerate(index.entries.values()):
                 type_id = count % 4
                 if type_id == 0:    # path
                     yield entry.path
@@ -454,7 +450,6 @@ class TestIndex(TestBase):
                     yield entry
                 else:
                     raise AssertionError("Invalid Type")
-                count += 1
             # END for each entry
         # END mixed iterator
         deleted_files = index.remove(mixed_iterator(), working_tree=False)
@@ -886,13 +881,12 @@ class TestIndex(TestBase):
                 self.assertEqual(err.command, [hp])
                 self.assertEqual(err.stdout, '')
                 self.assertEqual(err.stderr, '')
-                assert str(err)
             else:
                 self.assertEqual(err.status, 1)
                 self.assertEqual(err.command, [hp])
                 self.assertEqual(err.stdout, "\n  stdout: 'stdout\n'")
                 self.assertEqual(err.stderr, "\n  stderr: 'stderr\n'")
-                assert str(err)
+            assert str(err)
         else:
             raise AssertionError("Should have caught a HookExecutionError")
 
@@ -925,12 +919,11 @@ class TestIndex(TestBase):
                 self.assertEqual(err.command, [hp])
                 self.assertEqual(err.stdout, '')
                 self.assertEqual(err.stderr, '')
-                assert str(err)
             else:
                 self.assertEqual(err.status, 1)
                 self.assertEqual(err.command, [hp])
                 self.assertEqual(err.stdout, "\n  stdout: 'stdout\n'")
                 self.assertEqual(err.stderr, "\n  stderr: 'stderr\n'")
-                assert str(err)
+            assert str(err)
         else:
             raise AssertionError("Should have cought a HookExecutionError")

@@ -121,7 +121,7 @@ def altz_to_utctz_str(altz: float) -> str:
     utci = -1 * int((float(altz) / 3600) * 100)
     utcs = str(abs(utci))
     utcs = "0" * (4 - len(utcs)) + utcs
-    prefix = (utci < 0 and '-') or '+'
+    prefix = '-' if utci < 0 else '+'
     return prefix + utcs
 
 
@@ -168,8 +168,7 @@ def from_timestamp(timestamp: float, tz_offset: float) -> datetime:
     """Converts a timestamp + tz_offset into an aware datetime instance."""
     utc_dt = datetime.fromtimestamp(timestamp, utc)
     try:
-        local_dt = utc_dt.astimezone(tzoffset(tz_offset))
-        return local_dt
+        return utc_dt.astimezone(tzoffset(tz_offset))
     except ValueError:
         return utc_dt
 
@@ -189,13 +188,12 @@ def parse_date(string_date: Union[str, datetime]) -> Tuple[int, int]:
     :note: Date can also be YYYY.MM.DD, MM/DD/YYYY and DD.MM.YYYY.
     """
     if isinstance(string_date, datetime):
-        if string_date.tzinfo:
-            utcoffset = cast(timedelta, string_date.utcoffset())  # typeguard, if tzinfoand is not None
-            offset = -int(utcoffset.total_seconds())
-            return int(string_date.astimezone(utc).timestamp()), offset
-        else:
+        if not string_date.tzinfo:
             raise ValueError(f"string_date datetime object without tzinfo, {string_date}")
 
+        utcoffset = cast(timedelta, string_date.utcoffset())  # typeguard, if tzinfoand is not None
+        offset = -int(utcoffset.total_seconds())
+        return int(string_date.astimezone(utc).timestamp()), offset
     # git time
     try:
         if string_date.count(' ') == 1 and string_date.rfind(':') == -1:
@@ -219,16 +217,11 @@ def parse_date(string_date: Union[str, datetime]) -> Tuple[int, int]:
                 date_formats.append("%a, %d %b %Y")
                 splitter = string_date.rfind(' ')
             else:
-                # iso plus additional
-                date_formats.append("%Y-%m-%d")
-                date_formats.append("%Y.%m.%d")
-                date_formats.append("%m/%d/%Y")
-                date_formats.append("%d.%m.%Y")
-
+                date_formats.extend(("%Y-%m-%d", "%Y.%m.%d", "%m/%d/%Y", "%d.%m.%Y"))
                 splitter = string_date.rfind('T')
                 if splitter == -1:
                     splitter = string_date.rfind(' ')
-                # END handle 'T' and ' '
+                            # END handle 'T' and ' '
             # END handle rfc or iso
 
             assert splitter > -1
@@ -254,7 +247,7 @@ def parse_date(string_date: Union[str, datetime]) -> Tuple[int, int]:
 
             # still here ? fail
             raise ValueError("no format matched")
-        # END handle format
+            # END handle format
     except Exception as e:
         raise ValueError(f"Unsupported date format or type: {string_date}, type={type(string_date)}") from e
     # END handle exceptions
@@ -272,8 +265,7 @@ def parse_actor_and_date(line: str) -> Tuple[Actor, int, int]:
 
     :return: [Actor, int_seconds_since_epoch, int_timezone_offset]"""
     actor, epoch, offset = '', '0', '0'
-    m = _re_actor_epoch.search(line)
-    if m:
+    if m := _re_actor_epoch.search(line):
         actor, epoch, offset = m.groups()
     else:
         m = _re_only_actor.search(line)
@@ -349,22 +341,12 @@ class Traversable(Protocol):
         """
         # Commit and Submodule have id.__attribute__ as IterableObj
         # Tree has id.__attribute__ inherited from IndexObject
-        if isinstance(self, Has_id_attribute):
-            id = self._id_attribute_
-        else:
-            id = ""     # shouldn't reach here, unless Traversable subclass created with no _id_attribute_
-            # could add _id_attribute_ to Traversable, or make all Traversable also Iterable?
-
-        if not as_edge:
-            out: IterableList[Union['Commit', 'Submodule', 'Tree', 'Blob']] = IterableList(id)
-            out.extend(self.traverse(as_edge=as_edge, *args, **kwargs))
-            return out
-            # overloads in subclasses (mypy does't allow typing self: subclass)
-            # Union[IterableList['Commit'], IterableList['Submodule'], IterableList[Union['Submodule', 'Tree', 'Blob']]]
-        else:
-            # Raise deprecationwarning, doesn't make sense to use this
-            out_list: IterableList = IterableList(self.traverse(*args, **kwargs))
-            return out_list
+        id = self._id_attribute_ if isinstance(self, Has_id_attribute) else ""
+        if as_edge:
+            return IterableList(self.traverse(*args, **kwargs))
+        out: IterableList[Union['Commit', 'Submodule', 'Tree', 'Blob']] = IterableList(id)
+        out.extend(self.traverse(as_edge=as_edge, *args, **kwargs))
+        return out
 
     @ abstractmethod
     def traverse(self, *args: Any, **kwargs: Any) -> Any:

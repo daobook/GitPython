@@ -33,7 +33,7 @@ class TestObjDBPerformance(TestBigRepoR):
         ldb = LooseObjectDB(osp.join(rwrepo.git_dir, 'objects'))
 
         for randomize in range(2):
-            desc = (randomize and 'random ') or ''
+            desc = 'random ' if randomize else ''
             print("Creating %s data ..." % desc, file=sys.stderr)
             st = time()
             size, stream = make_memory_file(self.large_data_size_bytes, randomize)

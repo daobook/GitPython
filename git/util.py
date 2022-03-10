@@ -170,10 +170,10 @@ def join_path(a: PathLike, *p: PathLike) -> PathLike:
             continue
         if b.startswith('/'):
             path += b[1:]
-        elif path == '' or path.endswith('/'):
+        elif not path or path.endswith('/'):
             path += b
         else:
-            path += '/' + b
+            path += f'/{b}'
     # END for each path token to add
     return path
 
@@ -257,11 +257,7 @@ def _cygexpath(drive: Optional[str], path: str) -> str:
     else:
         p = path and osp.normpath(osp.expandvars(osp.expanduser(path)))
         if osp.isabs(p):
-            if drive:
-                # Confusing, maybe a remote system should expand vars.
-                p = path
-            else:
-                p = cygpath(p)
+            p = path if drive else cygpath(p)
         elif drive:
             p = '/cygdrive/%s/%s' % (drive.lower(), p)
     p_str = str(p)  # ensure it is a str and not AnyPath
@@ -304,8 +300,7 @@ def cygpath(path: str) -> str:
     # Fix to use Paths when 3.5 dropped. or to be just str if only for urls?
     if not path.startswith(('/cygdrive', '//')):
         for regex, parser, recurse in _cygpath_parsers:
-            match = regex.match(path)
-            if match:
+            if match := regex.match(path):
                 path = parser(*match.groups())
                 if recurse:
                     path = cygpath(path)
@@ -321,8 +316,7 @@ _decygpath_regex = re.compile(r"/cygdrive/(\w)(/.*)?")
 
 def decygpath(path: PathLike) -> str:
     path = str(path)
-    m = _decygpath_regex.match(path)
-    if m:
+    if m := _decygpath_regex.match(path):
         drive, rest_path = m.groups()
         path = '%s:%s' % (drive.upper(), rest_path or '')
 
@@ -480,10 +474,7 @@ class RemoteProgress(object):
         # Compressing objects:  50% (1/2)
         # Compressing objects: 100% (2/2)
         # Compressing objects: 100% (2/2), done.
-        if isinstance(line, bytes):   # mypy argues about ternary assignment
-            line_str = line.decode('utf-8')
-        else:
-            line_str = line
+        line_str = line.decode('utf-8') if isinstance(line, bytes) else line
         self._cur_line = line_str
 
         if self._cur_line.startswith(('error:', 'fatal:')):
@@ -657,7 +648,7 @@ class Actor(object):
         return hash((self.name, self.email))
 
     def __str__(self) -> str:
-        return self.name if self.name else ""
+        return self.name or ""
 
     def __repr__(self) -> str:
         return '<git.Actor "%s <%s>">' % (self.name, self.email)
@@ -670,16 +661,15 @@ class Actor(object):
                 John Doe <jdoe@example.com>
 
         :return: Actor """
-        m = cls.name_email_regex.search(string)
-        if m:
-            name, email = m.groups()
-            return Actor(name, email)
-        else:
-            m = cls.name_only_regex.search(string)
-            if m:
-                return Actor(m.group(1), None)
-            # assume best and use the whole string as name
-            return Actor(string, None)
+        if not (m := cls.name_email_regex.search(string)):
+            return (
+                Actor(m.group(1), None)
+                if (m := cls.name_only_regex.search(string))
+                else Actor(string, None)
+            )
+
+        name, email = m.groups()
+        return Actor(name, email)
             # END special case name
         # END handle name/email matching
 
@@ -977,8 +967,7 @@ class IterableList(List[T_IterableObj]):
     def __contains__(self, attr: object) -> bool:
         # first try identity match for performance
         try:
-            rval = list.__contains__(self, attr)
-            if rval:
+            if rval := list.__contains__(self, attr):
                 return rval
         except (AttributeError, TypeError):
             pass
@@ -1021,17 +1010,20 @@ class IterableList(List[T_IterableObj]):
 
         delindex = cast(int, index)
         if not isinstance(index, int):
-            delindex = -1
             name = self._prefix + index
-            for i, item in enumerate(self):
-                if getattr(item, self._id_attr) == name:
-                    delindex = i
-                    break
-                # END search index
+            delindex = next(
+                (
+                    i
+                    for i, item in enumerate(self)
+                    if getattr(item, self._id_attr) == name
+                ),
+                -1,
+            )
+
             # END for each item
             if delindex == -1:
                 raise IndexError("Item with name %s not found" % name)
-            # END handle error
+                # END handle error
         # END get index to delete
         list.__delitem__(self, delindex)
 

@@ -292,28 +292,32 @@ class Git(LazyMixin):
             # revert to whatever the old_git was
             cls.GIT_PYTHON_GIT_EXECUTABLE = old_git
 
-            if old_git is None:
-                # on the first refresh (when GIT_PYTHON_GIT_EXECUTABLE is
-                # None) we only are quiet, warn, or error depending on the
-                # GIT_PYTHON_REFRESH value
+            if old_git is not None:
+                # after the first refresh (when GIT_PYTHON_GIT_EXECUTABLE
+                # is no longer None) we raise an exception
+                raise GitCommandNotFound("git", err)
 
-                # determine what the user wants to happen during the initial
-                # refresh we expect GIT_PYTHON_REFRESH to either be unset or
-                # be one of the following values:
-                #   0|q|quiet|s|silence
-                #   1|w|warn|warning
-                #   2|r|raise|e|error
+            # on the first refresh (when GIT_PYTHON_GIT_EXECUTABLE is
+            # None) we only are quiet, warn, or error depending on the
+            # GIT_PYTHON_REFRESH value
 
-                mode = os.environ.get(cls._refresh_env_var, "raise").lower()
+            # determine what the user wants to happen during the initial
+            # refresh we expect GIT_PYTHON_REFRESH to either be unset or
+            # be one of the following values:
+            #   0|q|quiet|s|silence
+            #   1|w|warn|warning
+            #   2|r|raise|e|error
 
-                quiet = ["quiet", "q", "silence", "s", "none", "n", "0"]
-                warn = ["warn", "w", "warning", "1"]
-                error = ["error", "e", "raise", "r", "2"]
+            mode = os.environ.get(cls._refresh_env_var, "raise").lower()
 
-                if mode in quiet:
-                    pass
-                elif mode in warn or mode in error:
-                    err = dedent("""\
+            quiet = ["quiet", "q", "silence", "s", "none", "n", "0"]
+            warn = ["warn", "w", "warning", "1"]
+            error = ["error", "e", "raise", "r", "2"]
+
+            if mode in quiet:
+                pass
+            elif mode in warn or mode in error:
+                err = dedent("""\
                         %s
                         All git commands will error until this is rectified.
 
@@ -326,20 +330,20 @@ class Git(LazyMixin):
                         Example:
                             export %s=%s
                         """) % (
-                        err,
-                        cls._refresh_env_var,
-                        "|".join(quiet),
-                        "|".join(warn),
-                        "|".join(error),
-                        cls._refresh_env_var,
-                        quiet[0])
+                    err,
+                    cls._refresh_env_var,
+                    "|".join(quiet),
+                    "|".join(warn),
+                    "|".join(error),
+                    cls._refresh_env_var,
+                    quiet[0])
 
-                    if mode in warn:
-                        print("WARNING: %s" % err)
-                    else:
-                        raise ImportError(err)
+                if mode in warn:
+                    print("WARNING: %s" % err)
                 else:
-                    err = dedent("""\
+                    raise ImportError(err)
+            else:
+                err = dedent("""\
                         %s environment variable has been set but it has been set with an invalid value.
 
                         Use only the following values:
@@ -347,22 +351,17 @@ class Git(LazyMixin):
                             - %s: for a printed warning
                             - %s: for a raised exception
                         """) % (
-                        cls._refresh_env_var,
-                        "|".join(quiet),
-                        "|".join(warn),
-                        "|".join(error))
-                    raise ImportError(err)
+                    cls._refresh_env_var,
+                    "|".join(quiet),
+                    "|".join(warn),
+                    "|".join(error))
+                raise ImportError(err)
 
-                # we get here if this was the init refresh and the refresh mode
-                # was not error, go ahead and set the GIT_PYTHON_GIT_EXECUTABLE
-                # such that we discern the difference between a first import
-                # and a second import
-                cls.GIT_PYTHON_GIT_EXECUTABLE = cls.git_exec_name
-            else:
-                # after the first refresh (when GIT_PYTHON_GIT_EXECUTABLE
-                # is no longer None) we raise an exception
-                raise GitCommandNotFound("git", err)
-
+            # we get here if this was the init refresh and the refresh mode
+            # was not error, go ahead and set the GIT_PYTHON_GIT_EXECUTABLE
+            # such that we discern the difference between a first import
+            # and a second import
+            cls.GIT_PYTHON_GIT_EXECUTABLE = cls.git_exec_name
         return has_git
 
     @classmethod
@@ -485,12 +484,11 @@ class Git(LazyMixin):
                 p_stderr = None
 
             def read_all_from_possibly_closed_stream(stream: Union[IO[bytes], None]) -> bytes:
-                if stream:
-                    try:
-                        return stderr_b + force_bytes(stream.read())
-                    except ValueError:
-                        return stderr_b or b''
-                else:
+                if not stream:
+                    return stderr_b or b''
+                try:
+                    return stderr_b + force_bytes(stream.read())
+                except ValueError:
                     return stderr_b or b''
 
             # END status handling
@@ -529,12 +527,7 @@ class Git(LazyMixin):
             bytes_left = self._size - self._nbr
             if bytes_left == 0:
                 return b''
-            if size > -1:
-                # assure we don't try to read past our limit
-                size = min(bytes_left, size)
-            else:
-                # they try to read all, make sure its not more than what remains
-                size = bytes_left
+            size = min(bytes_left, size) if size > -1 else bytes_left
             # END check early depletion
             data = self._stream.read(size)
             self._nbr += len(data)
@@ -551,10 +544,7 @@ class Git(LazyMixin):
 
             # clamp size to lowest allowed value
             bytes_left = self._size - self._nbr
-            if size > -1:
-                size = min(bytes_left, size)
-            else:
-                size = bytes_left
+            size = min(bytes_left, size) if size > -1 else bytes_left
             # END handle size
 
             data = self._stream.readline(size)
@@ -602,8 +592,7 @@ class Git(LazyMixin):
             return line
 
         def __del__(self) -> None:
-            bytes_left = self._size - self._nbr
-            if bytes_left:
+            if bytes_left := self._size - self._nbr:
                 # read and discard - seeking is impossible within a stream
                 # includes terminating newline
                 self._stream.read(bytes_left + 1)
@@ -1040,19 +1029,13 @@ class Git(LazyMixin):
             self.update_environment(**old_env)
 
     def transform_kwarg(self, name: str, value: Any, split_single_char_options: bool) -> List[str]:
-        if len(name) == 1:
-            if value is True:
-                return ["-%s" % name]
-            elif value not in (False, None):
-                if split_single_char_options:
-                    return ["-%s" % name, "%s" % value]
-                else:
-                    return ["-%s%s" % (name, value)]
-        else:
-            if value is True:
-                return ["--%s" % dashify(name)]
-            elif value is not False and value is not None:
-                return ["--%s=%s" % (dashify(name), value)]
+        if value is True:
+            return ["-%s" % name] if len(name) == 1 else ["--%s" % dashify(name)]
+        elif value not in (False, None):
+            if split_single_char_options:
+                return ["-%s" % name, "%s" % value]
+            else:
+                return ["-%s%s" % (name, value)]
         return []
 
     def transform_kwargs(self, split_single_char_options: bool = True, **kwargs: Any) -> List[str]:

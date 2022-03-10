@@ -139,7 +139,7 @@ class Submodule(IndexObject, TraversableIterableObj):
             self._name = name
 
     def _set_cache_(self, attr: str) -> None:
-        if attr in ('path', '_url', '_branch_path'):
+        if attr in {'path', '_url', '_branch_path'}:
             reader: SectionConstraint = self.config_reader()
             # default submodule values
             try:
@@ -324,9 +324,8 @@ class Submodule(IndexObject, TraversableIterableObj):
         """
         git_file = osp.join(working_tree_dir, '.git')
         rela_path = osp.relpath(module_abspath, start=working_tree_dir)
-        if is_win:
-            if osp.isfile(git_file):
-                os.remove(git_file)
+        if is_win and osp.isfile(git_file):
+            os.remove(git_file)
         with open(git_file, 'wb') as fp:
             fp.write(("gitdir: %s" % rela_path).encode(defenc))
 
@@ -413,11 +412,13 @@ class Submodule(IndexObject, TraversableIterableObj):
         br = git.Head(repo, git.Head.to_full_path(str(branch) or cls.k_head_default))
         has_module = sm.module_exists()
         branch_is_default = branch is None
-        if has_module and url is not None:
-            if url not in [r.url for r in sm.module().remotes]:
-                raise ValueError(
-                    "Specified URL '%s' does not match any remote url of the repository at '%s'" % (url, sm.abspath))
-            # END check url
+        if (
+            has_module
+            and url is not None
+            and url not in [r.url for r in sm.module().remotes]
+        ):
+            raise ValueError(
+                "Specified URL '%s' does not match any remote url of the repository at '%s'" % (url, sm.abspath))
         # END verify urls match
 
         mrepo: Union[Repo, None] = None
@@ -532,10 +533,6 @@ class Submodule(IndexObject, TraversableIterableObj):
         prefix = ''
         if dry_run:
             prefix = "DRY-RUN: "
-        # END handle prefix
-
-        # to keep things plausible in dry-run mode
-        if dry_run:
             mrepo = None
         # END init mrepo
 
@@ -658,20 +655,23 @@ class Submodule(IndexObject, TraversableIterableObj):
                     base_commit = mrepo.merge_base(mrepo.head.commit, hexsha)
                     if len(base_commit) == 0 or (base_commit[0] is not None and base_commit[0].hexsha == hexsha):
                         if force:
-                            msg = "Will force checkout or reset on local branch that is possibly in the future of"
-                            msg += "the commit it will be checked out to, effectively 'forgetting' new commits"
+                            msg = (
+                                "Will force checkout or reset on local branch that is possibly in the future of"
+                                + "the commit it will be checked out to, effectively 'forgetting' new commits"
+                            )
+
                             log.debug(msg)
                         else:
                             msg = "Skipping %s on branch '%s' of submodule repo '%s' as it contains un-pushed commits"
                             msg %= (is_detached and "checkout" or "reset", mrepo.head, mrepo)
                             log.info(msg)
                             may_reset = False
-                        # end handle force
+                                        # end handle force
                     # end handle if we are in the future
 
                     if may_reset and not force and mrepo.is_dirty(index=True, working_tree=True, untracked_files=True):
                         raise RepositoryDirtyError(mrepo, "Cannot reset a dirty repository")
-                    # end handle force and dirty state
+                                # end handle force and dirty state
                 # end handle empty repo
 
                 # end verify future/past
@@ -688,11 +688,10 @@ class Submodule(IndexObject, TraversableIterableObj):
                         mrepo.git.checkout(hexsha, force=force)
                     else:
                         mrepo.head.reset(hexsha, index=True, working_tree=True)
-                    # END handle checkout
                 # if we may reset/checkout
                 progress.update(END | UPDWKTREE, 0, 1, prefix + "Done updating working tree for submodule %r"
                                 % self.name)
-            # END update to new commit only if needed
+                # END update to new commit only if needed
         except Exception as err:
             if not keep_going:
                 raise
@@ -701,14 +700,10 @@ class Submodule(IndexObject, TraversableIterableObj):
 
         # HANDLE RECURSION
         ##################
-        if recursive:
-            # in dry_run mode, the module might not exist
-            if mrepo is not None:
-                for submodule in self.iter_items(self.module()):
-                    submodule.update(recursive, init, to_latest_revision, progress=progress, dry_run=dry_run,
-                                     force=force, keep_going=keep_going)
-                # END handle recursive update
-            # END handle dry run
+        if recursive and mrepo is not None:
+            for submodule in self.iter_items(self.module()):
+                submodule.update(recursive, init, to_latest_revision, progress=progress, dry_run=dry_run,
+                                 force=force, keep_going=keep_going)
         # END for each submodule
 
         return self
@@ -757,22 +752,15 @@ class Submodule(IndexObject, TraversableIterableObj):
         # END handle index key already there
 
         # remove existing destination
-        if module:
-            if osp.exists(module_checkout_abspath):
-                if len(os.listdir(module_checkout_abspath)):
-                    raise ValueError("Destination module directory was not empty")
-                # END handle non-emptiness
+        if module and osp.exists(module_checkout_abspath):
+            if len(os.listdir(module_checkout_abspath)):
+                raise ValueError("Destination module directory was not empty")
+            # END handle non-emptiness
 
-                if osp.islink(module_checkout_abspath):
-                    os.remove(module_checkout_abspath)
-                else:
-                    os.rmdir(module_checkout_abspath)
-                # END handle link
+            if osp.islink(module_checkout_abspath):
+                os.remove(module_checkout_abspath)
             else:
-                # recreate parent directories
-                # NOTE: renames() does that now
-                pass
-            # END handle existence
+                os.rmdir(module_checkout_abspath)
         # END handle module
 
         # move the module into place if possible
@@ -1147,12 +1135,11 @@ class Submodule(IndexObject, TraversableIterableObj):
         self._clear_cache()
 
         try:
-            try:
-                self.path
-                return True
-            except Exception:
-                return False
-            # END handle exceptions
+            self.path
+            return True
+                # END handle exceptions
+        except Exception:
+            return False
         finally:
             for attr in self._cache_attrs:
                 if attr in loc:

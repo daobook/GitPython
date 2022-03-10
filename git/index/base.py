@@ -187,9 +187,7 @@ class IndexFile(LazyMixin, git_diff.Diffable, Serializable):
 
     def _serialize(self, stream: IO, ignore_extension_data: bool = False) -> 'IndexFile':
         entries = self._entries_sorted()
-        extension_data = self._extension_data    # type: Union[None, bytes]
-        if ignore_extension_data:
-            extension_data = None
+        extension_data = None if ignore_extension_data else self._extension_data
         write_cache(entries, stream, extension_data)
         return self
 
@@ -335,16 +333,13 @@ class IndexFile(LazyMixin, git_diff.Diffable, Serializable):
             As the underlying git-read-tree command takes into account the current index,
             it will be temporarily moved out of the way to assure there are no unsuspected
             interferences."""
-        if len(treeish) == 0 or len(treeish) > 3:
+        if not treeish or len(treeish) > 3:
             raise ValueError("Please specify between 1 and 3 treeish, got %i" % len(treeish))
 
         arg_list: List[Union[Treeish, str]] = []
         # ignore that working tree and index possibly are out of date
         if len(treeish) > 1:
-            # drop unmerged entries when reading our index and merging
-            arg_list.append("--reset")
-            # handle non-trivial cases the way a real merge does
-            arg_list.append("--aggressive")
+            arg_list.extend(("--reset", "--aggressive"))
         # END merge handling
 
         # tmp file created in git home directory to be sure renaming
@@ -662,9 +657,12 @@ class IndexFile(LazyMixin, git_diff.Diffable, Serializable):
         # END rewrite paths
 
         # HANDLE PATHS
-        assert len(entries_added) == 0
-        for filepath in self._iter_expand_paths(paths):
-            entries_added.append(self._store_path(filepath, fprogress))
+        assert not entries_added
+        entries_added.extend(
+            self._store_path(filepath, fprogress)
+            for filepath in self._iter_expand_paths(paths)
+        )
+
         # END for each filepath
         # END path handling
         return entries_added
@@ -954,7 +952,7 @@ class IndexFile(LazyMixin, git_diff.Diffable, Serializable):
 
         # parse result - first 0:n/2 lines are 'checking ', the remaining ones
         # are the 'renaming' ones which we parse
-        for ln in range(int(len(mvlines) / 2), len(mvlines)):
+        for ln in range(len(mvlines) // 2, len(mvlines)):
             tokens = mvlines[ln].split(' to ')
             assert len(tokens) == 2, "Too many tokens in %s" % mvlines[ln]
 
@@ -1021,8 +1019,7 @@ class IndexFile(LazyMixin, git_diff.Diffable, Serializable):
         return osp.join(self.repo.common_dir, "COMMIT_EDITMSG")
 
     def _flush_stdin_and_wait(cls, proc: 'Popen[bytes]', ignore_stdout: bool = False) -> bytes:
-        stdin_IO = proc.stdin
-        if stdin_IO:
+        if stdin_IO := proc.stdin:
             stdin_IO.flush()
             stdin_IO.close()
 
@@ -1091,11 +1088,10 @@ class IndexFile(LazyMixin, git_diff.Diffable, Serializable):
 
         def handle_stderr(proc: 'Popen[bytes]', iter_checked_out_files: Iterable[PathLike]) -> None:
 
-            stderr_IO = proc.stderr
-            if not stderr_IO:
-                return None  # return early if stderr empty
-            else:
+            if stderr_IO := proc.stderr:
                 stderr_bytes = stderr_IO.read()
+            else:
+                return None  # return early if stderr empty
             # line contents:
             stderr = stderr_bytes.decode(defenc)
             # git-checkout-index: this already exists
